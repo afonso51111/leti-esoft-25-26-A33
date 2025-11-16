@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml-server.url.net/svg/
+autoactivate on
+autonumber
+
+actor "Administrator" as User
+participant ":RegisterVaccineView" as View
+participant ":RegisterVaccineController" as Ctrl
+participant ":Administrator" as Admin
+participant "vtContainer:VaccineTypeContainer" as VT_Container
+participant "vContainer:VaccineContainer" as V_Container
+participant "vaccine:Vaccine" as Vaccine
+
+activate User
+
+User -> View: asks to register a new vaccine
+View -> Ctrl: getVaccineTypes()
+Ctrl -> Admin: getVaccineTypeContainer()
+Admin --> Ctrl: vtContainer
+Ctrl -> VT_Container: getVaccineTypes()
+VT_Container --> Ctrl: list<VaccineType>
+Ctrl --> View: list<VaccineType>
+View --> User: shows list of types and requests data (name, manufacturer, selected type)
+
+User -> View: types data and selects a vaccine type
+View -> Ctrl: registerVaccine(name, manufacturer, selectedType)
+Ctrl -> Admin: getVaccineContainer()
+Admin --> Ctrl: vContainer
+Ctrl -> V_Container: create(name, manufacturer, selectedType)
+V_Container --> Vaccine**: create(name, manufacturer, selectedType)
+' Vaccine constructor validates data (AC11-2, AC11-3)
+' Throws exception if invalid
+V_Container --> Ctrl: vaccine
+Ctrl --> View: ok
+View --> User: shows all data and requests confirmation
+
+User -> View: confirms the data
+View -> Ctrl: saveRegisteredVaccine()
+Ctrl -> V_Container: save(vaccine)
+V_Container -> V_Container : validate(vaccine) ' Global validation (AC11-4: duplicates)
+V_Container --> V_Container : ok
+V_Container -> V_Container: add(vaccine)
+V_Container --> V_Container : ok
+V_Container --> Ctrl: ok
+Ctrl --> View: ok
+View --> User: informs operation success
+
+@enduml

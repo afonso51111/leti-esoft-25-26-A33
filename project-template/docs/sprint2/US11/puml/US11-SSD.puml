@@ -1,0 +1,54 @@
+@startuml
+'https://plantuml-server.url.net/svg/
+
+hide circle
+skinparam classAttributeIconSize 0
+
+class RegisterVaccineView {
+}
+
+class RegisterVaccineController {
+    +getVaccineTypes(): list<VaccineType>
+    +registerVaccine(string name, string manuf, VaccineType type): void
+    +saveRegisteredVaccine(): Result
+}
+
+class Administrator {
+    +getVaccineTypeContainer(): VaccineTypeContainer
+    +getVaccineContainer(): VaccineContainer
+}
+
+class VaccineTypeContainer {
+    + getVaccineTypes(): list<VaccineType>
+}
+
+class VaccineType {
+    - code
+    - description
+}
+
+class VaccineContainer {
+    + create(string name, string manuf, VaccineType type): Vaccine
+    + save(Vaccine obj): Result
+}
+
+class Vaccine {
+    - name
+    - manufacturer
+    Vaccine(string name, string manuf, VaccineType type)
+}
+
+Administrator "1" -right-> "1" VaccineContainer:  maintains
+VaccineContainer "1" -right-> "0..*" Vaccine:  records
+Administrator "1" -up-> "1" VaccineTypeContainer:  accesses
+
+Vaccine "0..*" -up-> "1" VaccineType:  is of type
+
+RegisterVaccineView ..> RegisterVaccineController
+RegisterVaccineController ..> Administrator
+RegisterVaccineController ..> VaccineContainer
+RegisterVaccineController ..> Vaccine
+RegisterVaccineController ..> VaccineTypeContainer
+RegisterVaccineController ..> VaccineType
+
+@enduml

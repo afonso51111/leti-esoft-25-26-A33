@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autoactivate on
+autonumber
+
+actor "Administrator" as Admin
+participant ":System" as System
+
+activate Admin
+
+Admin -> System: asks to register a new vaccine
+System --> Admin: shows list of available vaccine types and requests data (name, manufacturer, selected type)
+
+Admin -> System: types requested data and selects a type
+System --> Admin: shows all data and requests confirmation
+
+Admin -> System: confirms the data
+System --> Admin: informs operation success
+@enduml
