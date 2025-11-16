@@ -1,7 +1,7 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-title Class Diagram
+title Domain Model
 
 skinparam classAttributeIconSize 0
 hide circle
@@ -22,7 +22,6 @@ class "SNS User" {
 }
 
 class Employee {
-  - id
   - name
   - postal_address
   - phone_number
@@ -47,13 +46,18 @@ class "Vaccination Center" {
 }
 
 class "Healthcare Center" {
-
+  - ars
+  - ages
 }
 
 class "Community Mass Vaccination Center" {
-
 }
 
+class "Waiting Room" {
+}
+
+class "Recovery Room" {
+}
 
 class Vaccine {
   - commercial_name
@@ -71,33 +75,22 @@ class "Vaccine Technology" {
 }
 
 class Appointment {
-  - id
   - date
   - time
-  - status
 }
 
 
-class "Vaccination Details" {
-  - id
+class "Vaccine Administration" {
   - lot_number
 }
 
 class "Adverse Reaction" {
-  - id
   - description
 }
 
 class "Vaccination Certificate" {
-  - id
   - issue_date
 }
-
-
-class PVMS {
-}
-
-
 
 ' --- Heranças ---
 
@@ -107,23 +100,19 @@ Receptionist --|> Employee
 "Community Mass Vaccination Center" --|> "Vaccination Center"
 
 
-
 ' --- Gestão de Entidades (Admin) ---
 
-
-"DGS Administrator" "1" -down-- "1" PVMS: manages >
 "DGS Administrator" "1" -right-- "0..*" Employee:  manages >
 "DGS Administrator" "1" -right-- "0..*" "Vaccination Center": manages >
 "DGS Administrator" "1" -right-- "0..*" Vaccine: manages >
-"DGS Administrator" "1" -right-- "0..*" "Vaccine Type": manages >
+"DGS Administrator" "1" -right-- "1..*" "Vaccine Type": manages >
 "DGS Administrator" "1" -right-- "0..*" "Vaccine Technology": manages >
 
 
-' --- Utilização do Sistema ---
+' --- Estrutura do Centro ---
 
-Nurse "0..*" -down-- "1" PVMS: uses >
-Receptionist "0..*" -down-- "1" PVMS: uses >
-"SNS User" "0..*" -down-- "1" PVMS: uses >
+"Vaccination Center" "1" *-- "1" "Waiting Room": has >
+"Vaccination Center" "1" *-- "1" "Recovery Room": has >
 
 
 ' --- Relações do Processo ---
@@ -131,20 +120,20 @@ Receptionist "0..*" -down-- "1" PVMS: uses >
 ' Agendamento
 "SNS User" "1..*" -right-- "0..*" Appointment: schedules >
 Receptionist "0..*" -right-- "0..*" Appointment: assists >
-Appointment "1" -down-- "1" "Vaccination Center": occurs at >
+Appointment "0..*" -down-- "1" "Vaccination Center": occurs at >
 Appointment "1" -down-- "1" "Vaccine Type": for >
 
 ' Fluxo no Centro
 Receptionist "1..*" -left-- "1..*" "SNS User": registers arrival >
-Nurse "1..*" -right-- "1..*" "Vaccination Details": records >
+Nurse "1..*" -right-- "1..*" "Vaccine Administration": performs >
 Nurse "1..*" -right-- "0..*" "Adverse Reaction": records >
 Nurse "1..*" -right-- "0..*" "Vaccination Certificate": issues on-site >
 
 ' Relações de Eventos
-"Vaccination Details" "1" -left-- "1" Appointment: fulfills >
-"Vaccination Details" "1" -right-- "1" Vaccine: uses >
-"Vaccination Details" "1" -down-- "0..1" "Adverse Reaction": results in >
-"Vaccination Details" "1" -down-- "0..1" "Vaccination Certificate": generates >
+"Vaccine Administration" "1" -left-- "1" Appointment: fulfills >
+"Vaccine Administration" "1" -right-- "1" Vaccine: uses >
+"Vaccine Administration" "1" -down-- "0..1" "Adverse Reaction": results in >
+"Vaccine Administration" "1" -down-- "0..1" "Vaccination Certificate": generates >
 
 "SNS User" "1..*" -up-- "0..*" "Vaccination Certificate": obtains >
 
