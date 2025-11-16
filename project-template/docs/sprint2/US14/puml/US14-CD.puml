@@ -1,0 +1,70 @@
+@startuml
+'https://plantuml-server.url.net/svg/
+
+hide circle
+skinparam classAttributeIconSize 0
+
+' --- Classes da UI e Controller ---
+
+class RegisterEmployeeView {
+}
+
+class RegisterEmployeeController {
+    + getRoles(): List<Role>
+    + registerEmployee(string name, string phone, string email, string cc, Role role): void
+    + saveEmployee(): Result
+}
+
+' --- Classes de Domínio e Contentores ---
+
+class Administrator {
+    + getEmployeeContainer(): EmployeeContainer
+    + getRoleContainer(): RoleContainer
+}
+
+class EmployeeContainer {
+    + create(string name, string phone, string email, string cc, Role role): Employee
+    + save(Employee obj): Result
+}
+
+class Employee {
+    - name: string
+    - phoneNumber: string
+    - emailAddress: string
+    - citizenCardNumber: string
+    Employee(string name, string phone, string email, string cc, Role role)
+}
+
+class RoleContainer {
+    + getRoles(): List<Role>
+    ' + getRoleById(string id): Role
+}
+
+class Role {
+    - code: string
+    - description: string
+}
+
+' --- Associações (Relações Permanentes) ---
+
+Administrator "1" -right-> "1" EmployeeContainer:  maintains
+EmployeeContainer "1" -right-> "0..*" Employee:  records
+
+Administrator "1" -down-> "1" RoleContainer: maintains
+RoleContainer "1" -down-> "0..*" Role: records
+
+Employee "0..*" -left-> "1" Role: has a
+
+' --- Dependências (Relações Momentâneas) ---
+
+RegisterEmployeeView ..> RegisterEmployeeController
+
+RegisterEmployeeController ..> Administrator
+RegisterEmployeeController ..> EmployeeContainer
+RegisterEmployeeController ..> Employee
+
+' Controller precisa de Roles para apresentar na View
+RegisterEmployeeController ..> RoleContainer
+RegisterEmployeeController ..> Role
+
+@enduml
