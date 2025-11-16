@@ -1,0 +1,155 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+title Class Diagram
+
+skinparam classAttributeIconSize 0
+hide circle
+hide methods
+
+class "DGS Administrator" {
+}
+
+class "SNS User" {
+  - sns_number
+  - name
+  - birth_date
+  - sex
+  - postal_address
+  - phone_number
+  - email
+  - citizen_card_number
+}
+
+class Employee {
+  - id
+  - name
+  - postal_address
+  - phone_number
+  - email
+}
+
+class Nurse {
+}
+
+class Receptionist {
+}
+
+class "Vaccination Center" {
+  - name
+  - postal_address
+  - phone_number
+  - email
+  - website_address
+  - opening_hours
+  - closing_hours
+  - capacity_per_hour
+}
+
+class "Healthcare Center" {
+
+}
+
+class "Community Mass Vaccination Center" {
+
+}
+
+
+class Vaccine {
+  - commercial_name
+  - brand
+}
+
+class "Vaccine Type" {
+  - code
+  - disease
+  - short_description
+}
+
+class "Vaccine Technology" {
+  - name
+}
+
+class Appointment {
+  - id
+  - date
+  - time
+  - status
+}
+
+
+class "Vaccination Details" {
+  - id
+  - lot_number
+}
+
+class "Adverse Reaction" {
+  - id
+  - description
+}
+
+class "Vaccination Certificate" {
+  - id
+  - issue_date
+}
+
+
+class PVMS {
+}
+
+
+
+' --- Heranças ---
+
+Nurse --|> Employee
+Receptionist --|> Employee
+"Healthcare Center" --|> "Vaccination Center"
+"Community Mass Vaccination Center" --|> "Vaccination Center"
+
+
+
+' --- Gestão de Entidades (Admin) ---
+
+
+"DGS Administrator" "1" -down-- "1" PVMS: manages >
+"DGS Administrator" "1" -right-- "0..*" Employee:  manages >
+"DGS Administrator" "1" -right-- "0..*" "Vaccination Center": manages >
+"DGS Administrator" "1" -right-- "0..*" Vaccine: manages >
+"DGS Administrator" "1" -right-- "0..*" "Vaccine Type": manages >
+"DGS Administrator" "1" -right-- "0..*" "Vaccine Technology": manages >
+
+
+' --- Utilização do Sistema ---
+
+Nurse "0..*" -down-- "1" PVMS: uses >
+Receptionist "0..*" -down-- "1" PVMS: uses >
+"SNS User" "0..*" -down-- "1" PVMS: uses >
+
+
+' --- Relações do Processo ---
+
+' Agendamento
+"SNS User" "1..*" -right-- "0..*" Appointment: schedules >
+Receptionist "0..*" -right-- "0..*" Appointment: assists >
+Appointment "1" -down-- "1" "Vaccination Center": occurs at >
+Appointment "1" -down-- "1" "Vaccine Type": for >
+
+' Fluxo no Centro
+Receptionist "1..*" -left-- "1..*" "SNS User": registers arrival >
+Nurse "1..*" -right-- "1..*" "Vaccination Details": records >
+Nurse "1..*" -right-- "0..*" "Adverse Reaction": records >
+Nurse "1..*" -right-- "0..*" "Vaccination Certificate": issues on-site >
+
+' Relações de Eventos
+"Vaccination Details" "1" -left-- "1" Appointment: fulfills >
+"Vaccination Details" "1" -right-- "1" Vaccine: uses >
+"Vaccination Details" "1" -down-- "0..1" "Adverse Reaction": results in >
+"Vaccination Details" "1" -down-- "0..1" "Vaccination Certificate": generates >
+
+"SNS User" "1..*" -up-- "0..*" "Vaccination Certificate": obtains >
+
+' Definição de Vacinas
+Vaccine "1..*" -right-- "1" "Vaccine Type": has >
+Vaccine "1..*" -right-- "1" "Vaccine Technology": uses >
+
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+title Use Case Diagram
+
+
+:Admin DGS: as Admin
+:Nurse: as Nurse
+:Receptionist: as Receptionist
+:SNS User: as User
+
+
+
+(Schedule Appointment) as (Schedule)
+(Register Arrival) as (RegisterArrival)
+(Administer Vaccine) as (Vaccinate)
+(Record Adverse Reaction) as (RecordReaction)
+(Issue Vaccination Certificate) as (IssueCertificate)
+(Manage Centers and Personnel) as (ManageCenters)
+(Manage Vaccines) as (ManageVaccines)
+
+
+User -> (Schedule)
+
+Receptionist --> (RegisterArrival)
+Receptionist --> (Schedule)
+
+Nurse --> (Vaccinate)
+Nurse --> (RecordReaction)
+Nurse --> (IssueCertificate)
+
+Admin --> (ManageCenters)
+Admin --> (ManageVaccines)
+
+
+@enduml
