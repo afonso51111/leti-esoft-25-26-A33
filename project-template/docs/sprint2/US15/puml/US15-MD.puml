@@ -1,0 +1,27 @@
+@startuml US15_DomainModel
+skinparam classAttributeIconSize 0
+hide circle
+hide methods
+
+class Administrator {
+}
+
+class Employee {
+    - id
+    - name
+    - phoneNumber
+    - emailAddress
+    - citizenCardNumber
+}
+
+class Role {
+    - designation
+}
+
+' O Administrador mantém o registo de Empregados
+Administrator "1" -right-- "0..*" Employee : maintains >
+
+' Cada Empregado tem obrigatoriamente um Papel
+Employee "0..*" -left-- "1" Role : has a >
+
+@enduml

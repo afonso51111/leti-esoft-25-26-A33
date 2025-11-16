@@ -4,12 +4,12 @@
 
 The team consists of the students listed in the table below. 
 
-| Student Number	 | Name |
-|-----------------|----------------------------|
-| **1XXXXXX**     | Name of student 1          |
-| **1XXXXXX**     | Name of student 2          |
-| **1XXXXXX**     | Name of student 3          |
-| **1XXXXXX**     | Name of student 4          |
+| Student Number	 | Name            |
+|-----------------|-----------------|
+| **1240857**     | Afonso Ribeiro  |
+| **1240632**     | Diogo Fernandes |
+| **1241034**     | Rui Marinheiro  |
+| **1240883**     | Tiago Moreira   |
 
 
 # 2. Task Distribution ###
@@ -33,10 +33,10 @@ Finally, keep in mind that each User Story is not isolated — it must be integr
 | [Use Case Diagram (UCD)](system-documentation/global-artifacts/use-case-diagram.md)                |   all    |   all    |   all    |   all    |
 | [Supplementary Specification](system-documentation/global-artifacts/suplementary-specification.md) |   all    |   all    |   all    |   all    |
 | [Domain Model](system-documentation/global-artifacts/analysis.md)                                  |   all    |   all    |   all    |   all    |
-| [US01](system-documentation/US01) (SDP Activities)                                                 |          | 1XXXXXX  |          |          |
-| [US02](system-documentation/US02) (SDP Activities)                                                 |          | 1XXXXXX  |          |          |
-| [US03](system-documentation/US03) (SDP Activities)                                                 |          | 1XXXXXX  |          |          |
-| ...                                                                                                |   ...    |   ...    |   ...    |   ...    |
+| [US01](system-documentation/US01) (SDP Activities)                                                 |          |  124883  |          |          |
+| [US02](system-documentation/US02) (SDP Activities)                                                 |          | 1240857  |          |          |
+| [US03](system-documentation/US03) (SDP Activities)                                                 |          | 1240632  |          |          |
+| [US04](system-documentation/US03) (SDP Activities)                                                 |   ...    | 1241034  |   ...    |   ...    |
 | ...                                                                                                |   ...    |   ...    |   ...    |   ...    |
 
 

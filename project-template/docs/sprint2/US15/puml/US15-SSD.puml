@@ -1,0 +1,27 @@
+@startuml US15_SSD
+skinparam monochrome true
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+autonumber
+
+actor "Administrator" as Admin
+participant ":System" as System
+
+activate Admin
+
+    Admin -> System : asks to list employees by role
+    activate System
+
+        System --> Admin : shows list of available roles
+    deactivate System
+
+    Admin -> System : selects a role
+    activate System
+
+        System --> Admin : shows list of employees with selected role
+    deactivate System
+
+deactivate Admin
+
+@enduml

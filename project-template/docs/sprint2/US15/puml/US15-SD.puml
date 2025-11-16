@@ -1,0 +1,77 @@
+@startuml US15_SD
+skinparam monochrome true
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+autonumber
+
+actor "Administrator" as Admin
+participant ":ListEmployeeByRoleView" as View
+participant ":ListEmployeeByRoleController" as Controller
+participant ":Administrator" as AdminObj
+participant ":RoleContainer" as RoleContainer
+participant ":EmployeeContainer" as EmployeeContainer
+
+activate Admin
+
+    Admin -> View : asks to list employees by role
+    activate View
+
+        View -> Controller : getRoles()
+        activate Controller
+
+            Controller -> AdminObj : getRoles()
+            activate AdminObj
+
+                AdminObj -> RoleContainer : getAllRoles()
+                activate RoleContainer
+
+                    RoleContainer --> AdminObj : roleList
+                deactivate RoleContainer
+
+                AdminObj --> Controller : roleList
+            deactivate AdminObj
+
+            Controller --> View : roleList
+        deactivate Controller
+
+        View --> Admin : shows list of available roles
+    deactivate View
+
+    Admin -> View : selects a role
+    activate View
+
+        View -> View : keeps selected role
+
+        View --> Admin : requests confirmation
+    deactivate View
+
+    Admin -> View : confirms
+    activate View
+
+        View -> Controller : getEmployeesByRole(role)
+        activate Controller
+
+            Controller -> AdminObj : getEmployeesByRole(role)
+            activate AdminObj
+
+                AdminObj -> EmployeeContainer : filterByRole(role)
+                activate EmployeeContainer
+
+                    EmployeeContainer -> EmployeeContainer : sortByName(filteredList)
+
+                    EmployeeContainer --> AdminObj : sortedEmployeeList
+                deactivate EmployeeContainer
+
+                AdminObj --> Controller : sortedEmployeeList
+            deactivate AdminObj
+
+            Controller --> View : sortedEmployeeList
+        deactivate Controller
+
+        View --> Admin : shows list of employees with selected role
+    deactivate View
+
+deactivate Admin
+
+@enduml
