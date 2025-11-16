@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml-server.url.net/svg/
+
+hide circle
+skinparam classAttributeIconSize 0
+
+class SpecifyVaccineTypeView {
+}
+
+class SpecifyVaccineTypeController {
+    +specifyNewVaccineType(string code, string description): void
+    +saveNewVaccineType(): Result
+}
+
+class Administrator {
+    +getVaccineTypeContainer(): VaccineTypeContainer
+}
+
+class VaccineTypeContainer {
+    + create(string code, string description): VaccineType
+    + save(VaccineType obj): Result
+    ' - validate(VaccineType obj): bool
+    ' - add(VaccineType obj): void
+}
+
+class VaccineType {
+    - code
+    - description
+    VaccineType(string code, string description)
+}
+
+Administrator "1" -right-> "1" VaccineTypeContainer:  maintains
+VaccineTypeContainer "1" -right-> "0..*" VaccineType:  records
+
+SpecifyVaccineTypeView ..> SpecifyVaccineTypeController
+SpecifyVaccineTypeController ..> Administrator
+SpecifyVaccineTypeController ..> VaccineTypeContainer
+SpecifyVaccineTypeController ..> VaccineType
+
+@enduml

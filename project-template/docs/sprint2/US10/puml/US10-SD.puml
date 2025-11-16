@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml-server.url.net/svg/
+autoactivate on
+autonumber
+
+actor "Administrator" as User
+participant ":SpecifyVaccineTypeView" as View
+participant ":SpecifyVaccineTypeController" as Ctrl
+participant ":Administrator" as Admin
+participant "container:VaccineTypeContainer" as Container
+participant "vType:VaccineType" as VType
+
+activate User
+
+User -> View: asks to specify a new vaccine type
+View --> User: requests data (code, description)
+
+User -> View: types requested data
+View -> Ctrl: specifyNewVaccineType(code, description)
+Ctrl -> Admin: getVaccineTypeContainer()
+Admin --> Ctrl: container
+Ctrl -> Container: create(code, description)
+Container --> VType**: create(code, description)
+' O construtor de VType valida os dados (AC10-1, AC10-2)
+' Se falhar, lança exceção aqui.
+Container --> Ctrl: vType
+Ctrl --> View: ok
+View --> User: shows all data and requests confirmation
+
+User -> View: confirms the data
+View -> Ctrl: saveNewVaccineType()
+Ctrl -> Container: save(vType)
+Container -> Container : validate(vType) ' Validação global (ex: duplicados - AC10-3)
+Container --> Container : ok
+Container -> Container: add(vType)
+Container --> Container : ok
+Container --> Ctrl: ok
+Ctrl --> View: ok
+View --> User: informs operation success
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml-server.url.net/svg/
+skinparam classAttributeIconSize 0
+hide circle
+hide methods
+
+class Administrator {
+}
+
+class VaccineType {
+    - code
+    - description
+}
+
+Administrator "1" -right-- "0..*" VaccineType:  maintains >
+
+@enduml
