@@ -1,54 +1,20 @@
 @startuml
-'https://plantuml-server.url.net/svg/
+'https://plantuml.com/sequence-diagram
 
-hide circle
-skinparam classAttributeIconSize 0
+autoactivate on
+autonumber
 
-class RegisterVaccineView {
-}
+actor "Administrator" as Admin
+participant ":System" as System
 
-class RegisterVaccineController {
-    +getVaccineTypes(): list<VaccineType>
-    +registerVaccine(string name, string manuf, VaccineType type): void
-    +saveRegisteredVaccine(): Result
-}
+activate Admin
 
-class Administrator {
-    +getVaccineTypeContainer(): VaccineTypeContainer
-    +getVaccineContainer(): VaccineContainer
-}
+Admin -> System: asks to register a new vaccine
+System --> Admin: shows list of available vaccine types and requests data (name, manufacturer, selected type)
 
-class VaccineTypeContainer {
-    + getVaccineTypes(): list<VaccineType>
-}
+Admin -> System: types requested data and selects a type
+System --> Admin: shows all data and requests confirmation
 
-class VaccineType {
-    - code
-    - description
-}
-
-class VaccineContainer {
-    + create(string name, string manuf, VaccineType type): Vaccine
-    + save(Vaccine obj): Result
-}
-
-class Vaccine {
-    - name
-    - manufacturer
-    Vaccine(string name, string manuf, VaccineType type)
-}
-
-Administrator "1" -right-> "1" VaccineContainer:  maintains
-VaccineContainer "1" -right-> "0..*" Vaccine:  records
-Administrator "1" -up-> "1" VaccineTypeContainer:  accesses
-
-Vaccine "0..*" -up-> "1" VaccineType:  is of type
-
-RegisterVaccineView ..> RegisterVaccineController
-RegisterVaccineController ..> Administrator
-RegisterVaccineController ..> VaccineContainer
-RegisterVaccineController ..> Vaccine
-RegisterVaccineController ..> VaccineTypeContainer
-RegisterVaccineController ..> VaccineType
-
+Admin -> System: confirms the data
+System --> Admin: informs operation success
 @enduml
