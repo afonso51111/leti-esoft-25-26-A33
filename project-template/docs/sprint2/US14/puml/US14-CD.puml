@@ -4,7 +4,6 @@
 hide circle
 skinparam classAttributeIconSize 0
 
-' --- Classes da UI e Controller ---
 
 class RegisterEmployeeView {
 }
@@ -15,7 +14,6 @@ class RegisterEmployeeController {
     + saveEmployee(): Result
 }
 
-' --- Classes de Domínio e Contentores ---
 
 class Administrator {
     + getEmployeeContainer(): EmployeeContainer
@@ -45,7 +43,6 @@ class Role {
     - description: string
 }
 
-' --- Associações (Relações Permanentes) ---
 
 Administrator "1" -right-> "1" EmployeeContainer:  maintains
 EmployeeContainer "1" -right-> "0..*" Employee:  records
@@ -55,7 +52,6 @@ RoleContainer "1" -down-> "0..*" Role: records
 
 Employee "0..*" -left-> "1" Role: has a
 
-' --- Dependências (Relações Momentâneas) ---
 
 RegisterEmployeeView ..> RegisterEmployeeController
 
@@ -63,7 +59,6 @@ RegisterEmployeeController ..> Administrator
 RegisterEmployeeController ..> EmployeeContainer
 RegisterEmployeeController ..> Employee
 
-' Controller precisa de Roles para apresentar na View
 RegisterEmployeeController ..> RoleContainer
 RegisterEmployeeController ..> Role
 

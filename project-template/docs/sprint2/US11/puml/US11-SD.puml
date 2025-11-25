@@ -28,8 +28,7 @@ Ctrl -> Admin: getVaccineContainer()
 Admin --> Ctrl: vContainer
 Ctrl -> V_Container: create(name, manufacturer, selectedType)
 V_Container --> Vaccine**: create(name, manufacturer, selectedType)
-' Vaccine constructor validates data (AC11-2, AC11-3)
-' Throws exception if invalid
+
 V_Container --> Ctrl: vaccine
 Ctrl --> View: ok
 View --> User: shows all data and requests confirmation

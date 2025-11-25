@@ -30,7 +30,6 @@ class ListEmployeeByRoleView {
 class ListEmployeeByRoleController {
 }
 
-' Relações principais do domínio
 Administrator "1" -down- "1" EmployeeContainer : manages >
 Administrator "1" -down- "1" RoleContainer : manages >
 
@@ -39,7 +38,6 @@ RoleContainer "1" -left- "0..*" Role : contains >
 
 Employee "0..*" -up- "1" Role : has a >
 
-' Relações de controlo
 ListEmployeeByRoleView ..> ListEmployeeByRoleController : uses
 ListEmployeeByRoleController ..> Administrator : uses
 

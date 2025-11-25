@@ -15,37 +15,29 @@ activate User
 
 User -> View: asks to register a new employee
 
-'--- Início do carregamento de dados para o formulário (AC14-1) ---
-' A View precisa da lista de Roles para mostrar
 View -> Ctrl: getRoles()
 Ctrl -> Admin: getRoleContainer()
 Admin --> Ctrl: roleCont
 Ctrl -> RoleCont: getRoles()
 RoleCont --> Ctrl: list<Role>
 Ctrl --> View: list<Role>
-'--- Fim do carregamento de dados ---
 
 View --> User: requests data (name, phone, email, cc) and role selection
 
 User -> View: types requested data and selects a role
 View -> Ctrl: registerEmployee(name, phone, email, cc, selectedRole)
 
-'--- Início da criação (passo de "create") ---
 Ctrl -> Admin: getEmployeeContainer()
 Admin --> Ctrl: empCont
 Ctrl -> EmpCont: create(name, phone, email, cc, selectedRole)
 EmpCont --> Emp**: create(name, phone, email, cc, selectedRole)
-' O construtor de Employee valida os dados (AC14-2, AC14-3)
-' Se falhar, lança exceção aqui.
 EmpCont --> Ctrl: emp
 Ctrl --> View: ok
-'--- Fim da criação ---
 
 View --> User: shows all data and requests confirmation
 
 User -> View: confirms the data
 
-'--- Início do "save" ---
 View -> Ctrl: saveEmployee()
 Ctrl -> EmpCont: save(emp)
 EmpCont -> EmpCont : validate(emp) ' Validação global (ex: duplicados - AC14-4)
@@ -54,7 +46,6 @@ EmpCont -> EmpCont: add(emp)
 EmpCont --> EmpCont : ok
 EmpCont --> Ctrl: ok
 Ctrl --> View: ok
-'--- Fim do "save" ---
 
 View --> User: informs operation success
 @enduml

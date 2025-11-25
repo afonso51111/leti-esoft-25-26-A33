@@ -21,8 +21,7 @@ Ctrl -> Admin: getVaccineTypeContainer()
 Admin --> Ctrl: container
 Ctrl -> Container: create(code, description)
 Container --> VType**: create(code, description)
-' O construtor de VType valida os dados (AC10-1, AC10-2)
-' Se falhar, lança exceção aqui.
+
 Container --> Ctrl: vType
 Ctrl --> View: ok
 View --> User: shows all data and requests confirmation

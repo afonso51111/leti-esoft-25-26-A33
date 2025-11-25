@@ -19,10 +19,8 @@ class Role {
     - description
 }
 
-' O Administrador mantém o registo de Empregados
 Administrator "1" -right-- "0..*" Employee:  maintains >
 
-' Cada Empregado tem obrigatoriamente um Papel (AC14-1)
 Employee "0..*" -left-- "1" Role:  has a >
 
 @enduml
