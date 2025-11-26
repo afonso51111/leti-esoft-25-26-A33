@@ -4,15 +4,15 @@
 autoactivate on
 autonumber
 
-actor "Administrator" as Admin
+actor "DGS Administrator" as Admin
 participant ":System" as System
 
 activate Admin
 
 Admin -> System: asks to register a new employee
-System --> Admin: requests data (name, phone, email, cc) and role selection
+System --> Admin: requests data (name, address, phone, email, cc) and role selection
 
-Admin -> System: types requested data and selects role
+Admin -> System: types requested data and selects role (Nurse/Receptionist)
 System --> Admin: shows all data and requests confirmation
 
 Admin -> System: confirms the data

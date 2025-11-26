@@ -1,13 +1,12 @@
 @startuml
-'https://plantuml-server.url.net/svg/
+'https://plantuml.com/sequence-diagram
 autoactivate on
 autonumber
 
-actor "Administrator" as User
+actor "DGS Administrator" as User
 participant ":RegisterEmployeeView" as View
 participant ":RegisterEmployeeController" as Ctrl
-participant ":Administrator" as Admin
-participant "roleCont:RoleContainer" as RoleCont
+participant ":DGS Administrator" as Admin
 participant "empCont:EmployeeContainer" as EmpCont
 participant "emp:Employee" as Emp
 
@@ -16,21 +15,19 @@ activate User
 User -> View: asks to register a new employee
 
 View -> Ctrl: getRoles()
-Ctrl -> Admin: getRoleContainer()
-Admin --> Ctrl: roleCont
-Ctrl -> RoleCont: getRoles()
-RoleCont --> Ctrl: list<Role>
-Ctrl --> View: list<Role>
+Ctrl --> View: list<String> (Nurse, Receptionist)
 
-View --> User: requests data (name, phone, email, cc) and role selection
+View --> User: requests data and role selection
 
-User -> View: types requested data and selects a role
-View -> Ctrl: registerEmployee(name, phone, email, cc, selectedRole)
+User -> View: types data and selects "Nurse"
+View -> Ctrl: registerEmployee(name, address, phone, email, cc, "Nurse")
 
 Ctrl -> Admin: getEmployeeContainer()
 Admin --> Ctrl: empCont
-Ctrl -> EmpCont: create(name, phone, email, cc, selectedRole)
-EmpCont --> Emp**: create(name, phone, email, cc, selectedRole)
+Ctrl -> EmpCont: create(name, address, phone, email, cc, "Nurse")
+
+EmpCont -> Emp**: create(name, address, ...)
+note right: Instantiates 'Nurse' or 'Receptionist' \nbased on selection
 EmpCont --> Ctrl: emp
 Ctrl --> View: ok
 
@@ -40,7 +37,7 @@ User -> View: confirms the data
 
 View -> Ctrl: saveEmployee()
 Ctrl -> EmpCont: save(emp)
-EmpCont -> EmpCont : validate(emp) ' Validação global (ex: duplicados - AC14-4)
+EmpCont -> EmpCont : validate(emp) ' Validação Global (email/phone unicos)
 EmpCont --> EmpCont : ok
 EmpCont -> EmpCont: add(emp)
 EmpCont --> EmpCont : ok

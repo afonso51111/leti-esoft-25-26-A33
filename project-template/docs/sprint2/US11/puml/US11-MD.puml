@@ -9,12 +9,13 @@ class Administrator {
 
 class VaccineType {
     - code
-    - description
+    - disease
+    - short_description
 }
 
 class Vaccine {
-    - name
-    - manufacturer
+     - commercial_name
+     - brand
 }
 
 Administrator "1" -right-- "0..*" Vaccine:  maintains >

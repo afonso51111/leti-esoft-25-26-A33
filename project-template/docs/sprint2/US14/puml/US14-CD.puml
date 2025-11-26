@@ -1,5 +1,5 @@
 @startuml
-'https://plantuml-server.url.net/svg/
+'https://plantuml.com/class-diagram
 
 hide circle
 skinparam classAttributeIconSize 0
@@ -9,57 +9,47 @@ class RegisterEmployeeView {
 }
 
 class RegisterEmployeeController {
-    + getRoles(): List<Role>
-    + registerEmployee(string name, string phone, string email, string cc, Role role): void
+    + getRoles(): List<String>
+    + registerEmployee(name, address, phone, email, cc, roleId): void
     + saveEmployee(): Result
 }
 
 
-class Administrator {
+class "DGS Administrator" {
     + getEmployeeContainer(): EmployeeContainer
-    + getRoleContainer(): RoleContainer
 }
 
 class EmployeeContainer {
-    + create(string name, string phone, string email, string cc, Role role): Employee
+    + create(name, address, phone, email, cc, roleId): Employee
     + save(Employee obj): Result
 }
 
-class Employee {
+abstract class Employee {
     - name: string
-    - phoneNumber: string
-    - emailAddress: string
-    - citizenCardNumber: string
-    Employee(string name, string phone, string email, string cc, Role role)
+    - postal_address: string
+    - phone_number: string
+    - email: string
+    - citizen_card_number: string
+    + Employee(name, address, phone, email, cc)
 }
 
-class RoleContainer {
-    + getRoles(): List<Role>
-    ' + getRoleById(string id): Role
+class Nurse {
 }
 
-class Role {
-    - code: string
-    - description: string
+class Receptionist {
 }
 
 
-Administrator "1" -right-> "1" EmployeeContainer:  maintains
+"DGS Administrator" "1" -right-> "1" EmployeeContainer:  manages
 EmployeeContainer "1" -right-> "0..*" Employee:  records
 
-Administrator "1" -down-> "1" RoleContainer: maintains
-RoleContainer "1" -down-> "0..*" Role: records
-
-Employee "0..*" -left-> "1" Role: has a
-
+Nurse --|> Employee
+Receptionist --|> Employee
 
 RegisterEmployeeView ..> RegisterEmployeeController
 
-RegisterEmployeeController ..> Administrator
+RegisterEmployeeController ..> "DGS Administrator"
 RegisterEmployeeController ..> EmployeeContainer
 RegisterEmployeeController ..> Employee
-
-RegisterEmployeeController ..> RoleContainer
-RegisterEmployeeController ..> Role
 
 @enduml

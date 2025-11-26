@@ -1,26 +1,29 @@
 @startuml
-'https://plantuml-server.url.net/svg/
+'https://plantuml.com/class-diagram
 skinparam classAttributeIconSize 0
 hide circle
 hide methods
 
-class Administrator {
+class "DGS Administrator" {
 }
 
 class Employee {
     - name
-    - phoneNumber
-    - emailAddress
-    - citizenCardNumber
+    - postal_address
+    - phone_number
+    - email
+    - citizen_card_number
 }
 
-class Role {
-    - code
-    - description
+class Nurse {
 }
 
-Administrator "1" -right-- "0..*" Employee:  maintains >
+class Receptionist {
+}
 
-Employee "0..*" -left-- "1" Role:  has a >
+"DGS Administrator" "1" -right-- "0..*" Employee:  manages >
+
+Nurse --|> Employee
+Receptionist --|> Employee
 
 @enduml

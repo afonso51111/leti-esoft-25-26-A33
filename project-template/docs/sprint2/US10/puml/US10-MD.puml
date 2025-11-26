@@ -8,8 +8,9 @@ class Administrator {
 }
 
 class VaccineType {
-    - code
-    - description
+       - code
+       - disease
+       - short_description
 }
 
 Administrator "1" -right-- "0..*" VaccineType:  maintains >
