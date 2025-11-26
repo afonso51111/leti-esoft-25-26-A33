@@ -3,23 +3,25 @@ skinparam classAttributeIconSize 0
 hide circle
 hide methods
 
-class Administrator {
+class "DGS Administrator" {
 }
 
 class Employee {
-    - id
     - name
-    - phoneNumber
-    - emailAddress
-    - citizenCardNumber
+    - postal_address
+    - phone_number
+    - email
 }
 
-class Role {
-    - designation
+class Nurse {
 }
 
-Administrator "1" -right-- "0..*" Employee : maintains >
+class Receptionist {
+}
 
-Employee "0..*" -left-- "1" Role : has a >
+"DGS Administrator" "1" -right-- "0..*" Employee : manages >
+
+Nurse --|> Employee
+Receptionist --|> Employee
 
 @enduml

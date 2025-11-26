@@ -5,12 +5,11 @@ skinparam shadowing false
 
 autonumber
 
-actor "Administrator" as Admin
+actor "DGS Administrator" as Admin
 participant ":ListEmployeeByRoleView" as View
 participant ":ListEmployeeByRoleController" as Controller
-participant ":Administrator" as AdminObj
-participant ":RoleContainer" as RoleContainer
-participant ":EmployeeContainer" as EmployeeContainer
+participant ":Company" as Company
+participant "store:EmployeeStore" as Store
 
 activate Admin
 
@@ -19,20 +18,8 @@ activate Admin
 
         View -> Controller : getRoles()
         activate Controller
-
-            Controller -> AdminObj : getRoles()
-            activate AdminObj
-
-                AdminObj -> RoleContainer : getAllRoles()
-                activate RoleContainer
-
-                    RoleContainer --> AdminObj : roleList
-                deactivate RoleContainer
-
-                AdminObj --> Controller : roleList
-            deactivate AdminObj
-
-            Controller --> View : roleList
+            note right of Controller: Roles are defined by\nEmployee subclasses\n(Nurse, Receptionist)
+            Controller --> View : list of roles
         deactivate Controller
 
         View --> Admin : shows list of available roles
@@ -52,19 +39,24 @@ activate Admin
         View -> Controller : getEmployeesByRole(role)
         activate Controller
 
-            Controller -> AdminObj : getEmployeesByRole(role)
-            activate AdminObj
+            Controller -> Company : getEmployeeStore()
+            activate Company
+                Company --> Controller : store
+            deactivate Company
 
-                AdminObj -> EmployeeContainer : filterByRole(role)
-                activate EmployeeContainer
+            Controller -> Store : getEmployeesByRole(role)
+            activate Store
 
-                    EmployeeContainer -> EmployeeContainer : sortByName(filteredList)
+                Store -> Store : filterByClassType(role)
+                activate Store
+                deactivate Store
 
-                    EmployeeContainer --> AdminObj : sortedEmployeeList
-                deactivate EmployeeContainer
+                Store -> Store : sortByName(filteredList)
+                activate Store
+                deactivate Store
 
-                AdminObj --> Controller : sortedEmployeeList
-            deactivate AdminObj
+                Store --> Controller : sortedEmployeeList
+            deactivate Store
 
             Controller --> View : sortedEmployeeList
         deactivate Controller
