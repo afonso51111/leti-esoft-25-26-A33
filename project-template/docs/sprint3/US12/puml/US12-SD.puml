@@ -1,0 +1,70 @@
+@startuml
+autonumber
+actor "DGS Administrator" as Admin
+participant ":SpecifyVaccineTypeUI" as UI
+participant ":SpecifyVaccineType\nController" as CTRL
+participant ":Company" as CMP
+participant "store\n:VaccineTypeStore" as STORE
+participant "vt\n:Vaccine Type" as VT
+
+activate Admin
+Admin -> UI : asks to specify a new vaccine type
+activate UI
+
+UI --> Admin : requests data (code, description, disease)
+deactivate UI
+
+Admin -> UI : types the requested data
+activate UI
+
+UI -> CTRL : createVaccineType(dto)
+activate CTRL
+
+CTRL -> CMP : store = getVaccineTypeStore()
+activate CMP
+deactivate CMP
+
+CTRL -> STORE : vt = createVaccineType(dto)
+activate STORE
+    create VT
+    STORE -> VT : create(code, description, disease)
+    activate VT
+        note right of VT
+           Validates internal rules
+           (e.g. code length)
+        end note
+    deactivate VT
+STORE --> CTRL : vt
+deactivate STORE
+
+CTRL -> STORE : validateVaccineType(vt)
+activate STORE
+    note right of STORE
+       Checks Global Rules:
+       - Code must be unique
+    end note
+deactivate STORE
+
+CTRL --> UI : vt info
+deactivate CTRL
+
+UI --> Admin : shows data and requests confirmation
+deactivate UI
+
+Admin -> UI : confirms
+activate UI
+
+UI -> CTRL : save()
+activate CTRL
+    CTRL -> STORE : saveVaccineType(vt)
+    activate STORE
+        STORE -> STORE : add(vt)
+    deactivate STORE
+CTRL --> UI : success
+deactivate CTRL
+
+UI --> Admin : informs operation success
+deactivate UI
+deactivate Admin
+
+@enduml

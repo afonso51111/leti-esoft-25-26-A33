@@ -1,0 +1,76 @@
+@startuml
+autonumber
+actor "Receptionist" as Rec
+participant ":RegisterSNSUserUI" as UI
+participant ":RegisterSNSUserController" as CTRL
+participant ":Company" as CMP
+participant "store\n:SNSUserStore" as STORE
+participant "user\n:SNS User" as USER
+
+activate Rec
+Rec -> UI : asks to register a new SNS User
+activate UI
+
+UI --> Rec : requests data (name, address, sex, phone, email, ...)
+deactivate UI
+
+Rec -> UI : types/selects the requested data
+activate UI
+
+UI -> CTRL : createSNSUser(dto)
+activate CTRL
+
+CTRL -> CMP : store = getSNSUserStore()
+activate CMP
+deactivate CMP
+
+CTRL -> STORE : user = createSNSUser(dto)
+activate STORE
+    create USER
+    STORE -> USER : create(name, address, sex, ...)
+    activate USER
+        note right of USER
+            Constructor validates
+            local formats (e.g. email regex)
+        end note
+    deactivate USER
+STORE --> CTRL : user
+deactivate STORE
+
+CTRL -> STORE : validateSNSUser(user)
+activate STORE
+    note right of STORE
+        Checks Global Business Rules:
+        Must ensure uniqueness for:
+        - SNS Number
+        - Citizen Card
+        - Phone Number
+        - Email
+    end note
+deactivate STORE
+
+CTRL --> UI : user info
+deactivate CTRL
+
+UI --> Rec : shows all data and requests confirmation
+deactivate UI
+
+Rec -> UI : confirms the data
+activate UI
+
+UI -> CTRL : save()
+activate CTRL
+
+CTRL -> STORE : saveSNSUser(user)
+activate STORE
+    STORE -> STORE : add(user)
+deactivate STORE
+
+CTRL --> UI : result
+deactivate CTRL
+
+UI --> Rec : informs operation success
+deactivate UI
+deactivate Rec
+
+@enduml

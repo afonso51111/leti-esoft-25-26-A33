@@ -1,0 +1,45 @@
+@startuml
+autonumber
+actor "SNS User" as User
+participant ":System" as System
+
+activate User
+
+User -> System : asks to schedule a vaccine administration
+activate System
+
+System --> User : shows list of vaccination centers and asks to select one
+deactivate System
+
+User -> System : selects a vaccination center
+activate System
+
+System --> User : asks to select the vaccine type (if applicable)
+deactivate System
+
+User -> System : selects the vaccine type
+activate System
+
+System --> User : requests the preferred date
+deactivate System
+
+User -> System : types the date
+activate System
+
+System --> User : shows available time slots for that date
+deactivate System
+
+User -> System : selects a time slot
+activate System
+
+System --> User : shows all data and requests confirmation
+deactivate System
+
+User -> System : confirms the data
+activate System
+
+System --> User : informs operation success
+deactivate System
+
+deactivate User
+@enduml

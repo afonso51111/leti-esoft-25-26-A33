@@ -1,0 +1,16 @@
+@startuml
+hide circle
+hide methods
+skinparam classAttributeIconSize 0
+
+class "DGS Administrator" {
+}
+
+class "Vaccine Type" {
+  - code
+  - disease
+  - short_description
+}
+
+"DGS Administrator" "1" -right-- "*" "Vaccine Type": manages >
+@enduml

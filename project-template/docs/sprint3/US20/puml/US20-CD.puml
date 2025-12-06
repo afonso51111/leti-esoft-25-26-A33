@@ -1,0 +1,45 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class RegisterSNSUserUI {
+}
+
+class RegisterSNSUserController {
+  + createSNSUser(dto)
+  + save()
+}
+
+class Company {
+  + getSNSUserStore()
+}
+
+class SNSUserStore {
+  + createSNSUser(dto)
+  + validateSNSUser(user)
+  + saveSNSUser(user)
+}
+
+class "SNS User" {
+  - sns_number
+  - name
+  - birth_date
+  - sex
+  - postal_address
+  - phone_number
+  - email
+  - citizen_card_number
+  + SNSUser(...)
+}
+
+class Receptionist {
+}
+
+RegisterSNSUserUI ..> RegisterSNSUserController
+RegisterSNSUserController ..> Company
+RegisterSNSUserController ..> SNSUserStore
+Company "1" --> "1" SNSUserStore : has >
+SNSUserStore "1" --> "*" "SNS User" : stores >
+Receptionist ..> RegisterSNSUserUI : uses >
+
+@enduml

@@ -1,0 +1,93 @@
+@startuml
+autonumber
+actor "DGS Administrator" as Admin
+participant ":RegisterVaccination\nCenterUI" as UI
+participant ":RegisterVaccination\nCenterController" as CTRL
+participant ":Company" as CMP
+participant "store\n:VaccinationCenterStore" as STORE
+participant "center\n:VaccinationCenter" as CENTER
+
+activate Admin
+Admin -> UI : asks to register a new vaccination center
+activate UI
+
+UI -> CTRL : getVaccinationCenterTypes()
+activate CTRL
+CTRL --> UI : list of types
+deactivate CTRL
+
+UI --> Admin : requests the vaccination center type
+deactivate UI
+
+Admin -> UI : selects the type (e.g. Healthcare Center)
+activate UI
+UI --> Admin : requests data (name, address, phone, email, website,\n open/close hours, capacity, + ARS/AGES if applicable)
+deactivate UI
+
+Admin -> UI : types the requested data
+activate UI
+
+UI -> CTRL : createVaccinationCenter(dto)
+activate CTRL
+
+CTRL -> CMP : store = getVaccinationCenterStore()
+activate CMP
+deactivate CMP
+
+CTRL -> STORE : center = createVaccinationCenter(dto)
+activate STORE
+
+    note right of STORE
+        Factory method: instantiates
+        HealthcareCenter or
+        CommunityMassVaccinationCenter
+        based on DTO type.
+    end note
+
+    create CENTER
+    STORE -> CENTER : create(name, address, ..., ars, ages)
+
+    activate CENTER
+        note right of CENTER
+            Constructor initializes
+            WaitingRoom and RecoveryRoom
+            (Composition)
+        end note
+    deactivate CENTER
+
+STORE --> CTRL : center
+deactivate STORE
+
+CTRL -> STORE : validateVaccinationCenter(center)
+activate STORE
+    note right of STORE
+        Checks Global Business Rules
+        (e.g. Name Uniqueness)
+    end note
+deactivate STORE
+
+CTRL --> UI : center info
+deactivate CTRL
+
+UI --> Admin : shows all data and requests confirmation
+deactivate UI
+
+Admin -> UI : confirms the data
+activate UI
+
+UI -> CTRL : save()
+activate CTRL
+
+CTRL -> STORE : saveVaccinationCenter(center)
+activate STORE
+    STORE -> STORE : add(center)
+deactivate STORE
+
+CTRL --> UI : result
+deactivate CTRL
+
+UI --> Admin : informs operation success
+deactivate UI
+deactivate Admin
+
+@enduml

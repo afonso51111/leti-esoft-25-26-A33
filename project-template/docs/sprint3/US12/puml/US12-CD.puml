@@ -1,0 +1,36 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class SpecifyVaccineTypeUI {
+}
+
+class SpecifyVaccineTypeController {
+  + createVaccineType(dto)
+  + save()
+}
+
+class Company {
+  + getVaccineTypeStore()
+}
+
+class VaccineTypeStore {
+  + createVaccineType(dto)
+  + validateVaccineType(vt)
+  + saveVaccineType(vt)
+}
+
+class "Vaccine Type" {
+  - code
+  - disease
+  - short_description
+  + VaccineType(code, description, disease)
+}
+
+SpecifyVaccineTypeUI ..> SpecifyVaccineTypeController
+SpecifyVaccineTypeController ..> Company
+SpecifyVaccineTypeController ..> VaccineTypeStore
+Company "1" --> "1" VaccineTypeStore : has >
+VaccineTypeStore "1" --> "*" "Vaccine Type" : stores >
+
+@enduml

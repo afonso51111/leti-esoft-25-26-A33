@@ -1,0 +1,22 @@
+@startuml
+hide circle
+hide methods
+skinparam classAttributeIconSize 0
+
+class Receptionist {
+}
+
+class "SNS User" {
+  - sns_number
+  - name
+  - birth_date
+  - sex
+  - postal_address
+  - phone_number
+  - email
+  - citizen_card_number
+}
+
+Receptionist "1" -right-- "*" "SNS User": registers >
+
+@enduml

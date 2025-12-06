@@ -1,0 +1,40 @@
+@startuml
+autonumber
+actor "DGS Administrator" as Admin
+participant ":System" as System
+
+activate Admin
+
+Admin -> System : asks to register a new vaccination center
+activate System
+
+System --> Admin : requests the vaccination center type \n(e.g. Community Mass or Healthcare)
+deactivate System
+
+Admin -> System : selects the type
+activate System
+
+System --> Admin : requests data (name, address, phone, email, \nwebsite, opening hours, closing hours, capacity)
+deactivate System
+
+Admin -> System : types the requested data
+activate System
+
+opt if type is Healthcare Center
+    System --> Admin : requests specific data (ARS, AGES)
+    deactivate System
+    Admin -> System : types the specific data
+    activate System
+end
+
+System --> Admin : shows all data and requests confirmation
+deactivate System
+
+Admin -> System : confirms the data
+activate System
+
+System --> Admin : informs operation success
+deactivate System
+
+deactivate Admin
+@enduml

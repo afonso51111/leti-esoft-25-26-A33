@@ -1,0 +1,63 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class RegisterVaccinationCenterUI {
+}
+
+class RegisterVaccinationCenterController {
+  + createVaccinationCenter(dto)
+  + save()
+  + getVaccinationCenterTypes()
+}
+
+class Company {
+  + getVaccinationCenterStore()
+}
+
+class VaccinationCenterStore {
+  + createVaccinationCenter(dto)
+  + validateVaccinationCenter(center)
+  + saveVaccinationCenter(center)
+}
+
+abstract class "Vaccination Center" {
+  - name
+  - postal_address
+  - phone_number
+  - email
+  - website_address
+  - opening_hours
+  - closing_hours
+  - capacity_per_hour
+  + VaccinationCenter(...)
+}
+
+class "Healthcare Center" {
+  - ars
+  - ages
+  + HealthcareCenter(...)
+}
+
+class "Community Mass Vaccination Center" {
+  + CommunityMassVaccinationCenter(...)
+}
+
+class "Waiting Room" {
+}
+class "Recovery Room" {
+}
+
+RegisterVaccinationCenterUI ..> RegisterVaccinationCenterController
+RegisterVaccinationCenterController ..> Company
+RegisterVaccinationCenterController ..> VaccinationCenterStore
+Company "1" --> "1" VaccinationCenterStore : has >
+VaccinationCenterStore "1" --> "*" "Vaccination Center" : stores >
+
+"Healthcare Center" --|> "Vaccination Center"
+"Community Mass Vaccination Center" --|> "Vaccination Center"
+
+"Vaccination Center" *-- "Waiting Room"
+"Vaccination Center" *-- "Recovery Room"
+
+@enduml

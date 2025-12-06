@@ -1,0 +1,27 @@
+@startuml
+autonumber
+actor "DGS Administrator" as Admin
+participant ":System" as System
+
+activate Admin
+
+Admin -> System : asks to specify a new vaccine type
+activate System
+
+System --> Admin : requests data (code, description, disease)
+deactivate System
+
+Admin -> System : types the requested data
+activate System
+
+System --> Admin : shows all data and requests confirmation
+deactivate System
+
+Admin -> System : confirms the data
+activate System
+
+System --> Admin : informs operation success
+deactivate System
+
+deactivate Admin
+@enduml

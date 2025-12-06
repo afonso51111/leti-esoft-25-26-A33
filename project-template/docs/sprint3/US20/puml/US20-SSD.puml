@@ -1,0 +1,27 @@
+@startuml
+autonumber
+actor "Receptionist" as Rec
+participant ":System" as System
+
+activate Rec
+
+Rec -> System : asks to register a new SNS User
+activate System
+
+System --> Rec : requests data (name, address, sex, phone, email, \nbirth date, SNS number, citizen card number)
+deactivate System
+
+Rec -> System : types the requested data and selects the sex
+activate System
+
+System --> Rec : shows all data and requests confirmation
+deactivate System
+
+Rec -> System : confirms the data
+activate System
+
+System --> Rec : informs operation success
+deactivate System
+
+deactivate Rec
+@enduml
