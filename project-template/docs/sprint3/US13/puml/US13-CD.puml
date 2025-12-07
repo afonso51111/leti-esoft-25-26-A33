@@ -9,10 +9,12 @@ class RegisterVaccinationCenterController {
   + createVaccinationCenter(dto)
   + save()
   + getVaccinationCenterTypes()
+  + getVaccineTypes()
 }
 
 class Company {
   + getVaccinationCenterStore()
+  + getVaccineTypeStore()
 }
 
 class VaccinationCenterStore {
@@ -40,7 +42,13 @@ class "Healthcare Center" {
 }
 
 class "Community Mass Vaccination Center" {
-  + CommunityMassVaccinationCenter(...)
+  + CommunityMassVaccinationCenter(..., vaccineType)
+}
+
+class "Vaccine Type" {
+    - code
+    - description
+    - technology
 }
 
 class "Waiting Room" {
@@ -51,11 +59,16 @@ class "Recovery Room" {
 RegisterVaccinationCenterUI ..> RegisterVaccinationCenterController
 RegisterVaccinationCenterController ..> Company
 RegisterVaccinationCenterController ..> VaccinationCenterStore
+
+RegisterVaccinationCenterController ..> "Vaccine Type"
+
 Company "1" --> "1" VaccinationCenterStore : has >
 VaccinationCenterStore "1" --> "*" "Vaccination Center" : stores >
 
 "Healthcare Center" --|> "Vaccination Center"
 "Community Mass Vaccination Center" --|> "Vaccination Center"
+
+"Community Mass Vaccination Center" "1" --> "1" "Vaccine Type" : administers >
 
 "Vaccination Center" *-- "Waiting Room"
 "Vaccination Center" *-- "Recovery Room"

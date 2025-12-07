@@ -6,7 +6,7 @@ skinparam classAttributeIconSize 0
 class "DGS Administrator" {
 }
 
-class "Vaccination Center" {
+abstract class "Vaccination Center" {
   - name
   - postal_address
   - phone_number
@@ -25,6 +25,12 @@ class "Healthcare Center" {
 class "Community Mass Vaccination Center" {
 }
 
+class "Vaccine Type" {
+  - code
+  - description
+  - technology
+}
+
 class "Waiting Room" {
 }
 
@@ -35,6 +41,8 @@ class "Recovery Room" {
 "Community Mass Vaccination Center" --|> "Vaccination Center"
 
 "DGS Administrator" "1" -right-- "0..*" "Vaccination Center": manages >
+
+"Community Mass Vaccination Center" "1" -- "1" "Vaccine Type": administers >
 
 "Vaccination Center" "1" *-- "1" "Waiting Room": has >
 "Vaccination Center" "1" *-- "1" "Recovery Room": has >

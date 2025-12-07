@@ -6,11 +6,19 @@ skinparam classAttributeIconSize 0
 class "DGS Administrator" {
 }
 
-class "Vaccine Type" {
-  - code
-  - disease
-  - short_description
+class Vaccine {
+  - name
+  - brand
+  - number_of_doses
 }
 
-"DGS Administrator" "1" -right-- "*" "Vaccine Type": manages >
+class "Vaccine Type" {
+  - code
+  - description
+  - technology
+}
+
+"DGS Administrator" "1" -right-- "*" Vaccine: manages >
+Vaccine "*" -up-- "1" "Vaccine Type": has >
+
 @enduml

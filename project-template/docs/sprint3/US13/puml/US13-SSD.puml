@@ -14,6 +14,13 @@ deactivate System
 Admin -> System : selects the type
 activate System
 
+opt if type is Community Mass Vaccination Center
+    System --> Admin : requests the vaccine type to administer
+    deactivate System
+    Admin -> System : selects the vaccine type
+    activate System
+end
+
 System --> Admin : requests data (name, address, phone, email, \nwebsite, opening hours, closing hours, capacity)
 deactivate System
 

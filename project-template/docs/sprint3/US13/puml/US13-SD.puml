@@ -5,6 +5,7 @@ participant ":RegisterVaccination\nCenterUI" as UI
 participant ":RegisterVaccination\nCenterController" as CTRL
 participant ":Company" as CMP
 participant "store\n:VaccinationCenterStore" as STORE
+participant "vtStore\n:VaccineTypeStore" as VTSTORE
 participant "center\n:VaccinationCenter" as CENTER
 
 activate Admin
@@ -19,9 +20,27 @@ deactivate CTRL
 UI --> Admin : requests the vaccination center type
 deactivate UI
 
-Admin -> UI : selects the type (e.g. Healthcare Center)
+Admin -> UI : selects the type (e.g. Community Mass Vaccination Center)
 activate UI
-UI --> Admin : requests data (name, address, phone, email, website,\n open/close hours, capacity, + ARS/AGES if applicable)
+
+opt if selected type is CommunityMassVaccinationCenter
+    UI -> CTRL : getVaccineTypes()
+    activate CTRL
+    CTRL -> CMP : vtStore = getVaccineTypeStore()
+    activate CMP
+    deactivate CMP
+    CTRL -> VTSTORE : getVaccineTypes()
+    activate VTSTORE
+    VTSTORE --> CTRL : list of vaccine types
+    deactivate VTSTORE
+    CTRL --> UI : list of vaccine types
+    deactivate CTRL
+
+    UI --> Admin : requests to select the vaccine type
+    Admin -> UI : selects the vaccine type
+end
+
+UI --> Admin : requests data (name, address, phone, email, website,\n open/close hours, capacity, + ARS/AGES if Healthcare)
 deactivate UI
 
 Admin -> UI : types the requested data
@@ -38,14 +57,13 @@ CTRL -> STORE : center = createVaccinationCenter(dto)
 activate STORE
 
     note right of STORE
-        Factory method: instantiates
-        HealthcareCenter or
-        CommunityMassVaccinationCenter
-        based on DTO type.
+        Factory method:
+        If Healthcare: creates with ARS/AGES
+        If Community: creates with **VaccineType** (AC13-1)
     end note
 
     create CENTER
-    STORE -> CENTER : create(name, address, ..., ars, ages)
+    STORE -> CENTER : create(...)
 
     activate CENTER
         note right of CENTER
@@ -62,7 +80,7 @@ CTRL -> STORE : validateVaccinationCenter(center)
 activate STORE
     note right of STORE
         Checks Global Business Rules
-        (e.g. Name Uniqueness)
+        (e.g. Name Uniqueness AC13-1)
     end note
 deactivate STORE
 

@@ -2,35 +2,32 @@
 skinparam classAttributeIconSize 0
 hide circle
 
-class SpecifyVaccineTypeUI {
+class ListVaccinesUI {
 }
 
-class SpecifyVaccineTypeController {
-  + createVaccineType(dto)
-  + save()
+class ListVaccinesController {
+  + getVaccinesList() : List<Vaccine>
 }
 
 class Company {
-  + getVaccineTypeStore()
+  + getVaccineStore() : VaccineStore
 }
 
-class VaccineTypeStore {
-  + createVaccineType(dto)
-  + validateVaccineType(vt)
-  + saveVaccineType(vt)
+class VaccineStore {
+  + getVaccines() : List<Vaccine>
 }
 
-class "Vaccine Type" {
-  - code
-  - disease
-  - short_description
-  + VaccineType(code, description, disease)
+class Vaccine {
+  - name
+  - brand
+  - type
 }
 
-SpecifyVaccineTypeUI ..> SpecifyVaccineTypeController
-SpecifyVaccineTypeController ..> Company
-SpecifyVaccineTypeController ..> VaccineTypeStore
-Company "1" --> "1" VaccineTypeStore : has >
-VaccineTypeStore "1" --> "*" "Vaccine Type" : stores >
+ListVaccinesUI ..> ListVaccinesController
+ListVaccinesController ..> Company
+ListVaccinesController ..> VaccineStore
+
+Company "1" --> "1" VaccineStore : has >
+VaccineStore "1" --> "*" Vaccine : stores >
 
 @enduml

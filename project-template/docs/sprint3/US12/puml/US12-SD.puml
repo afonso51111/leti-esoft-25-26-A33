@@ -1,69 +1,36 @@
 @startuml
 autonumber
 actor "DGS Administrator" as Admin
-participant ":SpecifyVaccineTypeUI" as UI
-participant ":SpecifyVaccineType\nController" as CTRL
+participant ":ListVaccinesUI" as UI
+participant ":ListVaccines\nController" as CTRL
 participant ":Company" as CMP
-participant "store\n:VaccineTypeStore" as STORE
-participant "vt\n:Vaccine Type" as VT
+participant "store\n:VaccineStore" as STORE
 
 activate Admin
-Admin -> UI : asks to specify a new vaccine type
+Admin -> UI : asks to list all vaccines
 activate UI
 
-UI --> Admin : requests data (code, description, disease)
-deactivate UI
-
-Admin -> UI : types the requested data
-activate UI
-
-UI -> CTRL : createVaccineType(dto)
+UI -> CTRL : getVaccinesList()
 activate CTRL
 
-CTRL -> CMP : store = getVaccineTypeStore()
+CTRL -> CMP : store = getVaccineStore()
 activate CMP
 deactivate CMP
 
-CTRL -> STORE : vt = createVaccineType(dto)
-activate STORE
-    create VT
-    STORE -> VT : create(code, description, disease)
-    activate VT
-        note right of VT
-           Validates internal rules
-           (e.g. code length)
-        end note
-    deactivate VT
-STORE --> CTRL : vt
-deactivate STORE
-
-CTRL -> STORE : validateVaccineType(vt)
+CTRL -> STORE : getVaccines()
 activate STORE
     note right of STORE
-       Checks Global Rules:
-       - Code must be unique
+       1. Gets all vaccines
+       2. Groups by Type
+       3. Sorts by Brand (AC12-1)
     end note
 deactivate STORE
+STORE --> CTRL : vaccineList
 
-CTRL --> UI : vt info
+CTRL --> UI : vaccineList
 deactivate CTRL
 
-UI --> Admin : shows data and requests confirmation
-deactivate UI
-
-Admin -> UI : confirms
-activate UI
-
-UI -> CTRL : save()
-activate CTRL
-    CTRL -> STORE : saveVaccineType(vt)
-    activate STORE
-        STORE -> STORE : add(vt)
-    deactivate STORE
-CTRL --> UI : success
-deactivate CTRL
-
-UI --> Admin : informs operation success
+UI --> Admin : displays the list of vaccines
 deactivate UI
 deactivate Admin
 
