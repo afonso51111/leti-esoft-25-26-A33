@@ -29,24 +29,13 @@ activate STORE
     create USER
     STORE -> USER : create(name, address, sex, ...)
     activate USER
-        note right of USER
-            Constructor validates
-            local formats (e.g. email regex)
-        end note
     deactivate USER
+
 STORE --> CTRL : user
 deactivate STORE
 
 CTRL -> STORE : validateSNSUser(user)
 activate STORE
-    note right of STORE
-        Checks Global Business Rules:
-        Must ensure uniqueness for:
-        - SNS Number
-        - Citizen Card
-        - Phone Number
-        - Email
-    end note
 deactivate STORE
 
 CTRL --> UI : user info

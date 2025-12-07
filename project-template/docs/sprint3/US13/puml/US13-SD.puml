@@ -56,32 +56,17 @@ deactivate CMP
 CTRL -> STORE : center = createVaccinationCenter(dto)
 activate STORE
 
-    note right of STORE
-        Factory method:
-        If Healthcare: creates with ARS/AGES
-        If Community: creates with **VaccineType** (AC13-1)
-    end note
+create CENTER
+STORE -> CENTER : create(...)
 
-    create CENTER
-    STORE -> CENTER : create(...)
-
-    activate CENTER
-        note right of CENTER
-            Constructor initializes
-            WaitingRoom and RecoveryRoom
-            (Composition)
-        end note
-    deactivate CENTER
+activate CENTER
+deactivate CENTER
 
 STORE --> CTRL : center
 deactivate STORE
 
 CTRL -> STORE : validateVaccinationCenter(center)
 activate STORE
-    note right of STORE
-        Checks Global Business Rules
-        (e.g. Name Uniqueness AC13-1)
-    end note
 deactivate STORE
 
 CTRL --> UI : center info

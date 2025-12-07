@@ -13,7 +13,6 @@ activate User
 User -> UI : asks to schedule a vaccine administration
 activate UI
 
-'--- Selecionar Centro ---
 UI -> CTRL : getVaccinationCenters()
 activate CTRL
 CTRL -> CMP : store = getVaccinationCenterStore()
@@ -31,7 +30,6 @@ deactivate UI
 User -> UI : selects a vaccination center
 activate UI
 
-'--- Selecionar Tipo de Vacina ---
 UI -> CTRL : getVaccineTypes()
 activate CTRL
 CTRL -> CMP : typeStore = getVaccineTypeStore()
@@ -48,7 +46,6 @@ deactivate UI
 User -> UI : selects vaccine type
 activate UI
 
-'--- Selecionar Data e Slot ---
 UI --> User : requests preferred date
 deactivate UI
 User -> UI : types date
@@ -58,11 +55,7 @@ UI -> CTRL : getAvailableSlots(center, date)
 activate CTRL
     CTRL -> CENTER : getAvailableSlots(date)
     activate CENTER
-    note right of CENTER
-       Checks capacity per hour vs
-       existing appointments
-       for that day
-    end note
+
     CENTER --> CTRL : list of slots
     deactivate CENTER
 CTRL --> UI : list of slots
@@ -74,7 +67,6 @@ deactivate UI
 User -> UI : selects a time slot
 activate UI
 
-'--- Criar Agendamento ---
 UI -> CTRL : createAppointment(dto)
 activate CTRL
 

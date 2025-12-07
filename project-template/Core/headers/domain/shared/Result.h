@@ -24,4 +24,4 @@ public:
     static const Result NOK(int number,const wstring &message);
 };
 
-#endif //RESULT_H
+#endif

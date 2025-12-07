@@ -1,3 +1,3 @@
-C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/cmake-build-debug/CMakeFiles/Core.dir
-C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Tiago/Desktop/esoft/leti-esoft-25-26-A33/project-template/Core/cmake-build-debug/CMakeFiles/Core.dir
+C:/Users/Tiago/Desktop/esoft/leti-esoft-25-26-A33/project-template/Core/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Tiago/Desktop/esoft/leti-esoft-25-26-A33/project-template/Core/cmake-build-debug/CMakeFiles/rebuild_cache.dir

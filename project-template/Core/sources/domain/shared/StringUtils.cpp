@@ -3,10 +3,7 @@
 #include "headers/domain/shared/StringUtils.h"
 
 wstring StringUtils::toUpperCase(const wstring &value) {
-    //  Assuming your system is already in UTF-8
-    std::locale::global(std::locale(""));  // (*)
-    // Otherwise you have to change to an UTF-8 locale you actually have on your platform
-    // E.g.: std::locale::global(std::locale("en_US.UTF8"));
+    std::locale::global(std::locale(""));
     wstring copy = value;
     for (int x=0; x < value.size(); x++)
         copy[x] = towupper(value[x]);
@@ -14,10 +11,7 @@ wstring StringUtils::toUpperCase(const wstring &value) {
 }
 
 wstring StringUtils::toLowerCase(const wstring &value) {
-    //  Assuming your system is already in UTF-8
-    std::locale::global(std::locale(""));  // (*)
-    // Otherwise you have to change to an UTF-8 locale you actually have on your platform
-    // E.g.: std::locale::global(std::locale("en_US.UTF8"));
+    std::locale::global(std::locale(""));
     wstring copy = value;
     for (int x=0; x < value.size(); x++)
         copy[x] = towlower(value[x]);

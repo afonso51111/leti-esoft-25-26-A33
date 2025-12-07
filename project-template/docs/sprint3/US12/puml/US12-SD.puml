@@ -20,18 +20,9 @@ deactivate CMP
 
 CTRL -> STORE : allVaccines = getAll()
 activate STORE
-    note right of STORE
-        Returns complete list
-        of Vaccine objects
-    end note
 deactivate STORE
 
 CTRL -> CTRL : sortAndGroup(allVaccines)
-note right of CTRL
-    Applies AC12-1:
-    1. Group by Vaccine Type
-    2. Sort by Brand (alphabetically)
-end note
 
 CTRL --> UI : sortedList
 deactivate CTRL

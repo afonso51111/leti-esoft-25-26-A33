@@ -16,4 +16,4 @@ public:
     static bool ensureNotNullOrEmpty(const wstring &value, int minLength);
 };
 
-#endif //STRINGUTILS_H
+#endif
