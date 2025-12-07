@@ -2,36 +2,41 @@
 autonumber
 actor "DGS Administrator" as Admin
 participant ":ListVaccinesUI" as UI
-participant ":ListVaccines\nController" as CTRL
+participant ":ListVaccinesController" as CTRL
 participant ":Company" as CMP
 participant "store\n:VaccineStore" as STORE
+participant "v\n:Vaccine" as VAX
 
 activate Admin
 Admin -> UI : asks to list all vaccines
 activate UI
 
-UI -> CTRL : getVaccinesList()
+UI -> CTRL : getVaccineList()
 activate CTRL
 
 CTRL -> CMP : store = getVaccineStore()
 activate CMP
 deactivate CMP
 
-CTRL -> STORE : getVaccines()
+CTRL -> STORE : allVaccines = getAll()
 activate STORE
     note right of STORE
-       1. Gets all vaccines
-       2. Groups by Type
-       3. Sorts by Brand (AC12-1)
+        Returns complete list
+        of Vaccine objects
     end note
 deactivate STORE
-STORE --> CTRL : vaccineList
 
-CTRL --> UI : vaccineList
+CTRL -> CTRL : sortAndGroup(allVaccines)
+note right of CTRL
+    Applies AC12-1:
+    1. Group by Vaccine Type
+    2. Sort by Brand (alphabetically)
+end note
+
+CTRL --> UI : sortedList
 deactivate CTRL
 
-UI --> Admin : displays the list of vaccines
+UI --> Admin : shows the list of vaccines (grouped by type, sorted by brand)
 deactivate UI
 deactivate Admin
-
 @enduml

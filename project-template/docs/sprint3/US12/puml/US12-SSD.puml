@@ -8,7 +8,7 @@ activate Admin
 Admin -> System : asks to list all vaccines
 activate System
 
-System --> Admin : displays the list of vaccines (grouped by type and sorted by brand)
+System --> Admin : shows the list of vaccines (grouped by type, sorted by brand)
 deactivate System
 
 deactivate Admin

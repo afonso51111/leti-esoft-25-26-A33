@@ -6,28 +6,34 @@ class ListVaccinesUI {
 }
 
 class ListVaccinesController {
-  + getVaccinesList() : List<Vaccine>
+  + getVaccineList()
 }
 
 class Company {
-  + getVaccineStore() : VaccineStore
+  + getVaccineStore()
 }
 
 class VaccineStore {
-  + getVaccines() : List<Vaccine>
+  + getAll()
 }
 
 class Vaccine {
-  - name
+  - commercial_name
   - brand
-  - type
+  + getBrand()
+  + getType()
+}
+
+class "Vaccine Type" {
+  - code
+  - short_description
 }
 
 ListVaccinesUI ..> ListVaccinesController
 ListVaccinesController ..> Company
 ListVaccinesController ..> VaccineStore
-
 Company "1" --> "1" VaccineStore : has >
 VaccineStore "1" --> "*" Vaccine : stores >
+Vaccine "*" --> "1" "Vaccine Type" : has >
 
 @enduml

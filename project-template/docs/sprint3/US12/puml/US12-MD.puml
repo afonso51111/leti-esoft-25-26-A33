@@ -7,18 +7,15 @@ class "DGS Administrator" {
 }
 
 class Vaccine {
-  - name
+  - commercial_name
   - brand
-  - number_of_doses
 }
 
 class "Vaccine Type" {
   - code
-  - description
-  - technology
+  - short_description
 }
 
-"DGS Administrator" "1" -right-- "*" Vaccine: manages >
-Vaccine "*" -up-- "1" "Vaccine Type": has >
-
+"DGS Administrator" "1" -right-- "*" Vaccine: consults >
+Vaccine "*" -down-- "1" "Vaccine Type": has >
 @enduml
