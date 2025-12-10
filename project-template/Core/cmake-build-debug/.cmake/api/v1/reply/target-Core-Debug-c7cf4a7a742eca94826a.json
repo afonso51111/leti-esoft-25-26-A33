@@ -78,7 +78,9 @@
 				16,
 				17,
 				18,
-				19
+				19,
+				20,
+				21
 			]
 		},
 		{
@@ -192,6 +194,16 @@
 		{
 			"backtrace" : 1,
 			"path" : "headers/domain/model/Appointment.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/domain/model/WaitingRoom.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/domain/model/RecoveryRoom.h",
 			"sourceGroupIndex" : 0
 		}
 	],

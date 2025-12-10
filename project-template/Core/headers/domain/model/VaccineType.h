@@ -2,22 +2,22 @@
 #define VACCINETYPE_H
 
 #include <string>
-#include <iostream>
 
 class VaccineType {
 private:
     std::string code;
-    std::string description;
-    std::string technology;
+    std::string disease;
+    std::string short_description;
 
 public:
-    VaccineType(std::string code, std::string description, std::string technology);
+    VaccineType(std::string code, std::string disease, std::string shortDesc);
 
     std::string getCode() const;
-    std::string getDescription() const;
-    std::string getTechnology() const;
+    std::string getDisease() const;
+    std::string getShortDescription() const;
 
-    bool operator==(const VaccineType& other) const;
+    // Método extra para verificar compatibilidade (útil para o Sprint 3)
+    bool checkTechnology(std::string tech) const;
 };
 
-#endif
+#endif // VACCINETYPE_H

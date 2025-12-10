@@ -29,4 +29,6 @@ add_library(Core
         headers/domain/model/SNSUserStore.h
 
         headers/domain/model/Appointment.h
+        headers/domain/model/WaitingRoom.h
+        headers/domain/model/RecoveryRoom.h
 )

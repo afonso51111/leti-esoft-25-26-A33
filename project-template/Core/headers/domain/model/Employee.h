@@ -2,24 +2,19 @@
 #define EMPLOYEE_H
 
 #include <string>
-#include <iostream>
 
 class Employee {
 protected:
     std::string name;
-    std::string address;
-    std::string phoneNumber;
+    std::string postal_address;
+    std::string phone_number;
     std::string email;
-    std::string citizenCardNumber;
+    std::string citizen_card_number;
 
 public:
-    Employee(std::string name, std::string address, std::string phone, std::string email, std::string cc);
-
-    std::string getName() const;
-    std::string getPhoneNumber() const;
-    std::string getEmail() const;
+    Employee(std::string name, std::string addr, std::string phone, std::string email, std::string cc);
 
     virtual ~Employee() = default;
 };
 
-#endif
+#endif // EMPLOYEE_H

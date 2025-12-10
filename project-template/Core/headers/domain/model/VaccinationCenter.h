@@ -3,28 +3,30 @@
 
 #include <string>
 #include <vector>
-#include "VaccineType.h"
+#include "WaitingRoom.h"
+#include "RecoveryRoom.h"
 
 class VaccinationCenter {
 protected:
     std::string name;
-    std::string address;
-    std::string phoneNumber;
+    std::string postal_address;
+    std::string phone_number;
     std::string email;
-    std::string websiteAddress;
-    std::string openingHours;
-    std::string closingHours;
-    int slotDuration;
-    int maxVaccinesPerSlot;
+    std::string website_address;
+    std::string opening_hours;
+    std::string closing_hours;
+    int capacity_per_hour;
+
+    WaitingRoom waitingRoom;
+    RecoveryRoom recoveryRoom;
 
 public:
-    VaccinationCenter(std::string name, std::string address, std::string phone, std::string email,
-                      std::string website, std::string openHours, std::string closeHours,
-                      int slotDur, int maxVac);
+    VaccinationCenter(std::string name, std::string addr, std::string phone, std::string email,
+                      std::string website, std::string open, std::string close, int cap);
 
     std::string getName() const;
 
     virtual ~VaccinationCenter() = default;
 };
 
-#endif
+#endif // VACCINATIONCENTER_H

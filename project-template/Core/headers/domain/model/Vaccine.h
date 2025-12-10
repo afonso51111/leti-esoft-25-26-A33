@@ -6,18 +6,18 @@
 
 class Vaccine {
 private:
-    std::string name;
+    std::string commercial_name;
     std::string brand;
     VaccineType* type;
 
 public:
-    Vaccine(std::string name, std::string brand, VaccineType* type);
+    Vaccine(std::string commercialName, std::string brand, VaccineType* type);
 
-    std::string getName() const;
+    std::string getCommercialName() const;
     std::string getBrand() const;
     VaccineType* getType() const;
 
     virtual ~Vaccine() = default;
 };
 
-#endif
+#endif // VACCINE_H
