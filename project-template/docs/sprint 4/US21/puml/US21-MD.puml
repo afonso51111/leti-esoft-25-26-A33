@@ -1,0 +1,32 @@
+@startuml
+hide circle
+hide methods
+skinparam classAttributeIconSize 0
+
+class "Receptionist" {
+}
+
+class "SNS User" {
+  - sns_number
+  - name
+}
+
+class "Vaccination Center" {
+  - name
+}
+
+class "Appointment" {
+  - date
+  - time
+}
+
+class "Vaccine Type" {
+  - code
+}
+
+"Receptionist" "1" -right-- "*" Appointment : schedules >
+"SNS User" "1" -right-- "*" Appointment : has >
+Appointment "*" -down-- "1" "Vaccination Center" : occurs at >
+Appointment "*" -down-- "1" "Vaccine Type" : for >
+
+@enduml

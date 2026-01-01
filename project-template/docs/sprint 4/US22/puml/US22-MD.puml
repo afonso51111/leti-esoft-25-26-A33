@@ -1,0 +1,29 @@
+@startuml
+hide circle
+hide methods
+skinparam classAttributeIconSize 0
+
+class Receptionist {
+}
+
+class "Vaccination Center" {
+}
+
+class "Waiting Room" {
+}
+
+class "SNS User" {
+  - sns_number
+}
+
+class Appointment {
+  - date
+  - time
+}
+
+Receptionist "1" -right-- "*" "Appointment" : marks arrival >
+"Vaccination Center" "1" *-- "1" "Waiting Room" : has >
+"Waiting Room" "1" -right-- "*" Appointment : has (waiting) >
+Appointment "*" --> "1" "SNS User" : for >
+
+@enduml

@@ -1,0 +1,117 @@
+@startuml
+autonumber
+actor "Receptionist" as Rec
+participant ":ScheduleVaccine\nOnBehalfUI" as UI
+participant ":ScheduleVaccine\nOnBehalfController" as CTRL
+participant ":Company" as CMP
+participant "uStore\n:SNSUserStore" as U_STORE
+participant "cStore\n:VaccinationCenterStore" as C_STORE
+participant "tStore\n:VaccineTypeStore" as T_STORE
+participant "center\n:Vaccination Center" as CENTER
+participant "app\n:Appointment" as APP
+
+activate Rec
+Rec -> UI : asks to schedule for an SNS User
+activate UI
+
+UI --> Rec : requests SNS User Number
+deactivate UI
+
+Rec -> UI : types SNS User Number
+activate UI
+
+'--- Identificar o User ---
+UI -> CTRL : setSNSUser(snsNumber)
+activate CTRL
+CTRL -> CMP : uStore = getSNSUserStore()
+activate CMP
+deactivate CMP
+CTRL -> U_STORE : user = getSNSUser(snsNumber)
+activate U_STORE
+deactivate U_STORE
+deactivate CTRL
+
+'--- O resto é idêntico à US30 ---
+UI -> CTRL : getVaccinationCenters()
+activate CTRL
+CTRL -> CMP : cStore = getVaccinationCenterStore()
+activate CMP
+deactivate CMP
+CTRL -> C_STORE : getList()
+activate C_STORE
+deactivate C_STORE
+CTRL --> UI : list of centers
+deactivate CTRL
+
+UI --> Rec : asks to select center
+deactivate UI
+Rec -> UI : selects center
+activate UI
+
+UI -> CTRL : getVaccineTypes()
+activate CTRL
+CTRL -> CMP : tStore = getVaccineTypeStore()
+activate CMP
+deactivate CMP
+CTRL -> T_STORE : getList()
+activate T_STORE
+deactivate T_STORE
+CTRL --> UI : list of types
+deactivate CTRL
+
+UI --> Rec : asks to select vaccine type
+deactivate UI
+Rec -> UI : selects type
+activate UI
+
+UI --> Rec : requests preferred date
+deactivate UI
+Rec -> UI : types date
+activate UI
+
+UI -> CTRL : getAvailableSlots(center, date)
+activate CTRL
+    CTRL -> CENTER : getAvailableSlots(date)
+    activate CENTER
+    deactivate CENTER
+CTRL --> UI : list of slots
+deactivate CTRL
+
+UI --> Rec : shows available slots
+deactivate UI
+Rec -> UI : selects time slot
+activate UI
+
+UI -> CTRL : createAppointment(dto)
+activate CTRL
+    CTRL -> CENTER : createAppointment(user, vaccineType, date, time)
+    activate CENTER
+        create APP
+        CENTER -> APP : create(user, vaccineType, date, time)
+    CENTER --> CTRL : app
+    deactivate CENTER
+
+    CTRL -> CENTER : validateAppointment(app)
+    activate CENTER
+    deactivate CENTER
+
+CTRL --> UI : appointment info
+deactivate CTRL
+
+UI --> Rec : shows data and requests confirmation
+deactivate UI
+Rec -> UI : confirms
+activate UI
+
+UI -> CTRL : save()
+activate CTRL
+    CTRL -> CENTER : addAppointment(app)
+    activate CENTER
+    deactivate CENTER
+CTRL --> UI : success
+deactivate CTRL
+
+UI --> Rec : informs success
+deactivate UI
+deactivate Rec
+@enduml

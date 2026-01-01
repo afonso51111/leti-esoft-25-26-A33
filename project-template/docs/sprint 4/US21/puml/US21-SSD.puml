@@ -1,0 +1,51 @@
+@startuml
+autonumber
+actor "Receptionist" as Rec
+participant ":System" as System
+
+activate Rec
+
+Rec -> System : asks to schedule a vaccination for an SNS User
+activate System
+
+System --> Rec : requests the SNS User Number
+deactivate System
+
+Rec -> System : types the SNS User Number
+activate System
+
+System --> Rec : shows list of vaccination centers and asks to select one
+deactivate System
+
+Rec -> System : selects a vaccination center
+activate System
+
+System --> Rec : asks to select the vaccine type (if applicable)
+deactivate System
+
+Rec -> System : selects the vaccine type
+activate System
+
+System --> Rec : requests the preferred date
+deactivate System
+
+Rec -> System : types the date
+activate System
+
+System --> Rec : shows available time slots for that date
+deactivate System
+
+Rec -> System : selects a time slot
+activate System
+
+System --> Rec : shows all data and requests confirmation
+deactivate System
+
+Rec -> System : confirms the data
+activate System
+
+System --> Rec : informs operation success
+deactivate System
+
+deactivate Rec
+@enduml

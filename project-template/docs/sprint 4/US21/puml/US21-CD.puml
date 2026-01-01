@@ -1,0 +1,56 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class ScheduleVaccineOnBehalfUI {
+}
+
+class ScheduleVaccineOnBehalfController {
+  + setSNSUser(snsNumber)
+  + getVaccinationCenters()
+  + getVaccineTypes()
+  + getAvailableSlots(center, date)
+  + createAppointment(dto)
+  + save()
+}
+
+class Company {
+  + getVaccinationCenterStore()
+  + getVaccineTypeStore()
+  + getSNSUserStore()
+}
+
+class SNSUserStore {
+  + getSNSUser(snsNumber)
+}
+
+class VaccinationCenterStore {
+  + getList()
+}
+
+class VaccineTypeStore {
+  + getList()
+}
+
+class "Vaccination Center" {
+  + getAvailableSlots(date)
+  + createAppointment(user, type, date, time)
+  + addAppointment(app)
+}
+
+class "SNS User" {
+}
+
+ScheduleVaccineOnBehalfUI ..> ScheduleVaccineOnBehalfController
+ScheduleVaccineOnBehalfController ..> Company
+ScheduleVaccineOnBehalfController ..> SNSUserStore
+ScheduleVaccineOnBehalfController ..> VaccinationCenterStore
+ScheduleVaccineOnBehalfController ..> VaccineTypeStore
+ScheduleVaccineOnBehalfController ..> "Vaccination Center"
+ScheduleVaccineOnBehalfController ..> "SNS User"
+
+Company "1" --> "1" SNSUserStore : has >
+Company "1" --> "1" VaccinationCenterStore : has >
+Company "1" --> "1" VaccineTypeStore : has >
+
+@enduml

@@ -1,0 +1,60 @@
+@startuml
+autonumber
+actor "Receptionist" as Rec
+participant ":RegisterArrivalUI" as UI
+participant ":RegisterArrival\nController" as CTRL
+participant ":Company" as CMP
+participant "cStore\n:VaccinationCenterStore" as CSTORE
+participant "center\n:Vaccination Center" as CENTER
+participant "room\n:Waiting Room" as ROOM
+participant "app\n:Appointment" as APP
+
+activate Rec
+Rec -> UI : asks to register arrival
+activate UI
+
+'--- Seleção de Centro (Simplificado para focar na mudança) ---
+UI -> CTRL : getVaccinationCenters()
+activate CTRL
+' ... (lógica igual de obter lista) ...
+CTRL --> UI : list of centers
+deactivate CTRL
+
+UI --> Rec : asks to select center
+deactivate UI
+Rec -> UI : selects center
+activate UI
+
+'--- Identificar Utente e Registar Chegada ---
+UI --> Rec : requests SNS User Number
+deactivate UI
+Rec -> UI : types SNS User Number
+activate UI
+
+UI -> CTRL : createArrival()
+activate CTRL
+    CTRL -> CENTER : registerArrival(snsNumber)
+    activate CENTER
+
+        ' 1. Verificar se tem agendamento
+        CENTER -> CENTER : app = getAppointment(snsNumber)
+        activate CENTER
+        deactivate CENTER
+
+        ' 2. Adicionar o Agendamento à Sala de Espera
+        CENTER -> ROOM : addAppointment(app)
+        activate ROOM
+            ROOM -> ROOM : validateDuplicate(app
+            ROOM -> ROOM : add(app)
+
+
+        deactivate ROOM
+
+    deactivate CENTER
+CTRL --> UI : success
+deactivate CTRL
+
+UI --> Rec : informs operation success
+deactivate UI
+deactivate Rec
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class RegisterArrivalUI {
+}
+
+class RegisterArrivalController {
+  + getVaccinationCenters()
+  + createArrival()
+}
+
+class "Vaccination Center" {
+  + registerArrival(snsNumber)
+  - getAppointment(snsNumber)
+}
+
+class "Waiting Room" {
+  + addAppointment(app)
+}
+
+class Appointment {
+  - date
+  - time
+}
+
+class "SNS User" {
+  - sns_number
+}
+
+RegisterArrivalController ..> "Vaccination Center"
+"Vaccination Center" "1" --> "1" "Waiting Room" : has >
+"Waiting Room" "1" --> "*" Appointment : holds >
+Appointment --> "SNS User" : for >
+
+@enduml
