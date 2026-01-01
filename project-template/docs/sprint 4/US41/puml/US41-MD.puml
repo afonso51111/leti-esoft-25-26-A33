@@ -1,0 +1,39 @@
+@startuml
+hide circle
+hide methods
+skinparam classAttributeIconSize 0
+
+class Nurse {
+}
+
+class "Vaccination Center" {
+}
+
+class "Waiting Room" {
+}
+
+class "Recovery Room" {
+}
+
+class "Appointment" {
+  - date
+  - time
+  - administration_date
+  - administration_time
+  - lot_number
+}
+
+class "Vaccine" {
+  - brand
+}
+
+Nurse "1" -right-- "*" Appointment : records administration >
+"Vaccination Center" "1" *-- "1" "Waiting Room" : has >
+"Vaccination Center" "1" *-- "1" "Recovery Room" : has >
+
+"Waiting Room" "1" -down-- "*" Appointment : has (waiting) >
+"Recovery Room" "1" -down-- "*" Appointment : has (recovering) >
+
+Appointment "*" -right-- "0..1" Vaccine : administered >
+
+@enduml

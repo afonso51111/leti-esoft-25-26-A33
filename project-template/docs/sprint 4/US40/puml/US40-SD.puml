@@ -1,0 +1,50 @@
+@startuml
+autonumber
+actor "Nurse" as Nurse
+participant ":ConsultWaitingRoomUI" as UI
+participant ":ConsultWaitingRoom\nController" as CTRL
+participant ":Company" as CMP
+participant "cStore\n:VaccinationCenterStore" as CSTORE
+participant "center\n:Vaccination Center" as CENTER
+participant "room\n:Waiting Room" as ROOM
+
+activate Nurse
+Nurse -> UI : asks to consult waiting room
+activate UI
+
+'--- Selecionar Centro ---
+UI -> CTRL : getVaccinationCenters()
+activate CTRL
+CTRL -> CMP : store = getVaccinationCenterStore()
+activate CMP
+deactivate CMP
+CTRL -> CSTORE : getList()
+activate CSTORE
+deactivate CSTORE
+CTRL --> UI : list of centers
+deactivate CTRL
+
+UI --> Nurse : asks to select center
+deactivate UI
+Nurse -> UI : selects center
+activate UI
+
+'--- Obter Lista de Espera ---
+UI -> CTRL : getWaitingList()
+activate CTRL
+    CTRL -> CENTER : room = getWaitingRoom()
+    activate CENTER
+    deactivate CENTER
+
+    CTRL -> ROOM : waitingList = getWaitingList()
+    activate ROOM
+
+    deactivate ROOM
+
+CTRL --> UI : waitingListDTO
+deactivate CTRL
+
+UI --> Nurse : shows list of users in waiting room
+deactivate UI
+deactivate Nurse
+@enduml

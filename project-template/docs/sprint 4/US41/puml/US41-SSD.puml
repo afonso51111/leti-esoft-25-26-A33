@@ -1,0 +1,33 @@
+@startuml
+autonumber
+actor "Nurse" as Nurse
+participant ":System" as System
+
+activate Nurse
+
+Nurse -> System : asks to record the administration of a vaccine for a selected user
+activate System
+
+System --> Nurse : shows list of available vaccines (of the scheduled type) \nand asks to select one
+deactivate System
+
+Nurse -> System : selects the vaccine (brand)
+activate System
+
+System --> Nurse : requests the lot number
+deactivate System
+
+Nurse -> System : types the lot number
+activate System
+
+System --> Nurse : shows all data and requests confirmation
+deactivate System
+
+Nurse -> System : confirms the administration
+activate System
+
+System --> Nurse : informs operation success (User moved to Recovery Room)
+deactivate System
+
+deactivate Nurse
+@enduml

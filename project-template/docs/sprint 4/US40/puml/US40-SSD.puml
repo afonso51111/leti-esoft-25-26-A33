@@ -1,0 +1,21 @@
+@startuml
+autonumber
+actor "Nurse" as Nurse
+participant ":System" as System
+
+activate Nurse
+
+Nurse -> System : asks to consult the waiting room
+activate System
+
+System --> Nurse : asks to select the vaccination center
+deactivate System
+
+Nurse -> System : selects the vaccination center
+activate System
+
+System --> Nurse : shows the list of users in the waiting room \n(ordered by arrival time)
+deactivate System
+
+deactivate Nurse
+@enduml

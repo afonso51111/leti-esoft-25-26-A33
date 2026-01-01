@@ -1,0 +1,62 @@
+@startuml
+autonumber
+actor "Nurse" as Nurse
+participant ":RecordAdministrationUI" as UI
+participant ":RecordAdministration\nController" as CTRL
+participant ":Company" as CMP
+participant "vStore\n:VaccineStore" as VSTORE
+participant "center\n:Vaccination Center" as CENTER
+participant "wRoom\n:Waiting Room" as WROOM
+participant "rRoom\n:Recovery Room" as RROOM
+participant "app\n:Appointment" as APP
+
+activate Nurse
+Nurse -> UI : selects a user from the waiting list (from US40)
+activate UI
+
+'--- Obter Vacinas (Filtradas pelo Tipo) ---
+UI -> CTRL : getVaccines(vaccineType)
+activate CTRL
+CTRL -> CMP : vStore = getVaccineStore()
+activate CMP
+deactivate CMP
+CTRL -> VSTORE : list = getVaccinesByType(vaccineType)
+activate VSTORE
+deactivate VSTORE
+CTRL --> UI : list of vaccines
+deactivate CTRL
+
+UI --> Nurse : asks to select vaccine and enter lot number
+deactivate UI
+Nurse -> UI : selects vaccine and types lot number
+activate UI
+
+'--- Registar Administração ---
+UI -> CTRL : recordAdministration(dto)
+activate CTRL
+
+    ' 1. Guardar dados no Agendamento
+    CTRL -> APP : addAdministrationInfo(vaccine, lotNumber, now())
+    activate APP
+    deactivate APP
+
+    ' 2. Mover o Utente de Sala (AC41-2)
+    CTRL -> CENTER : moveUserToRecovery(app)
+    activate CENTER
+        CENTER -> WROOM : remove(app)
+        activate WROOM
+        deactivate WROOM
+
+        CENTER -> RROOM : add(app)
+        activate RROOM
+        deactivate RROOM
+
+    deactivate CENTER
+
+CTRL --> UI : success
+deactivate CTRL
+
+UI --> Nurse : informs operation success
+deactivate UI
+deactivate Nurse
+@enduml

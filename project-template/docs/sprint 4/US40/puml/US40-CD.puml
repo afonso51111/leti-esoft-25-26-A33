@@ -1,0 +1,51 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class ConsultWaitingRoomUI {
+}
+
+class ConsultWaitingRoomController {
+  + getVaccinationCenters()
+  + getWaitingList()
+}
+
+class Company {
+  + getVaccinationCenterStore()
+}
+
+class VaccinationCenterStore {
+  + getList()
+}
+
+class "Vaccination Center" {
+  + getWaitingRoom()
+}
+
+class "Waiting Room" {
+  + getWaitingList()
+}
+
+class Appointment {
+  - date
+  - time
+}
+
+class "SNS User" {
+  - name
+  - sns_number
+}
+
+ConsultWaitingRoomUI ..> ConsultWaitingRoomController
+ConsultWaitingRoomController ..> Company
+ConsultWaitingRoomController ..> VaccinationCenterStore
+ConsultWaitingRoomController ..> "Vaccination Center"
+ConsultWaitingRoomController ..> "Waiting Room"
+
+Company "1" --> "1" VaccinationCenterStore : has >
+VaccinationCenterStore "1" --> "*" "Vaccination Center" : stores >
+"Vaccination Center" "1" --> "1" "Waiting Room" : has >
+"Waiting Room" "1" --> "*" Appointment : holds >
+Appointment --> "SNS User" : for >
+
+@enduml

@@ -1,0 +1,58 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class RecordAdministrationUI {
+}
+
+class RecordAdministrationController {
+  + getVaccines(type)
+  + recordAdministration(dto)
+}
+
+class Company {
+  + getVaccineStore()
+}
+
+class VaccineStore {
+  + getVaccinesByType(type)
+}
+
+class "Vaccination Center" {
+  + moveUserToRecovery(app)
+}
+
+class "Waiting Room" {
+  + remove(app)
+}
+
+class "Recovery Room" {
+  + add(app)
+}
+
+class Appointment {
+  - lot_number
+  - administration_time
+  + addAdministrationInfo(vaccine, lot, time)
+}
+
+class Vaccine {
+  - brand
+}
+
+RecordAdministrationUI ..> RecordAdministrationController
+RecordAdministrationController ..> Company
+RecordAdministrationController ..> VaccineStore
+RecordAdministrationController ..> "Vaccination Center"
+RecordAdministrationController ..> Appointment
+
+Company "1" --> "1" VaccineStore : has >
+VaccineStore "1" --> "*" Vaccine : stores >
+
+"Vaccination Center" "1" --> "1" "Waiting Room" : has >
+"Vaccination Center" "1" --> "1" "Recovery Room" : has >
+
+"Waiting Room" --> "0..*" Appointment : holds >
+"Recovery Room" --> "0..*" Appointment : holds >
+
+@enduml
