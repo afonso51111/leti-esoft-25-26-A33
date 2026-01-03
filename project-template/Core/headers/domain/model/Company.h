@@ -6,6 +6,7 @@ class VaccineTypeStore;
 class VaccinationCenterStore;
 class SNSUserStore;
 class VaccineStore;
+class AppointmentStore;
 
 class Company {
 private:
@@ -16,6 +17,7 @@ private:
     VaccinationCenterStore* centerStore;
     SNSUserStore* snsUserStore;
     VaccineStore* vaccineStore;
+    AppointmentStore* appointmentStore;
 
     Company();
 
@@ -27,6 +29,8 @@ public:
     VaccinationCenterStore* getVaccinationCenterStore() const;
     SNSUserStore* getSNSUserStore() const;
     VaccineStore* getVaccineStore() const;
+
+    AppointmentStore* getAppointmentStore() const;
 
     ~Company();
 };

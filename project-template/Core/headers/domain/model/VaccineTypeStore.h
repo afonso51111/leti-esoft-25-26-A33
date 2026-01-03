@@ -20,6 +20,8 @@ public:
     std::vector<VaccineType*> getVaccineTypes() const;
 
     ~VaccineTypeStore();
+
+    VaccineType* findTypeByCode(std::string code) const;
 };
 
 #endif

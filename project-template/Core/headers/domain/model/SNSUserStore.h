@@ -20,6 +20,8 @@ public:
 
     SNSUser* findUserBySNS(std::string snsNumber) const;
 
+    std::vector<SNSUser*> getAllUsers() const;
+
     ~SNSUserStore();
 };
 

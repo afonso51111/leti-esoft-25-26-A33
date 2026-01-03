@@ -2,35 +2,24 @@
 #define WAITINGROOM_H
 
 #include <list>
-#include "Appointment.h"
+#include <string>
+
+class Appointment;
 
 class WaitingRoom {
 private:
     std::list<Appointment*> waitingList;
 
 public:
-    WaitingRoom() = default;
+    WaitingRoom();
 
-    void addClient(Appointment* appointment) {
-        waitingList.push_back(appointment);
-    }
+    void addClient(Appointment* appointment);
 
-    void removeClient(Appointment* appointment) {
-        waitingList.remove(appointment);
-    }
+    void removeClient(Appointment* appointment);
 
-    std::list<Appointment*> getWaitingList() const {
-        return waitingList;
-    }
+    std::list<Appointment*> getWaitingList() const;
 
-    bool hasUser(std::string snsNumber) const {
-        for (auto app : waitingList) {
-            if (app->getUser()->getSNSNumber() == snsNumber) {
-                return true;
-            }
-        }
-        return false;
-    }
+    bool hasUser(std::string snsNumber) const;
 };
 
 #endif
