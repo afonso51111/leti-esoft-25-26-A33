@@ -22,9 +22,17 @@ protected:
 
 public:
     VaccinationCenter(std::string name, std::string addr, std::string phone, std::string email,
-                      std::string website, std::string open, std::string close, int cap);
+                       std::string website, std::string open, std::string close, int cap);
 
     std::string getName() const;
+
+    std::string getAddress() const;
+    std::string getPhoneNumber() const;
+    std::string getEmail() const;
+    std::string getWebsite() const;
+    std::string getOpeningHours() const;
+    std::string getClosingHours() const;
+    int getCapacity() const;
 
     virtual ~VaccinationCenter() = default;
 };

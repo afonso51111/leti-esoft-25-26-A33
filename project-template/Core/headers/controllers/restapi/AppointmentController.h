@@ -1,9 +1,8 @@
 #ifndef APPOINTMENTCONTROLLER_H
 #define APPOINTMENTCONTROLLER_H
 
+#include "controllers/restapi/HttpResult.h"
 #include <string>
-#include "HttpResult.h"
-#include "../../domain/model/Company.h"
 
 class AppointmentController {
 public:
@@ -11,8 +10,7 @@ public:
 
     HttpResult getAll();
 
-    HttpResult createAppointment(std::string snsNumber, std::string centerName,
-                                 std::string vaccineTypeCode, std::string date, std::string time);
+    HttpResult createAppointment(std::string snsNumber, std::string centerName, std::string vaccineType, std::string date, std::string time);
 };
 
-#endif
+#endif // APPOINTMENTCONTROLLER_H

@@ -4,6 +4,7 @@
 #include "../headers/VaccineTypeRouter.h"
 #include "../headers/SNSUserRouter.h"
 #include "../headers/AppointmentRouter.h"
+#include "../headers/VaccinationCenterRouter.h"
 
 void Server::run() {
     std::cout << "Starting PVMS Server..." << std::endl;
@@ -19,6 +20,9 @@ void Server::run() {
 
     AppointmentRouter appointmentRouter;
     appointmentRouter.configure(this->svr);
+
+    VaccinationCenterRouter centerRouter;
+    centerRouter.configure(this->svr);
 
     std::cout << "Server listening on http://localhost:8080" << std::endl;
     this->svr.listen("0.0.0.0", 8080);

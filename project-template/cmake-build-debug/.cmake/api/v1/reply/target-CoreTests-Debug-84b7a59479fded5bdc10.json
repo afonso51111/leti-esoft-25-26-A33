@@ -30,19 +30,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 5,
+				"line" : 6,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 7,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 8,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
@@ -57,7 +57,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 3,
+				"line" : 4,
 				"parent" : 0
 			}
 		]
@@ -111,7 +111,8 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
@@ -123,11 +124,11 @@
 		},
 		{
 			"backtrace" : 3,
-			"id" : "gtest_main::@2ce7832806bc4314e0aa"
+			"id" : "gtest::@2ce7832806bc4314e0aa"
 		},
 		{
 			"backtrace" : 3,
-			"id" : "gtest::@2ce7832806bc4314e0aa"
+			"id" : "gtest_main::@2ce7832806bc4314e0aa"
 		}
 	],
 	"id" : "CoreTests::@f5995f64041c05ec46bd",
@@ -183,7 +184,8 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
@@ -193,6 +195,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "CoreTests/domain/shared/StringUtilsTests.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "CoreTests/domain/model/VaccineTest.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

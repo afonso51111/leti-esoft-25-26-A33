@@ -2,28 +2,22 @@
 #define APPOINTMENT_H
 
 #include <string>
-
-class SNSUser;
-class VaccinationCenter;
-class VaccineType;
+#include "SNSUser.h"
 
 class Appointment {
 private:
     SNSUser* user;
-    VaccinationCenter* center;
-    VaccineType* vaccineType;
+    std::string centerName;
+    std::string vaccineType;
     std::string date;
-    std::string time;
 
 public:
-    Appointment(SNSUser* user, VaccinationCenter* center, VaccineType* type, std::string date, std::string time);
+    Appointment(SNSUser* user, std::string centerName, std::string vaccineType, std::string date);
 
     SNSUser* getUser() const;
-    VaccinationCenter* getCenter() const;
+    std::string getCenterName() const;
+    std::string getVaccineType() const;
     std::string getDate() const;
-    std::string getTime() const;
-
-    virtual ~Appointment() = default;
 };
 
-#endif
+#endif // APPOINTMENT_H

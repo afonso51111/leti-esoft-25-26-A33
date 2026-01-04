@@ -42,14 +42,16 @@ add_executable(project-template
 
         Core/sources/controllers/restapi/VaccineController.cpp
         Core/sources/controllers/restapi/VaccineTypeController.cpp
-        Core/sources/controllers/restapi/SNSUserController.cpp
         Core/sources/controllers/restapi/AppointmentController.cpp
+        Core/sources/controllers/restapi/SNSUserController.cpp
+        Core/sources/controllers/restapi/VaccinationCenterController.cpp
 
         RestApi/sources/Server.cpp
         RestApi/sources/VaccineRouter.cpp
         RestApi/sources/VaccineTypeRouter.cpp
         RestApi/sources/SNSUserRouter.cpp
         RestApi/sources/AppointmentRouter.cpp
+        RestApi/sources/VaccinationCenterRouter.cpp
 
 )
 

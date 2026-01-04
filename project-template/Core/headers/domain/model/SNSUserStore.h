@@ -10,19 +10,16 @@ private:
 
 public:
     SNSUserStore();
+    virtual ~SNSUserStore();
 
-    SNSUser* createSNSUser(std::string name, std::string address, std::string sex, std::string phone,
-                           std::string email, std::string birthDate, std::string snsNum, std::string ccNum);
-
-    bool validateSNSUser(SNSUser* user) const;
+    SNSUser* createSNSUser(std::string name, std::string address, std::string sex,
+                           std::string phone, std::string email, std::string birthDate,
+                           std::string snsNum, std::string ccNum);
 
     void saveSNSUser(SNSUser* user);
 
+    std::vector<SNSUser*> getList() const;
     SNSUser* findUserBySNS(std::string snsNumber) const;
-
-    std::vector<SNSUser*> getAllUsers() const;
-
-    ~SNSUserStore();
 };
 
-#endif
+#endif // SNSUSERSTORE_H

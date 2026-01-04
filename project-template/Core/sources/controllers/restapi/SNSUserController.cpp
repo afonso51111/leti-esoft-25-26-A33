@@ -1,9 +1,7 @@
-#include "../../../headers/controllers/restapi/SNSUserController.h"
-#include <iostream>
-#include "../../../headers/domain/model/SNSUser.h"
-#include "../../../headers/domain/model/SNSUserStore.h"
-#include <vector>
-
+#include "../../Core/headers/controllers/restapi/SNSUserController.h"
+#include "../../Core/headers/domain/model/Company.h"
+#include "../../Core/headers/domain/model/SNSUserStore.h"
+#include "../../Core/headers/domain/model/SNSUser.h"
 #include <iostream>
 
 SNSUserController::SNSUserController() {}
@@ -12,21 +10,17 @@ HttpResult SNSUserController::getAll() {
     HttpResult result;
     Company* company = Company::getInstance();
 
-    std::vector<SNSUser*> users = company->getSNSUserStore()->getAllUsers();
+    auto users = company->getSNSUserStore()->getList();
 
     std::string json = "[";
     for (size_t i = 0; i < users.size(); ++i) {
         SNSUser* u = users[i];
-
         json += "{";
-        json += "\"name\": \"" + u->getName() + "\",";
-        json += "\"snsNumber\": \"" + u->getSNSNumber() + "\",";
-        json += "\"phoneNumber\": \"" + u->getPhoneNumber() + "\"";
+        json += "\"name\": \"" + u->getName() + "\", ";
+        json += "\"sns\": \"" + u->getSNSNumber() + "\", ";
+        json += "\"phone\": \"" + u->getPhoneNumber() + "\"";
         json += "}";
-
-        if (i < users.size() - 1) {
-            json += ",";
-        }
+        if (i < users.size() - 1) json += ",";
     }
     json += "]";
 
@@ -42,21 +36,15 @@ HttpResult SNSUserController::createUser(std::string name, std::string address, 
     Company* company = Company::getInstance();
     SNSUserStore* store = company->getSNSUserStore();
 
-    if (store->findUserBySNS(snsNum) != nullptr) {
-        result.setHttpStatus(HttpStatus::HTTP_BAD_REQUEST);
-        result.setResult("Error: SNS User already exists.");
-        return result;
-    }
-
     SNSUser* newUser = store->createSNSUser(name, address, sex, phone, email, birthDate, snsNum, ccNum);
 
-    if (store->validateSNSUser(newUser)) {
-        store->saveSNSUser(newUser);
-        result.setHttpStatus(HttpStatus::HTTP_CREATED);
-        result.setResult("{ \"message\": \"SNS User registered successfully.\" }");
+    if (newUser != nullptr) {
+        store->saveSNSUser(newUser); // Guardamos na lista
+        result.setHttpStatus(HttpStatus::HTTP_OK);
+        result.setResult("{\"message\": \"User created successfully\"}");
     } else {
         result.setHttpStatus(HttpStatus::HTTP_BAD_REQUEST);
-        result.setResult("Error: Invalid data or duplicate fields (phone/email).");
+        result.setResult("{\"message\": \"Error creating user\"}");
     }
 
     return result;

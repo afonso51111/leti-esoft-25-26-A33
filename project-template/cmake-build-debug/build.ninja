@@ -203,6 +203,13 @@ build CMakeFiles/project-template.dir/Core/sources/controllers/restapi/VaccineTy
   OBJECT_DIR = CMakeFiles\project-template.dir
   OBJECT_FILE_DIR = CMakeFiles\project-template.dir\Core\sources\controllers\restapi
 
+build CMakeFiles/project-template.dir/Core/sources/controllers/restapi/AppointmentController.cpp.obj: CXX_COMPILER__project-template_unscanned_Debug C$:/Users/MSI$ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/sources/controllers/restapi/AppointmentController.cpp || cmake_object_order_depends_target_project-template
+  DEP_FILE = CMakeFiles\project-template.dir\Core\sources\controllers\restapi\AppointmentController.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/headers" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/RestApi/headers" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/RestApi/thirdparty"
+  OBJECT_DIR = CMakeFiles\project-template.dir
+  OBJECT_FILE_DIR = CMakeFiles\project-template.dir\Core\sources\controllers\restapi
+
 build CMakeFiles/project-template.dir/Core/sources/controllers/restapi/SNSUserController.cpp.obj: CXX_COMPILER__project-template_unscanned_Debug C$:/Users/MSI$ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/sources/controllers/restapi/SNSUserController.cpp || cmake_object_order_depends_target_project-template
   DEP_FILE = CMakeFiles\project-template.dir\Core\sources\controllers\restapi\SNSUserController.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
@@ -210,8 +217,8 @@ build CMakeFiles/project-template.dir/Core/sources/controllers/restapi/SNSUserCo
   OBJECT_DIR = CMakeFiles\project-template.dir
   OBJECT_FILE_DIR = CMakeFiles\project-template.dir\Core\sources\controllers\restapi
 
-build CMakeFiles/project-template.dir/Core/sources/controllers/restapi/AppointmentController.cpp.obj: CXX_COMPILER__project-template_unscanned_Debug C$:/Users/MSI$ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/sources/controllers/restapi/AppointmentController.cpp || cmake_object_order_depends_target_project-template
-  DEP_FILE = CMakeFiles\project-template.dir\Core\sources\controllers\restapi\AppointmentController.cpp.obj.d
+build CMakeFiles/project-template.dir/Core/sources/controllers/restapi/VaccinationCenterController.cpp.obj: CXX_COMPILER__project-template_unscanned_Debug C$:/Users/MSI$ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/sources/controllers/restapi/VaccinationCenterController.cpp || cmake_object_order_depends_target_project-template
+  DEP_FILE = CMakeFiles\project-template.dir\Core\sources\controllers\restapi\VaccinationCenterController.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/headers" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/RestApi/headers" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/RestApi/thirdparty"
   OBJECT_DIR = CMakeFiles\project-template.dir
@@ -252,6 +259,13 @@ build CMakeFiles/project-template.dir/RestApi/sources/AppointmentRouter.cpp.obj:
   OBJECT_DIR = CMakeFiles\project-template.dir
   OBJECT_FILE_DIR = CMakeFiles\project-template.dir\RestApi\sources
 
+build CMakeFiles/project-template.dir/RestApi/sources/VaccinationCenterRouter.cpp.obj: CXX_COMPILER__project-template_unscanned_Debug C$:/Users/MSI$ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/RestApi/sources/VaccinationCenterRouter.cpp || cmake_object_order_depends_target_project-template
+  DEP_FILE = CMakeFiles\project-template.dir\RestApi\sources\VaccinationCenterRouter.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/headers" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/RestApi/headers" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/RestApi/thirdparty"
+  OBJECT_DIR = CMakeFiles\project-template.dir
+  OBJECT_FILE_DIR = CMakeFiles\project-template.dir\RestApi\sources
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target project-template
@@ -260,7 +274,7 @@ build CMakeFiles/project-template.dir/RestApi/sources/AppointmentRouter.cpp.obj:
 #############################################
 # Link the executable project-template.exe
 
-build project-template.exe: CXX_EXECUTABLE_LINKER__project-template_Debug CMakeFiles/project-template.dir/main.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Company.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/EmployeeStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/VaccineTypeStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/VaccineStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/VaccinationCenterStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/SNSUserStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/AppointmentStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Employee.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Nurse.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Receptionist.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/VaccineType.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Vaccine.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/SNSUser.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Appointment.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/VaccinationCenter.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/HealthcareCenter.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/CommunityMassVaccinationCenter.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/WaitingRoom.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/RecoveryRoom.cpp.obj CMakeFiles/project-template.dir/Core/sources/controllers/restapi/VaccineController.cpp.obj CMakeFiles/project-template.dir/Core/sources/controllers/restapi/VaccineTypeController.cpp.obj CMakeFiles/project-template.dir/Core/sources/controllers/restapi/SNSUserController.cpp.obj CMakeFiles/project-template.dir/Core/sources/controllers/restapi/AppointmentController.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/Server.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/VaccineRouter.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/VaccineTypeRouter.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/SNSUserRouter.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/AppointmentRouter.cpp.obj | Core/libCore.a || Core/libCore.a
+build project-template.exe: CXX_EXECUTABLE_LINKER__project-template_Debug CMakeFiles/project-template.dir/main.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Company.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/EmployeeStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/VaccineTypeStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/VaccineStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/VaccinationCenterStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/SNSUserStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/AppointmentStore.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Employee.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Nurse.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Receptionist.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/VaccineType.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Vaccine.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/SNSUser.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/Appointment.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/VaccinationCenter.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/HealthcareCenter.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/CommunityMassVaccinationCenter.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/WaitingRoom.cpp.obj CMakeFiles/project-template.dir/Core/sources/domain/model/RecoveryRoom.cpp.obj CMakeFiles/project-template.dir/Core/sources/controllers/restapi/VaccineController.cpp.obj CMakeFiles/project-template.dir/Core/sources/controllers/restapi/VaccineTypeController.cpp.obj CMakeFiles/project-template.dir/Core/sources/controllers/restapi/AppointmentController.cpp.obj CMakeFiles/project-template.dir/Core/sources/controllers/restapi/SNSUserController.cpp.obj CMakeFiles/project-template.dir/Core/sources/controllers/restapi/VaccinationCenterController.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/Server.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/VaccineRouter.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/VaccineTypeRouter.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/SNSUserRouter.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/AppointmentRouter.cpp.obj CMakeFiles/project-template.dir/RestApi/sources/VaccinationCenterRouter.cpp.obj | Core/libCore.a || Core/libCore.a
   FLAGS = -g
   LINK_LIBRARIES = Core/libCore.a  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\project-template.dir
@@ -598,6 +612,13 @@ build CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj:
   OBJECT_DIR = CoreTests\CMakeFiles\CoreTests.dir
   OBJECT_FILE_DIR = CoreTests\CMakeFiles\CoreTests.dir\domain\shared
 
+build CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj: CXX_COMPILER__CoreTests_unscanned_Debug C$:/Users/MSI$ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/CoreTests/domain/model/VaccineTest.cpp || cmake_object_order_depends_target_CoreTests
+  DEP_FILE = CoreTests\CMakeFiles\CoreTests.dir\domain\model\VaccineTest.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/Core/headers" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/RestApi/headers" -I"C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/RestApi/thirdparty" -isystem "C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/CoreTests/lib/googletest/include" -isystem "C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/CoreTests/lib/googletest"
+  OBJECT_DIR = CoreTests\CMakeFiles\CoreTests.dir
+  OBJECT_FILE_DIR = CoreTests\CMakeFiles\CoreTests.dir\domain\model
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CoreTests
@@ -606,7 +627,7 @@ build CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj:
 #############################################
 # Link the executable CoreTests\CoreTests.exe
 
-build CoreTests/CoreTests.exe: CXX_EXECUTABLE_LINKER__CoreTests_Debug CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj | Core/libCore.a lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || Core/libCore.a lib/libgtest.a lib/libgtest_main.a
+build CoreTests/CoreTests.exe: CXX_EXECUTABLE_LINKER__CoreTests_Debug CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj | Core/libCore.a lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || Core/libCore.a lib/libgtest.a lib/libgtest_main.a
   FLAGS = -g
   LINK_LIBRARIES = Core/libCore.a  lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CoreTests\CMakeFiles\CoreTests.dir

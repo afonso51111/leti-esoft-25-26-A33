@@ -58,4 +58,5 @@ add_library(Core
         sources/domain/model/RecoveryRoom.cpp
         sources/domain/model/AppointmentStore.cpp
 
+
 )

@@ -6,7 +6,6 @@ VaccineTypeRouter::VaccineTypeRouter() : RouterConfig("/api/vaccine-types") {}
 
 void VaccineTypeRouter::configure(httplib::Server &svr) {
 
-    // GET: Listar Tipos
     svr.Get(this->baseResource, [](const httplib::Request &req, httplib::Response &res) {
         VaccineTypeController ctrl;
         HttpResult result = ctrl.getAll();
@@ -14,8 +13,6 @@ void VaccineTypeRouter::configure(httplib::Server &svr) {
         res.set_content(result.getBody(), "application/json");
     });
 
-    // POST: Criar Tipo
-    // Exemplo: /api/vaccine-types?code=COV&desc=Covid&tech=mRNA
     svr.Post(this->baseResource, [](const httplib::Request &req, httplib::Response &res) {
         if (req.has_param("code") && req.has_param("desc")) {
              std::string code = req.get_param_value("code");

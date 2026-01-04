@@ -1,8 +1,8 @@
 #ifndef SNSUSERCONTROLLER_H
 #define SNSUSERCONTROLLER_H
 
-#include "HttpResult.h"
-#include "../../domain/model/Company.h"
+#include "controllers/restapi/HttpResult.h"
+#include <string>
 
 class SNSUserController {
 public:
@@ -15,4 +15,4 @@ public:
                           std::string snsNum, std::string ccNum);
 };
 
-#endif
+#endif // SNSUSERCONTROLLER_H

@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "Appointment.h"
+#include "SNSUser.h"
 
 class AppointmentStore {
 private:
@@ -10,10 +11,13 @@ private:
 
 public:
     AppointmentStore();
-    ~AppointmentStore();
+    virtual ~AppointmentStore();
+
+    bool createAppointment(SNSUser* user, std::string centerName, std::string vaccineType, std::string date);
 
     void saveAppointment(Appointment* appointment);
-    std::vector<Appointment*> getAll() const;
+
+    std::vector<Appointment*> getList() const;
 };
 
-#endif
+#endif // APPOINTMENTSTORE_H

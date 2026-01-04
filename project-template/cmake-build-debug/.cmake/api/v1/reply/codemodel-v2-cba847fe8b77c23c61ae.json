@@ -252,7 +252,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "CoreTests::@f5995f64041c05ec46bd",
-					"jsonFile" : "target-CoreTests-Debug-0d3dc99111cc38d6d373.json",
+					"jsonFile" : "target-CoreTests-Debug-84b7a59479fded5bdc10.json",
 					"name" : "CoreTests",
 					"projectIndex" : 2
 				},
@@ -287,7 +287,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "project-template::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-project-template-Debug-387f31f1dec53658757e.json",
+					"jsonFile" : "target-project-template-Debug-5ec56012642d4a1aa64d.json",
 					"name" : "project-template",
 					"projectIndex" : 0
 				}
