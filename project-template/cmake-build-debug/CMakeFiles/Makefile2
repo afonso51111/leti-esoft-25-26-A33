@@ -186,7 +186,7 @@ CoreTests/lib/googletest/clean: CoreTests/lib/googletest/CMakeFiles/gtest_main.d
 CMakeFiles/project-template.dir/all: Core/CMakeFiles/Core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\project-template.dir\build.make CMakeFiles/project-template.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\project-template.dir\build.make CMakeFiles/project-template.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67 "Built target project-template"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68 "Built target project-template"
 .PHONY : CMakeFiles/project-template.dir/all
 
 # Build rule for subdir invocation for target.
@@ -240,12 +240,12 @@ CoreTests/CMakeFiles/CoreTests.dir/all: CoreTests/lib/googletest/CMakeFiles/gtes
 CoreTests/CMakeFiles/CoreTests.dir/all: CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=25,26,27 "Built target CoreTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=25,26,27,28 "Built target CoreTests"
 .PHONY : CoreTests/CMakeFiles/CoreTests.dir/all
 
 # Build rule for subdir invocation for target.
 CoreTests/CMakeFiles/CoreTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 30
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/CMakeFiles/CoreTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 0
 .PHONY : CoreTests/CMakeFiles/CoreTests.dir/rule
@@ -266,7 +266,7 @@ CoreTests/CMakeFiles/CoreTests.dir/clean:
 CoreTests/lib/googlemock/CMakeFiles/gmock.dir/all: CoreTests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CoreTests\lib\googlemock\CMakeFiles\gmock.dir\build.make CoreTests/lib/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f CoreTests\lib\googlemock\CMakeFiles\gmock.dir\build.make CoreTests/lib/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=28,29 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=29,30 "Built target gmock"
 .PHONY : CoreTests/lib/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -289,11 +289,11 @@ CoreTests/lib/googlemock/CMakeFiles/gmock.dir/clean:
 # Target rules for target CoreTests/lib/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-CoreTests/lib/googlemock/CMakeFiles/gmock_main.dir/all: CoreTests/lib/googletest/CMakeFiles/gtest.dir/all
 CoreTests/lib/googlemock/CMakeFiles/gmock_main.dir/all: CoreTests/lib/googlemock/CMakeFiles/gmock.dir/all
+CoreTests/lib/googlemock/CMakeFiles/gmock_main.dir/all: CoreTests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CoreTests\lib\googlemock\CMakeFiles\gmock_main.dir\build.make CoreTests/lib/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CoreTests\lib\googlemock\CMakeFiles\gmock_main.dir\build.make CoreTests/lib/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=30,31 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=31,32 "Built target gmock_main"
 .PHONY : CoreTests/lib/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -319,7 +319,7 @@ CoreTests/lib/googlemock/CMakeFiles/gmock_main.dir/clean:
 CoreTests/lib/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CoreTests\lib\googletest\CMakeFiles\gtest.dir\build.make CoreTests/lib/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CoreTests\lib\googletest\CMakeFiles\gtest.dir\build.make CoreTests/lib/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=32,33 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=33,34 "Built target gtest"
 .PHONY : CoreTests/lib/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -345,7 +345,7 @@ CoreTests/lib/googletest/CMakeFiles/gtest.dir/clean:
 CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/all: CoreTests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CoreTests\lib\googletest\CMakeFiles\gtest_main.dir\build.make CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CoreTests\lib\googletest\CMakeFiles\gtest_main.dir\build.make CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=34,35 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=35,36 "Built target gtest_main"
 .PHONY : CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.

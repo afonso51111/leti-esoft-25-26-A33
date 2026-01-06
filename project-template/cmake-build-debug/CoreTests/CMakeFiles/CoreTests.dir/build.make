@@ -98,16 +98,33 @@ CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.s"
 	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\domain\model\VaccineTest.cpp -o CMakeFiles\CoreTests.dir\domain\model\VaccineTest.cpp.s
 
+CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj: CoreTests/CMakeFiles/CoreTests.dir/flags.make
+CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj: CoreTests/CMakeFiles/CoreTests.dir/includes_CXX.rsp
+CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj: C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/CoreTests/domain/model/UtentTest.cpp
+CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj: CoreTests/CMakeFiles/CoreTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj"
+	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj -MF CMakeFiles\CoreTests.dir\domain\model\UtentTest.cpp.obj.d -o CMakeFiles\CoreTests.dir\domain\model\UtentTest.cpp.obj -c C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\domain\model\UtentTest.cpp
+
+CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.i"
+	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\domain\model\UtentTest.cpp > CMakeFiles\CoreTests.dir\domain\model\UtentTest.cpp.i
+
+CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.s"
+	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\domain\model\UtentTest.cpp -o CMakeFiles\CoreTests.dir\domain\model\UtentTest.cpp.s
+
 # Object files for target CoreTests
 CoreTests_OBJECTS = \
 "CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj" \
-"CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj"
+"CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj" \
+"CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj"
 
 # External object files for target CoreTests
 CoreTests_EXTERNAL_OBJECTS =
 
 CoreTests/CoreTests.exe: CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj
 CoreTests/CoreTests.exe: CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj
+CoreTests/CoreTests.exe: CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj
 CoreTests/CoreTests.exe: CoreTests/CMakeFiles/CoreTests.dir/build.make
 CoreTests/CoreTests.exe: Core/libCore.a
 CoreTests/CoreTests.exe: lib/libgtest.a
@@ -116,7 +133,7 @@ CoreTests/CoreTests.exe: lib/libgtest.a
 CoreTests/CoreTests.exe: CoreTests/CMakeFiles/CoreTests.dir/linkLibs.rsp
 CoreTests/CoreTests.exe: CoreTests/CMakeFiles/CoreTests.dir/objects1.rsp
 CoreTests/CoreTests.exe: CoreTests/CMakeFiles/CoreTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CoreTests.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CoreTests.exe"
 	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CoreTests.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

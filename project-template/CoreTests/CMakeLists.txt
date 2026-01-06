@@ -6,6 +6,7 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 add_executable(CoreTests
         domain/shared/StringUtilsTests.cpp
         domain/model/VaccineTest.cpp
+        domain/model/UtentTest.cpp
 )
 
 target_link_libraries(CoreTests Core)

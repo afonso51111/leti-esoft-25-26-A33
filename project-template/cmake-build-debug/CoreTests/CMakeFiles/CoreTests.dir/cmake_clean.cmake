@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj"
+  "CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj.d"
   "CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj"
   "CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj.d"
   "CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj"

@@ -8,7 +8,6 @@
 class VaccineTest : public ::testing::Test {
 protected:
     void SetUp() override {
-        // Setup vazio por enquanto
     }
 };
 

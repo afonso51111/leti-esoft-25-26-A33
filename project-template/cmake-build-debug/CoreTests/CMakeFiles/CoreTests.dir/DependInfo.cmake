@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/CoreTests/domain/model/UtentTest.cpp" "CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj" "gcc" "CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj.d"
   "C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/CoreTests/domain/model/VaccineTest.cpp" "CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj" "gcc" "CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj.d"
   "C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/CoreTests/domain/shared/StringUtilsTests.cpp" "CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj" "gcc" "CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj.d"
   )
