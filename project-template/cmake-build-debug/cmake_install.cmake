@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template
+# Install script for directory: C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,17 +39,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/cmake_install.cmake")
+  include("C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/cmake_install.cmake")
+  include("C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/cmake_install.cmake")
+  include("C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -67,6 +67,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

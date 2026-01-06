@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/CoreTests
+# Install script for directory: C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/CoreTests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/cmake_install.cmake")
+  include("C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/cmake_install.cmake")
 endif()
 

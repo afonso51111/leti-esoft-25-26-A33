@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/ConsoleApp
+# Install script for directory: C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/ConsoleApp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
