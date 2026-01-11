@@ -1,51 +1,78 @@
 @startuml
 skinparam classAttributeIconSize 0
-hide circle
 
-class ConsultWaitingRoomUI {
+package "UI" {
+  class ConsultWaitingRoomUI {
+  }
 }
 
-class ConsultWaitingRoomController {
-  + getVaccinationCenters()
-  + getWaitingList()
-}
+package "Core" {
 
-class Company {
-  + getVaccinationCenterStore()
-}
+  package "Controller" {
+    class ConsultWaitingRoomController {
+      + getWaitingList(): List<AppointmentDTO>
+    }
+  }
 
-class VaccinationCenterStore {
-  + getList()
-}
+  package "Service" {
+    class WaitingRoomService {
+      + getWaitingList(): List<AppointmentDTO>
+    }
+  }
 
-class "Vaccination Center" {
-  + getWaitingRoom()
-}
+  package "Domain" {
+    package "Model" {
+      class VaccinationCenter {
+        + getWaitingRoom(): WaitingRoom
+      }
+      class WaitingRoom {
+        + getAppointments(): List<Appointment>
+      }
+      class Appointment {
+        - arrivalTime: DateTime
+        - state: AppointmentState
+      }
+      class SNSUser {}
+    }
 
-class "Waiting Room" {
-  + getWaitingList()
-}
+    package "Repository" {
+      class VaccinationCenterRepository {
+        + getCurrentCenter(): VaccinationCenter
+      }
+    }
+  }
 
-class Appointment {
-  - date
-  - time
-}
+  package "DTO" {
+    class AppointmentDTO {
+      - snsUserNumber
+      - snsUserName
+      - arrivalTime
+    }
+  }
 
-class "SNS User" {
-  - name
-  - sns_number
+  package "Mapper" {
+    class AppointmentMapper {
+      + toDTOList(list: List<Appointment>): List<AppointmentDTO>
+      + toDTO(app: Appointment): AppointmentDTO
+    }
+  }
 }
 
 ConsultWaitingRoomUI ..> ConsultWaitingRoomController
-ConsultWaitingRoomController ..> Company
-ConsultWaitingRoomController ..> VaccinationCenterStore
-ConsultWaitingRoomController ..> "Vaccination Center"
-ConsultWaitingRoomController ..> "Waiting Room"
+ConsultWaitingRoomUI ..> AppointmentDTO
 
-Company "1" --> "1" VaccinationCenterStore : has >
-VaccinationCenterStore "1" --> "*" "Vaccination Center" : stores >
-"Vaccination Center" "1" --> "1" "Waiting Room" : has >
-"Waiting Room" "1" --> "*" Appointment : holds >
-Appointment --> "SNS User" : for >
+ConsultWaitingRoomController ..> WaitingRoomService
+ConsultWaitingRoomController ..> AppointmentDTO
+
+WaitingRoomService ..> VaccinationCenterRepository
+WaitingRoomService ..> VaccinationCenter
+WaitingRoomService ..> WaitingRoom
+WaitingRoomService ..> AppointmentMapper
+
+AppointmentMapper ..> Appointment
+AppointmentMapper ..> AppointmentDTO
+
+VaccinationCenter "1" --> "1" WaitingRoom : has
+WaitingRoom "1" --> "*" Appointment : holds
 
 @enduml

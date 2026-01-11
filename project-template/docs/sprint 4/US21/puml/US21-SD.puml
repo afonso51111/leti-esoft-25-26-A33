@@ -1,117 +1,112 @@
 @startuml
 autonumber
-actor "Receptionist" as Rec
-participant ":ScheduleVaccine\nOnBehalfUI" as UI
-participant ":ScheduleVaccine\nOnBehalfController" as CTRL
-participant ":Company" as CMP
-participant "uStore\n:SNSUserStore" as U_STORE
-participant "cStore\n:VaccinationCenterStore" as C_STORE
-participant "tStore\n:VaccineTypeStore" as T_STORE
-participant "center\n:Vaccination Center" as CENTER
-participant "app\n:Appointment" as APP
 
-activate Rec
-Rec -> UI : asks to schedule for an SNS User
+actor "SNS User" as User
+participant ":ScheduleAppointmentUI" as UI
+participant ":ScheduleAppointmentController" as CTRL
+participant ":ScheduleAppointmentService" as SVC
+participant ":VaccinationCenterRepository" as VCRepo
+participant ":VaccineTypeRepository" as VTRepo
+participant ":AppointmentRepository" as AppRepo
+participant ":SNSUserRepository" as UserRepo
+participant ":AppointmentMapper" as MAPPER
+participant "dto: AppointmentDTO" as DTO
+participant "app: Appointment" as APP
+
+activate User
+User -> UI : asks to schedule vaccine
 activate UI
 
-UI --> Rec : requests SNS User Number
-deactivate UI
-
-Rec -> UI : types SNS User Number
-activate UI
-
-'--- Identificar o User ---
-UI -> CTRL : setSNSUser(snsNumber)
-activate CTRL
-CTRL -> CMP : uStore = getSNSUserStore()
-activate CMP
-deactivate CMP
-CTRL -> U_STORE : user = getSNSUser(snsNumber)
-activate U_STORE
-deactivate U_STORE
-deactivate CTRL
-
-'--- O resto é idêntico à US30 ---
+' 1. Obter Lista de Centros
 UI -> CTRL : getVaccinationCenters()
 activate CTRL
-CTRL -> CMP : cStore = getVaccinationCenterStore()
-activate CMP
-deactivate CMP
-CTRL -> C_STORE : getList()
-activate C_STORE
-deactivate C_STORE
-CTRL --> UI : list of centers
+CTRL -> SVC : getVaccinationCenters()
+activate SVC
+SVC -> VCRepo : findAll()
+activate VCRepo
+VCRepo --> SVC : listCenters
+deactivate VCRepo
+SVC --> CTRL : listCenterDTOs
+deactivate SVC
+CTRL --> UI : listCenterDTOs
 deactivate CTRL
 
-UI --> Rec : asks to select center
+UI --> User : shows centers and asks to select
 deactivate UI
-Rec -> UI : selects center
+
+User -> UI : selects a center (centerId)
 activate UI
 
+' 2. Obter Lista de Tipos de Vacina
 UI -> CTRL : getVaccineTypes()
 activate CTRL
-CTRL -> CMP : tStore = getVaccineTypeStore()
-activate CMP
-deactivate CMP
-CTRL -> T_STORE : getList()
-activate T_STORE
-deactivate T_STORE
-CTRL --> UI : list of types
+CTRL -> SVC : getVaccineTypes()
+activate SVC
+SVC -> VTRepo : findAll()
+activate VTRepo
+VTRepo --> SVC : listTypes
+deactivate VTRepo
+SVC --> CTRL : listTypeDTOs
+deactivate SVC
+CTRL --> UI : listTypeDTOs
 deactivate CTRL
 
-UI --> Rec : asks to select vaccine type
+UI --> User : shows types and asks to select
 deactivate UI
-Rec -> UI : selects type
+
+User -> UI : selects a type (typeCode)
 activate UI
 
-UI --> Rec : requests preferred date
+UI --> User : asks for date and time
 deactivate UI
-Rec -> UI : types date
+
+User -> UI : enters date and time
 activate UI
 
-UI -> CTRL : getAvailableSlots(center, date)
-activate CTRL
-    CTRL -> CENTER : getAvailableSlots(date)
-    activate CENTER
-    deactivate CENTER
-CTRL --> UI : list of slots
-deactivate CTRL
-
-UI --> Rec : shows available slots
-deactivate UI
-Rec -> UI : selects time slot
-activate UI
+' 3. Criar o Agendamento
+' Assumindo que o UI já sabe o SNS Number do utilizador logado
+UI -> DTO** : create(snsNumber, centerId, typeCode, date, time)
 
 UI -> CTRL : createAppointment(dto)
 activate CTRL
-    CTRL -> CENTER : createAppointment(user, vaccineType, date, time)
-    activate CENTER
-        create APP
-        CENTER -> APP : create(user, vaccineType, date, time)
-    CENTER --> CTRL : app
-    deactivate CENTER
 
-    CTRL -> CENTER : validateAppointment(app)
-    activate CENTER
-    deactivate CENTER
+CTRL -> SVC : createAppointment(dto)
+activate SVC
 
-CTRL --> UI : appointment info
-deactivate CTRL
+' Validar disponibilidade (simplificado)
+SVC -> VCRepo : findById(dto.centerId)
+activate VCRepo
+VCRepo --> SVC : center
+deactivate VCRepo
 
-UI --> Rec : shows data and requests confirmation
-deactivate UI
-Rec -> UI : confirms
-activate UI
+' Obter entidades necessárias
+SVC -> UserRepo : findByNumber(dto.snsNumber)
+activate UserRepo
+UserRepo --> SVC : user
+deactivate UserRepo
 
-UI -> CTRL : save()
-activate CTRL
-    CTRL -> CENTER : addAppointment(app)
-    activate CENTER
-    deactivate CENTER
+SVC -> VTRepo : findByCode(dto.typeCode)
+activate VTRepo
+VTRepo --> SVC : vType
+deactivate VTRepo
+
+' Criar objeto de domínio
+SVC -> APP** : create(user, center, vType, date, time)
+
+' Guardar
+SVC -> AppRepo : save(app)
+activate AppRepo
+AppRepo --> SVC : success
+deactivate AppRepo
+
+SVC --> CTRL : success
+deactivate SVC
+
 CTRL --> UI : success
 deactivate CTRL
 
-UI --> Rec : informs success
+UI --> User : displays success message
 deactivate UI
-deactivate Rec
+
+deactivate User
 @enduml

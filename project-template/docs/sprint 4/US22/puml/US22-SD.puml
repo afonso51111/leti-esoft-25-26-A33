@@ -1,60 +1,102 @@
 @startuml
 autonumber
+
 actor "Receptionist" as Rec
 participant ":RegisterArrivalUI" as UI
-participant ":RegisterArrival\nController" as CTRL
-participant ":Company" as CMP
-participant "cStore\n:VaccinationCenterStore" as CSTORE
-participant "center\n:Vaccination Center" as CENTER
-participant "room\n:Waiting Room" as ROOM
-participant "app\n:Appointment" as APP
+participant ":RegisterArrivalController" as CTRL
+participant ":ArrivalService" as SVC
+participant ":AppointmentRepository" as AppRepo
+participant ":VaccinationCenterRepository" as VCRepo
+participant "center: VaccinationCenter" as CENTER
+participant "waitingRoom: WaitingRoom" as ROOM
+participant "appointment: Appointment" as APP
+participant "arrival: Arrival" as ARRIVAL
+participant "dto: AppointmentDTO" as DTO
+participant ":AppointmentMapper" as MAPPER
 
 activate Rec
 Rec -> UI : asks to register arrival
 activate UI
 
-'--- Seleção de Centro (Simplificado para focar na mudança) ---
-UI -> CTRL : getVaccinationCenters()
-activate CTRL
-' ... (lógica igual de obter lista) ...
-CTRL --> UI : list of centers
-deactivate CTRL
-
-UI --> Rec : asks to select center
+UI --> Rec : asks for SNS User Number
 deactivate UI
-Rec -> UI : selects center
+
+Rec -> UI : provides SNS User Number
 activate UI
 
-'--- Identificar Utente e Registar Chegada ---
-UI --> Rec : requests SNS User Number
+UI -> CTRL : getAppointment(snsNumber)
+activate CTRL
+
+CTRL -> SVC : getAppointment(snsNumber)
+activate SVC
+
+' O Serviço procura agendamentos para hoje para este utente
+SVC -> AppRepo : findTodayAppointment(snsNumber)
+activate AppRepo
+AppRepo --> SVC : appointment
+deactivate AppRepo
+
+SVC -> MAPPER : toDTO(appointment)
+activate MAPPER
+MAPPER --> SVC : dto
+deactivate MAPPER
+
+SVC --> CTRL : dto
+deactivate SVC
+
+CTRL --> UI : dto
+deactivate CTRL
+
+UI --> Rec : shows details and asks confirmation
 deactivate UI
-Rec -> UI : types SNS User Number
+
+Rec -> UI : confirms arrival
 activate UI
 
 UI -> CTRL : createArrival()
 activate CTRL
-    CTRL -> CENTER : registerArrival(snsNumber)
-    activate CENTER
 
-        ' 1. Verificar se tem agendamento
-        CENTER -> CENTER : app = getAppointment(snsNumber)
-        activate CENTER
-        deactivate CENTER
+CTRL -> SVC : registerArrival(dto.id)
+activate SVC
 
-        ' 2. Adicionar o Agendamento à Sala de Espera
-        CENTER -> ROOM : addAppointment(app)
-        activate ROOM
-            ROOM -> ROOM : validateDuplicate(app
-            ROOM -> ROOM : add(app)
+' Recuperar o objeto de domínio appointment
+SVC -> AppRepo : findById(dto.id)
+activate AppRepo
+AppRepo --> SVC : appointment
+deactivate AppRepo
 
+' Recuperar o centro atual
+SVC -> VCRepo : getCurrentCenter()
+activate VCRepo
+VCRepo --> SVC : center
+deactivate VCRepo
 
-        deactivate ROOM
+SVC -> CENTER : getWaitingRoom()
+activate CENTER
+CENTER --> SVC : waitingRoom
+deactivate CENTER
 
-    deactivate CENTER
+' Criar a chegada (Arrival)
+SVC -> ARRIVAL** : create(appointment)
+
+' Adicionar à sala de espera
+SVC -> ROOM : addArrival(arrival)
+activate ROOM
+deactivate ROOM
+
+' Mudar o estado do agendamento para ARRIVED
+SVC -> APP : arrive()
+activate APP
+deactivate APP
+
+SVC --> CTRL : success
+deactivate SVC
+
 CTRL --> UI : success
 deactivate CTRL
 
-UI --> Rec : informs operation success
+UI --> Rec : displays operation success
 deactivate UI
+
 deactivate Rec
 @enduml

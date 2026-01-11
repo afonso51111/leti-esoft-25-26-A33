@@ -5,28 +5,24 @@ participant ":System" as System
 
 activate Nurse
 
-Nurse -> System : asks to record the administration of a vaccine for a selected user
+Nurse -> System : asks to record vaccine administration
 activate System
-
-System --> Nurse : shows list of available vaccines (of the scheduled type) \nand asks to select one
+System --> Nurse : asks for appointment data (e.g. SNS User number)
 deactivate System
 
-Nurse -> System : selects the vaccine (brand)
+Nurse -> System : types requested data
 activate System
-
-System --> Nurse : requests the lot number
+System --> Nurse : shows appointment details and asks for vaccine data (lot number)
 deactivate System
 
-Nurse -> System : types the lot number
+Nurse -> System : types vaccine data (lot number)
 activate System
-
 System --> Nurse : shows all data and requests confirmation
 deactivate System
 
-Nurse -> System : confirms the administration
+Nurse -> System : confirms data
 activate System
-
-System --> Nurse : informs operation success (User moved to Recovery Room)
+System --> Nurse : records the administration and informs success
 deactivate System
 
 deactivate Nurse

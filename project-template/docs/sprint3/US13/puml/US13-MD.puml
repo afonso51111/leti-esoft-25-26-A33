@@ -1,49 +1,42 @@
 @startuml
-hide circle
 hide methods
+left to right direction
 skinparam classAttributeIconSize 0
 
-class "DGS Administrator" {
-}
-
-abstract class "Vaccination Center" {
+class Administrator {
   - name
-  - postal_address
-  - phone_number
   - email
-  - website_address
-  - opening_hours
-  - closing_hours
-  - capacity_per_hour
+  - phoneNumber
+  - employeeId
 }
 
-class "Healthcare Center" {
-  - ars
-  - ages
-}
-
-class "Community Mass Vaccination Center" {
-}
-
-class "Vaccine Type" {
+class VaccineType {
   - code
   - description
   - technology
 }
 
-class "Waiting Room" {
+class Vaccine {
+  - name
+  - brand
+  - id
 }
 
-class "Recovery Room" {
+class AdministrationProcess {
+  - doseNumber
+  - dosage
+  - timeIntervalBetweenDoses
 }
 
-"Healthcare Center" --|> "Vaccination Center"
-"Community Mass Vaccination Center" --|> "Vaccination Center"
+class AgeGroup {
+  - minimumAge
+  - maximumAge
+}
 
-"DGS Administrator" "1" -right-- "0..*" "Vaccination Center": manages >
+' Relacionamentos
+Administrator "1" -- "*" Vaccine : specifies >
+Vaccine "*" -- "1" VaccineType : is of >
+Vaccine "1" -- "1..*" AdministrationProcess : consists of >
+AdministrationProcess "*" -- "1" AgeGroup : applicable to >
 
-"Community Mass Vaccination Center" "1" -- "1" "Vaccine Type": administers >
-
-"Vaccination Center" "1" *-- "1" "Waiting Room": has >
-"Vaccination Center" "1" *-- "1" "Recovery Room": has >
 @enduml

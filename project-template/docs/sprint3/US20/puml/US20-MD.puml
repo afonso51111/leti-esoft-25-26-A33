@@ -1,22 +1,35 @@
 @startuml
-hide circle
 hide methods
+left to right direction
 skinparam classAttributeIconSize 0
 
-class Receptionist {
+class Company {
+  - designation
 }
 
-class "SNS User" {
-  - sns_number
+class Administrator {
   - name
-  - birth_date
-  - sex
-  - postal_address
-  - phone_number
   - email
-  - citizen_card_number
+  - phoneNumber
+  - employeeId
 }
 
-Receptionist "1" -right-- "*" "SNS User": registers >
+class Employee {
+  - name
+  - address
+  - phoneNumber
+  - email
+  - citizenCardNumber
+  - employeeId
+}
+
+class Receptionist {
+  ' Herda atributos de Employee
+}
+
+' Relações
+Company "1" -- "*" Employee : employs >
+Administrator "1" -- "*" Receptionist : registers >
+Receptionist --|> Employee : is a >
 
 @enduml

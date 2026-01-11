@@ -1,65 +1,62 @@
 @startuml
 autonumber
-actor "Receptionist" as Rec
-participant ":RegisterSNSUserUI" as UI
-participant ":RegisterSNSUserController" as CTRL
-participant ":Company" as CMP
-participant "store\n:SNSUserStore" as STORE
-participant "user\n:SNS User" as USER
 
-activate Rec
-Rec -> UI : asks to register a new SNS User
+actor "Administrator" as Admin
+participant ":RegisterReceptionistUI" as UI
+participant ":RegisterReceptionistController" as CTRL
+participant ":ReceptionistService" as SVC
+participant "dto: ReceptionistDTO" as DTO
+participant ":ReceptionistMapper" as MAPPER
+participant ":ReceptionistRepository" as REPO
+participant "receptionist: Receptionist" as MODEL
+participant ":AuthFacade" as AUTH
+
+activate Admin
+Admin -> UI : asks to register a new receptionist
 activate UI
 
-UI --> Rec : requests data (name, address, sex, phone, email, ...)
+UI --> Admin : asks for data (Name, Address, Phone, Email, CC)
 deactivate UI
 
-Rec -> UI : types/selects the requested data
+Admin -> UI : types data
 activate UI
 
-UI -> CTRL : createSNSUser(dto)
+' UI cria o DTO com os dados inseridos
+UI -> DTO** : create(name, address, phone, email, cc)
+
+UI -> CTRL : registerReceptionist(dto)
 activate CTRL
 
-CTRL -> CMP : store = getSNSUserStore()
-activate CMP
-deactivate CMP
+CTRL -> SVC : registerReceptionist(dto)
+activate SVC
 
-CTRL -> STORE : user = createSNSUser(dto)
-activate STORE
-    create USER
-    STORE -> USER : create(name, address, sex, ...)
-    activate USER
-    deactivate USER
+' 1. O Serviço usa o Mapper para converter DTO em Domínio
+SVC -> MAPPER : toModel(dto)
+activate MAPPER
+MAPPER -> MODEL** : create(name, address, phone, email, cc)
+MAPPER --> SVC : receptionist
+deactivate MAPPER
 
-STORE --> CTRL : user
-deactivate STORE
+' 2. O Serviço guarda o Rececionista no Repositório
+SVC -> REPO : save(receptionist)
+activate REPO
+REPO --> SVC : boolean (success)
+deactivate REPO
 
-CTRL -> STORE : validateSNSUser(user)
-activate STORE
-deactivate STORE
+' 3. O Serviço regista o utilizador no sistema de autenticação (opcional mas comum)
+SVC -> AUTH : addUserWithRole(name, email, "RECEPTIONIST")
+activate AUTH
+AUTH --> SVC : success
+deactivate AUTH
 
-CTRL --> UI : user info
+SVC --> CTRL : success
+deactivate SVC
+
+CTRL --> UI : success
 deactivate CTRL
 
-UI --> Rec : shows all data and requests confirmation
+UI --> Admin : displays success message and credentials
 deactivate UI
 
-Rec -> UI : confirms the data
-activate UI
-
-UI -> CTRL : save()
-activate CTRL
-
-CTRL -> STORE : saveSNSUser(user)
-activate STORE
-    STORE -> STORE : add(user)
-deactivate STORE
-
-CTRL --> UI : result
-deactivate CTRL
-
-UI --> Rec : informs operation success
-deactivate UI
-deactivate Rec
-
+deactivate Admin
 @enduml

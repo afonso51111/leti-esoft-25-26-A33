@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template
+CMAKE_SOURCE_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CoreTests/CMakeFiles/CoreTests.dir/depend.make
@@ -70,33 +70,33 @@ include CoreTests/CMakeFiles/CoreTests.dir/flags.make
 
 CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj: CoreTests/CMakeFiles/CoreTests.dir/flags.make
 CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj: CoreTests/CMakeFiles/CoreTests.dir/includes_CXX.rsp
-CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj: C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/CoreTests/domain/shared/StringUtilsTests.cpp
+CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj: C:/Users/MSI\ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/CoreTests/domain/shared/StringUtilsTests.cpp
 CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj: CoreTests/CMakeFiles/CoreTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj -MF CMakeFiles\CoreTests.dir\domain\shared\StringUtilsTests.cpp.obj.d -o CMakeFiles\CoreTests.dir\domain\shared\StringUtilsTests.cpp.obj -c C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\domain\shared\StringUtilsTests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj -MF CMakeFiles\CoreTests.dir\domain\shared\StringUtilsTests.cpp.obj.d -o CMakeFiles\CoreTests.dir\domain\shared\StringUtilsTests.cpp.obj -c "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\domain\shared\StringUtilsTests.cpp"
 
 CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.i"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\domain\shared\StringUtilsTests.cpp > CMakeFiles\CoreTests.dir\domain\shared\StringUtilsTests.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\domain\shared\StringUtilsTests.cpp" > CMakeFiles\CoreTests.dir\domain\shared\StringUtilsTests.cpp.i
 
 CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.s"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\domain\shared\StringUtilsTests.cpp -o CMakeFiles\CoreTests.dir\domain\shared\StringUtilsTests.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\domain\shared\StringUtilsTests.cpp" -o CMakeFiles\CoreTests.dir\domain\shared\StringUtilsTests.cpp.s
 
 CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj: CoreTests/CMakeFiles/CoreTests.dir/flags.make
 CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj: CoreTests/CMakeFiles/CoreTests.dir/includes_CXX.rsp
-CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj: C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/CoreTests/domain/model/VaccineTest.cpp
+CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj: C:/Users/MSI\ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/CoreTests/domain/model/VaccineTest.cpp
 CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj: CoreTests/CMakeFiles/CoreTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj -MF CMakeFiles\CoreTests.dir\domain\model\VaccineTest.cpp.obj.d -o CMakeFiles\CoreTests.dir\domain\model\VaccineTest.cpp.obj -c C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\domain\model\VaccineTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj -MF CMakeFiles\CoreTests.dir\domain\model\VaccineTest.cpp.obj.d -o CMakeFiles\CoreTests.dir\domain\model\VaccineTest.cpp.obj -c "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\domain\model\VaccineTest.cpp"
 
 CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.i"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\domain\model\VaccineTest.cpp > CMakeFiles\CoreTests.dir\domain\model\VaccineTest.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\domain\model\VaccineTest.cpp" > CMakeFiles\CoreTests.dir\domain\model\VaccineTest.cpp.i
 
 CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.s"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\domain\model\VaccineTest.cpp -o CMakeFiles\CoreTests.dir\domain\model\VaccineTest.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\domain\model\VaccineTest.cpp" -o CMakeFiles\CoreTests.dir\domain\model\VaccineTest.cpp.s
 
 # Object files for target CoreTests
 CoreTests_OBJECTS = \
@@ -116,18 +116,18 @@ CoreTests/CoreTests.exe: lib/libgtest.a
 CoreTests/CoreTests.exe: CoreTests/CMakeFiles/CoreTests.dir/linkLibs.rsp
 CoreTests/CoreTests.exe: CoreTests/CMakeFiles/CoreTests.dir/objects1.rsp
 CoreTests/CoreTests.exe: CoreTests/CMakeFiles/CoreTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CoreTests.exe"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CoreTests.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CoreTests.exe"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CoreTests.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 CoreTests/CMakeFiles/CoreTests.dir/build: CoreTests/CoreTests.exe
 .PHONY : CoreTests/CMakeFiles/CoreTests.dir/build
 
 CoreTests/CMakeFiles/CoreTests.dir/clean:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests && $(CMAKE_COMMAND) -P CMakeFiles\CoreTests.dir\cmake_clean.cmake
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1 && $(CMAKE_COMMAND) -P CMakeFiles\CoreTests.dir\cmake_clean.cmake
 .PHONY : CoreTests/CMakeFiles/CoreTests.dir/clean
 
 CoreTests/CMakeFiles/CoreTests.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\CMakeFiles\CoreTests.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\CMakeFiles\CoreTests.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CoreTests/CMakeFiles/CoreTests.dir/depend
 

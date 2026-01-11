@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template
+CMAKE_SOURCE_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/depend.make
@@ -70,18 +70,18 @@ include CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/flags.make
 
 CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/flags.make
 CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/includes_CXX.rsp
-CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/CoreTests/lib/googletest/src/gtest_main.cc
+CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: C:/Users/MSI\ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/CoreTests/lib/googletest/src/gtest_main.cc
 CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googletest && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj -MF CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d -o CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj -c C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\lib\googletest\src\gtest_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~2 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj -MF CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d -o CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj -c "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\lib\googletest\src\gtest_main.cc"
 
 CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gtest_main.dir/src/gtest_main.cc.i"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googletest && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\lib\googletest\src\gtest_main.cc > CMakeFiles\gtest_main.dir\src\gtest_main.cc.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~2 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\lib\googletest\src\gtest_main.cc" > CMakeFiles\gtest_main.dir\src\gtest_main.cc.i
 
 CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gtest_main.dir/src/gtest_main.cc.s"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googletest && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\lib\googletest\src\gtest_main.cc -o CMakeFiles\gtest_main.dir\src\gtest_main.cc.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~2 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\lib\googletest\src\gtest_main.cc" -o CMakeFiles\gtest_main.dir\src\gtest_main.cc.s
 
 # Object files for target gtest_main
 gtest_main_OBJECTS = \
@@ -93,19 +93,19 @@ gtest_main_EXTERNAL_OBJECTS =
 lib/libgtest_main.a: CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj
 lib/libgtest_main.a: CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/build.make
 lib/libgtest_main.a: CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ..\..\..\lib\libgtest_main.a"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googletest && $(CMAKE_COMMAND) -P CMakeFiles\gtest_main.dir\cmake_clean_target.cmake
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googletest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gtest_main.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ..\..\..\lib\libgtest_main.a"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~2 && $(CMAKE_COMMAND) -P CMakeFiles\gtest_main.dir\cmake_clean_target.cmake
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gtest_main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/build: lib/libgtest_main.a
 .PHONY : CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/build
 
 CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/clean:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googletest && $(CMAKE_COMMAND) -P CMakeFiles\gtest_main.dir\cmake_clean.cmake
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~2 && $(CMAKE_COMMAND) -P CMakeFiles\gtest_main.dir\cmake_clean.cmake
 .PHONY : CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/clean
 
 CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\lib\googletest C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googletest C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googletest\CMakeFiles\gtest_main.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\lib\googletest" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googletest" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googletest\CMakeFiles\gtest_main.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/depend
 

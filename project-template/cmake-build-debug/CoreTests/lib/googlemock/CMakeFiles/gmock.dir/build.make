@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template
+CMAKE_SOURCE_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CoreTests/lib/googlemock/CMakeFiles/gmock.dir/depend.make
@@ -70,18 +70,18 @@ include CoreTests/lib/googlemock/CMakeFiles/gmock.dir/flags.make
 
 CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CoreTests/lib/googlemock/CMakeFiles/gmock.dir/flags.make
 CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CoreTests/lib/googlemock/CMakeFiles/gmock.dir/includes_CXX.rsp
-CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/CoreTests/lib/googlemock/src/gmock-all.cc
+CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: C:/Users/MSI\ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/CoreTests/lib/googlemock/src/gmock-all.cc
 CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CoreTests/lib/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googlemock && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj -MF CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d -o CMakeFiles\gmock.dir\src\gmock-all.cc.obj -c C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\lib\googlemock\src\gmock-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj -MF CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d -o CMakeFiles\gmock.dir\src\gmock-all.cc.obj -c "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\lib\googlemock\src\gmock-all.cc"
 
 CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gmock.dir/src/gmock-all.cc.i"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googlemock && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\lib\googlemock\src\gmock-all.cc > CMakeFiles\gmock.dir\src\gmock-all.cc.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\lib\googlemock\src\gmock-all.cc" > CMakeFiles\gmock.dir\src\gmock-all.cc.i
 
 CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/src/gmock-all.cc.s"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googlemock && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\lib\googlemock\src\gmock-all.cc -o CMakeFiles\gmock.dir\src\gmock-all.cc.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\lib\googlemock\src\gmock-all.cc" -o CMakeFiles\gmock.dir\src\gmock-all.cc.s
 
 # Object files for target gmock
 gmock_OBJECTS = \
@@ -93,19 +93,19 @@ gmock_EXTERNAL_OBJECTS =
 lib/libgmock.a: CoreTests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj
 lib/libgmock.a: CoreTests/lib/googlemock/CMakeFiles/gmock.dir/build.make
 lib/libgmock.a: CoreTests/lib/googlemock/CMakeFiles/gmock.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ..\..\..\lib\libgmock.a"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googlemock && $(CMAKE_COMMAND) -P CMakeFiles\gmock.dir\cmake_clean_target.cmake
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gmock.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ..\..\..\lib\libgmock.a"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~1 && $(CMAKE_COMMAND) -P CMakeFiles\gmock.dir\cmake_clean_target.cmake
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\gmock.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 CoreTests/lib/googlemock/CMakeFiles/gmock.dir/build: lib/libgmock.a
 .PHONY : CoreTests/lib/googlemock/CMakeFiles/gmock.dir/build
 
 CoreTests/lib/googlemock/CMakeFiles/gmock.dir/clean:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googlemock && $(CMAKE_COMMAND) -P CMakeFiles\gmock.dir\cmake_clean.cmake
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CORETE~1\lib\GOOGLE~1 && $(CMAKE_COMMAND) -P CMakeFiles\gmock.dir\cmake_clean.cmake
 .PHONY : CoreTests/lib/googlemock/CMakeFiles/gmock.dir/clean
 
 CoreTests/lib/googlemock/CMakeFiles/gmock.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\CoreTests\lib\googlemock C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googlemock C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googlemock\CMakeFiles\gmock.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\CoreTests\lib\googlemock" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googlemock" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\lib\googlemock\CMakeFiles\gmock.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CoreTests/lib/googlemock/CMakeFiles/gmock.dir/depend
 

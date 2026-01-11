@@ -1,56 +1,99 @@
 @startuml
 skinparam classAttributeIconSize 0
-hide circle
 
-class ScheduleVaccineOnBehalfUI {
+package "UI" {
+  class ScheduleAppointmentUI {
+  }
 }
 
-class ScheduleVaccineOnBehalfController {
-  + setSNSUser(snsNumber)
-  + getVaccinationCenters()
-  + getVaccineTypes()
-  + getAvailableSlots(center, date)
-  + createAppointment(dto)
-  + save()
+package "Core" {
+
+  package "Controller" {
+    class ScheduleAppointmentController {
+      + getVaccinationCenters(): List<VaccinationCenterDTO>
+      + getVaccineTypes(): List<VaccineTypeDTO>
+      + createAppointment(dto: AppointmentDTO): boolean
+    }
+  }
+
+  package "Service" {
+    class ScheduleAppointmentService {
+      + getVaccinationCenters(): List<VaccinationCenterDTO>
+      + getVaccineTypes(): List<VaccineTypeDTO>
+      + createAppointment(dto: AppointmentDTO): boolean
+    }
+  }
+
+  package "Domain" {
+    package "Model" {
+      class Appointment {
+        - date: Date
+        - time: Time
+        + create(user, center, type, date, time)
+      }
+      class SNSUser {}
+      class VaccinationCenter {}
+      class VaccineType {}
+    }
+
+    package "Repository" {
+      class AppointmentRepository {
+        + save(app: Appointment): boolean
+      }
+      class VaccinationCenterRepository {
+        + findAll(): List<VaccinationCenter>
+        + findById(id: String): VaccinationCenter
+      }
+      class VaccineTypeRepository {
+        + findAll(): List<VaccineType>
+        + findByCode(code: String): VaccineType
+      }
+      class SNSUserRepository {
+        + findByNumber(num: String): SNSUser
+      }
+    }
+  }
+
+  package "DTO" {
+    class AppointmentDTO {
+      - snsUserNumber
+      - centerId
+      - vaccineTypeCode
+      - date
+      - time
+    }
+    class VaccinationCenterDTO {}
+    class VaccineTypeDTO {}
+  }
+
+  package "Mapper" {
+    class AppointmentMapper {
+      + toModel(dto: AppointmentDTO): Appointment
+    }
+    class VaccinationCenterMapper {
+      + toDTOList(list: List<VaccinationCenter>): List<VaccinationCenterDTO>
+    }
+    class VaccineTypeMapper {
+      + toDTOList(list: List<VaccineType>): List<VaccineTypeDTO>
+    }
+  }
 }
 
-class Company {
-  + getVaccinationCenterStore()
-  + getVaccineTypeStore()
-  + getSNSUserStore()
-}
+ScheduleAppointmentUI ..> ScheduleAppointmentController
+ScheduleAppointmentUI ..> AppointmentDTO
 
-class SNSUserStore {
-  + getSNSUser(snsNumber)
-}
+ScheduleAppointmentController ..> ScheduleAppointmentService
+ScheduleAppointmentController ..> AppointmentDTO
 
-class VaccinationCenterStore {
-  + getList()
-}
+ScheduleAppointmentService ..> AppointmentRepository
+ScheduleAppointmentService ..> VaccinationCenterRepository
+ScheduleAppointmentService ..> VaccineTypeRepository
+ScheduleAppointmentService ..> SNSUserRepository
+ScheduleAppointmentService ..> Appointment
+ScheduleAppointmentService ..> AppointmentMapper
+ScheduleAppointmentService ..> VaccinationCenterMapper
+ScheduleAppointmentService ..> VaccineTypeMapper
 
-class VaccineTypeStore {
-  + getList()
-}
-
-class "Vaccination Center" {
-  + getAvailableSlots(date)
-  + createAppointment(user, type, date, time)
-  + addAppointment(app)
-}
-
-class "SNS User" {
-}
-
-ScheduleVaccineOnBehalfUI ..> ScheduleVaccineOnBehalfController
-ScheduleVaccineOnBehalfController ..> Company
-ScheduleVaccineOnBehalfController ..> SNSUserStore
-ScheduleVaccineOnBehalfController ..> VaccinationCenterStore
-ScheduleVaccineOnBehalfController ..> VaccineTypeStore
-ScheduleVaccineOnBehalfController ..> "Vaccination Center"
-ScheduleVaccineOnBehalfController ..> "SNS User"
-
-Company "1" --> "1" SNSUserStore : has >
-Company "1" --> "1" VaccinationCenterStore : has >
-Company "1" --> "1" VaccineTypeStore : has >
+AppointmentRepository "1" --> "*" Appointment : saves
 
 @enduml

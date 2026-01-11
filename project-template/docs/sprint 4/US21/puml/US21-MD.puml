@@ -1,32 +1,47 @@
 @startuml
-hide circle
 hide methods
+left to right direction
 skinparam classAttributeIconSize 0
 
-class "Receptionist" {
+class Company {
+  - designation
 }
 
-class "SNS User" {
-  - sns_number
+class SNSUser {
+  - snsUserNumber
   - name
+  - birthDate
+  - sex
+  - phoneNumber
+  - email
+  - citizenCardNumber
 }
 
-class "Vaccination Center" {
+class VaccinationCenter {
   - name
+  - address
+  - email
+  - phoneNumber
+  - faxNumber
+  - website
 }
 
-class "Appointment" {
+class VaccineType {
+  - code
+  - description
+  - technology
+}
+
+class Appointment {
   - date
   - time
+  - state
 }
 
-class "Vaccine Type" {
-  - code
-}
-
-"Receptionist" "1" -right-- "*" Appointment : schedules >
-"SNS User" "1" -right-- "*" Appointment : has >
-Appointment "*" -down-- "1" "Vaccination Center" : occurs at >
-Appointment "*" -down-- "1" "Vaccine Type" : for >
+' Relações
+Company "1" -- "*" VaccinationCenter : manages >
+SNSUser "1" -- "*" Appointment : schedules >
+Appointment "*" -- "1" VaccinationCenter : at >
+Appointment "*" -- "1" VaccineType : for >
 
 @enduml

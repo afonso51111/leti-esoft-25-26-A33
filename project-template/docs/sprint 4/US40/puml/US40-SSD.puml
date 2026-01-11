@@ -7,14 +7,7 @@ activate Nurse
 
 Nurse -> System : asks to consult the waiting room
 activate System
-
-System --> Nurse : asks to select the vaccination center
-deactivate System
-
-Nurse -> System : selects the vaccination center
-activate System
-
-System --> Nurse : shows the list of users in the waiting room \n(ordered by arrival time)
+System --> Nurse : displays the list of users in the waiting room (DTOs)
 deactivate System
 
 deactivate Nurse

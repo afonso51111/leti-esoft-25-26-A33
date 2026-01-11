@@ -1,14 +1,23 @@
 @startuml
 autonumber
-actor "DGS Administrator" as Admin
+actor "Administrator" as Admin
 participant ":System" as System
 
 activate Admin
 
-Admin -> System : asks to list all vaccines
+Admin -> System : asks to specify a new vaccine type
 activate System
+System --> Admin : asks for the data (Code, Description, Technology)
+deactivate System
 
-System --> Admin : shows the list of vaccines (grouped by type, sorted by brand)
+Admin -> System : types the requested data
+activate System
+System --> Admin : shows the data and requests confirmation
+deactivate System
+
+Admin -> System : confirms the data
+activate System
+System --> Admin : records the vaccine type and informs success
 deactivate System
 
 deactivate Admin

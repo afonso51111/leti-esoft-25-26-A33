@@ -1,21 +1,28 @@
 @startuml
-hide circle
 hide methods
+left to right direction
 skinparam classAttributeIconSize 0
 
-class "DGS Administrator" {
+class Company {
+  - designation
 }
 
-class Vaccine {
-  - commercial_name
-  - brand
+class Administrator {
+  - name
+  - address
+  - phoneNumber
+  - email
+  - citizenCardNumber
+  - employeeId
 }
 
-class "Vaccine Type" {
+class VaccineType {
   - code
-  - short_description
+  - description
+  - technology
 }
 
-"DGS Administrator" "1" -right-- "*" Vaccine: consults >
-Vaccine "*" -down-- "1" "Vaccine Type": has >
+Company "1" -- "*" VaccineType : promotes >
+Administrator "1" -- "*" VaccineType : specifies >
+
 @enduml

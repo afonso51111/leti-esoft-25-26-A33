@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template
+CMAKE_SOURCE_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -131,14 +131,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp\\CMakeFiles\progress.marks
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 0
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp\\CMakeFiles\progress.marks"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/clean
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/clean
 .PHONY : clean
 
 # The main clean target
@@ -147,22 +147,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/preinstall
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/preinstall
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ConsoleApp/CMakeFiles/ConsoleApp.dir/rule:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/CMakeFiles/ConsoleApp.dir/rule
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/CMakeFiles/ConsoleApp.dir/rule
 .PHONY : ConsoleApp/CMakeFiles/ConsoleApp.dir/rule
 
 # Convenience name for target.
@@ -171,7 +171,7 @@ ConsoleApp: ConsoleApp/CMakeFiles/ConsoleApp.dir/rule
 
 # fast build rule for target.
 ConsoleApp/fast:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f ConsoleApp\CMakeFiles\ConsoleApp.dir\build.make ConsoleApp/CMakeFiles/ConsoleApp.dir/build
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f ConsoleApp\CMakeFiles\ConsoleApp.dir\build.make ConsoleApp/CMakeFiles/ConsoleApp.dir/build
 .PHONY : ConsoleApp/fast
 
 ConsoleApp.obj: ConsoleApp.cpp.obj
@@ -179,7 +179,7 @@ ConsoleApp.obj: ConsoleApp.cpp.obj
 
 # target to build an object file
 ConsoleApp.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f ConsoleApp\CMakeFiles\ConsoleApp.dir\build.make ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f ConsoleApp\CMakeFiles\ConsoleApp.dir\build.make ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj
 .PHONY : ConsoleApp.cpp.obj
 
 ConsoleApp.i: ConsoleApp.cpp.i
@@ -187,7 +187,7 @@ ConsoleApp.i: ConsoleApp.cpp.i
 
 # target to preprocess a source file
 ConsoleApp.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f ConsoleApp\CMakeFiles\ConsoleApp.dir\build.make ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f ConsoleApp\CMakeFiles\ConsoleApp.dir\build.make ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.i
 .PHONY : ConsoleApp.cpp.i
 
 ConsoleApp.s: ConsoleApp.cpp.s
@@ -195,7 +195,7 @@ ConsoleApp.s: ConsoleApp.cpp.s
 
 # target to generate assembly for a file
 ConsoleApp.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f ConsoleApp\CMakeFiles\ConsoleApp.dir\build.make ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f ConsoleApp\CMakeFiles\ConsoleApp.dir\build.make ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.s
 .PHONY : ConsoleApp.cpp.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

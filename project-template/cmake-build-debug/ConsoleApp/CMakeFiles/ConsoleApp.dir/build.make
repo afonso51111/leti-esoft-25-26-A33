@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template
+CMAKE_SOURCE_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include ConsoleApp/CMakeFiles/ConsoleApp.dir/depend.make
@@ -70,18 +70,18 @@ include ConsoleApp/CMakeFiles/ConsoleApp.dir/flags.make
 
 ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj: ConsoleApp/CMakeFiles/ConsoleApp.dir/flags.make
 ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj: ConsoleApp/CMakeFiles/ConsoleApp.dir/includes_CXX.rsp
-ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj: C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/ConsoleApp/ConsoleApp.cpp
+ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj: C:/Users/MSI\ PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/ConsoleApp/ConsoleApp.cpp
 ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj: ConsoleApp/CMakeFiles/ConsoleApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj -MF CMakeFiles\ConsoleApp.dir\ConsoleApp.cpp.obj.d -o CMakeFiles\ConsoleApp.dir\ConsoleApp.cpp.obj -c C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\ConsoleApp\ConsoleApp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CONSOL~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.obj -MF CMakeFiles\ConsoleApp.dir\ConsoleApp.cpp.obj.d -o CMakeFiles\ConsoleApp.dir\ConsoleApp.cpp.obj -c "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\ConsoleApp\ConsoleApp.cpp"
 
 ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.i"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\ConsoleApp\ConsoleApp.cpp > CMakeFiles\ConsoleApp.dir\ConsoleApp.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CONSOL~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\ConsoleApp\ConsoleApp.cpp" > CMakeFiles\ConsoleApp.dir\ConsoleApp.cpp.i
 
 ConsoleApp/CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ConsoleApp.dir/ConsoleApp.cpp.s"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\ConsoleApp\ConsoleApp.cpp -o CMakeFiles\ConsoleApp.dir\ConsoleApp.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CONSOL~1 && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\ConsoleApp\ConsoleApp.cpp" -o CMakeFiles\ConsoleApp.dir\ConsoleApp.cpp.s
 
 # Object files for target ConsoleApp
 ConsoleApp_OBJECTS = \
@@ -96,18 +96,18 @@ ConsoleApp/ConsoleApp.exe: Core/libCore.a
 ConsoleApp/ConsoleApp.exe: ConsoleApp/CMakeFiles/ConsoleApp.dir/linkLibs.rsp
 ConsoleApp/ConsoleApp.exe: ConsoleApp/CMakeFiles/ConsoleApp.dir/objects1.rsp
 ConsoleApp/ConsoleApp.exe: ConsoleApp/CMakeFiles/ConsoleApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ConsoleApp.exe"
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ConsoleApp.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ConsoleApp.exe"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CONSOL~1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ConsoleApp.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 ConsoleApp/CMakeFiles/ConsoleApp.dir/build: ConsoleApp/ConsoleApp.exe
 .PHONY : ConsoleApp/CMakeFiles/ConsoleApp.dir/build
 
 ConsoleApp/CMakeFiles/ConsoleApp.dir/clean:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp && $(CMAKE_COMMAND) -P CMakeFiles\ConsoleApp.dir\cmake_clean.cmake
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1\CONSOL~1 && $(CMAKE_COMMAND) -P CMakeFiles\ConsoleApp.dir\cmake_clean.cmake
 .PHONY : ConsoleApp/CMakeFiles/ConsoleApp.dir/clean
 
 ConsoleApp/CMakeFiles/ConsoleApp.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\ConsoleApp C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp\CMakeFiles\ConsoleApp.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\ConsoleApp" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\ConsoleApp\CMakeFiles\ConsoleApp.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : ConsoleApp/CMakeFiles/ConsoleApp.dir/depend
 

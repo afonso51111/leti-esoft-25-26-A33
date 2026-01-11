@@ -1,36 +1,92 @@
 @startuml
 skinparam classAttributeIconSize 0
-hide circle
 
-class RegisterArrivalUI {
+package "UI" {
+  class RegisterArrivalUI {
+  }
 }
 
-class RegisterArrivalController {
-  + getVaccinationCenters()
-  + createArrival()
+package "Core" {
+
+  package "Controller" {
+    class RegisterArrivalController {
+      + getAppointment(snsNumber: String): AppointmentDTO
+      + registerArrival(): boolean
+    }
+  }
+
+  package "Service" {
+    class ArrivalService {
+      + getAppointment(snsNumber: String): AppointmentDTO
+      + registerArrival(appointmentId: String): boolean
+    }
+  }
+
+  package "Domain" {
+    package "Model" {
+      class VaccinationCenter {
+        + getWaitingRoom(): WaitingRoom
+      }
+      class WaitingRoom {
+        + addArrival(arrival: Arrival): boolean
+      }
+      class Arrival {
+        - arrivalTime: DateTime
+        + create(appointment: Appointment)
+      }
+      class Appointment {
+        - state: AppointmentState
+        + arrive(): void
+      }
+      class SNSUser {}
+    }
+
+    package "Repository" {
+      class AppointmentRepository {
+        + findTodayAppointment(snsNumber: String): Appointment
+        + findById(id: String): Appointment
+      }
+      class VaccinationCenterRepository {
+        + getCurrentCenter(): VaccinationCenter
+      }
+    }
+  }
+
+  package "DTO" {
+    class AppointmentDTO {
+      - id
+      - snsUserNumber
+      - date
+      - time
+    }
+  }
+
+  package "Mapper" {
+    class AppointmentMapper {
+      + toDTO(app: Appointment): AppointmentDTO
+    }
+  }
 }
 
-class "Vaccination Center" {
-  + registerArrival(snsNumber)
-  - getAppointment(snsNumber)
-}
+RegisterArrivalUI ..> RegisterArrivalController
+RegisterArrivalUI ..> AppointmentDTO
 
-class "Waiting Room" {
-  + addAppointment(app)
-}
+RegisterArrivalController ..> ArrivalService
+RegisterArrivalController ..> AppointmentDTO
 
-class Appointment {
-  - date
-  - time
-}
+ArrivalService ..> AppointmentRepository
+ArrivalService ..> VaccinationCenterRepository
+ArrivalService ..> VaccinationCenter
+ArrivalService ..> WaitingRoom
+ArrivalService ..> Arrival
+ArrivalService ..> Appointment
+ArrivalService ..> AppointmentMapper
 
-class "SNS User" {
-  - sns_number
-}
+AppointmentMapper ..> AppointmentDTO
+AppointmentMapper ..> Appointment
 
-RegisterArrivalController ..> "Vaccination Center"
-"Vaccination Center" "1" --> "1" "Waiting Room" : has >
-"Waiting Room" "1" --> "*" Appointment : holds >
-Appointment --> "SNS User" : for >
+VaccinationCenter "1" --> "1" WaitingRoom : has
+WaitingRoom "1" --> "*" Arrival : contains
+Arrival "1" --> "1" Appointment : relates to
 
 @enduml

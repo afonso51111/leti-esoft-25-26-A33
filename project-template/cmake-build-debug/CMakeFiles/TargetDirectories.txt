@@ -1,50 +1,50 @@
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/project-template.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/list_install_components.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/install.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/install/local.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/install/strip.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/Core.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/edit_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/rebuild_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/list_install_components.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/install.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/install/local.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/install/strip.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/CoreTests.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/edit_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/rebuild_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/list_install_components.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/install.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/install/local.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/install/strip.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/edit_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/rebuild_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/list_install_components.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/install.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/install/local.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/install/strip.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/gmock.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/gmock_main.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/edit_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/rebuild_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/list_install_components.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/install.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/install/local.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/install/strip.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/gtest.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/gtest_main.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/edit_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/rebuild_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/list_install_components.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/install.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/install/local.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/install/strip.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/ConsoleApp.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/edit_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/rebuild_cache.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/list_install_components.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/install.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/install/local.dir
-C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/install/strip.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/project-template.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/list_install_components.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/install.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/install/local.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CMakeFiles/install/strip.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/Core.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/edit_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/list_install_components.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/install.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/install/local.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/Core/CMakeFiles/install/strip.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/CoreTests.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/edit_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/list_install_components.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/install.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/install/local.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/CMakeFiles/install/strip.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/edit_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/list_install_components.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/install.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/install/local.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/CMakeFiles/install/strip.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/gmock.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/gmock_main.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/edit_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/list_install_components.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/install.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/install/local.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googlemock/CMakeFiles/install/strip.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/gtest.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/gtest_main.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/edit_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/list_install_components.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/install.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/install/local.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/CoreTests/lib/googletest/CMakeFiles/install/strip.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/ConsoleApp.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/edit_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/list_install_components.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/install.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/install/local.dir
+C:/Users/MSI PC/Documents/Projeto/leti-esoft-25-26-A33/project-template/cmake-build-debug/ConsoleApp/CMakeFiles/install/strip.dir

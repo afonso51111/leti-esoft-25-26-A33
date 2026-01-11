@@ -1,45 +1,77 @@
 @startuml
 skinparam classAttributeIconSize 0
-hide circle
 
-class RegisterSNSUserUI {
+package "UI" {
+  class RegisterReceptionistUI {
+  }
 }
 
-class RegisterSNSUserController {
-  + createSNSUser(dto)
-  + save()
+package "Core" {
+
+  package "Controller" {
+    class RegisterReceptionistController {
+      + registerReceptionist(dto: ReceptionistDTO): boolean
+    }
+  }
+
+  package "Service" {
+    class ReceptionistService {
+      + registerReceptionist(dto: ReceptionistDTO): boolean
+    }
+  }
+
+  package "Domain" {
+    package "Model" {
+      class Employee {
+        - name: String
+        - email: String
+      }
+      class Receptionist {
+        + create(name, address, phone, email, cc)
+      }
+    }
+
+    package "Repository" {
+      class ReceptionistRepository {
+        + save(receptionist: Receptionist): boolean
+      }
+    }
+  }
+
+  package "DTO" {
+    class ReceptionistDTO {
+      - name
+      - address
+      - phoneNumber
+      - email
+      - citizenCardNumber
+    }
+  }
+
+  package "Mapper" {
+    class ReceptionistMapper {
+      + toModel(dto: ReceptionistDTO): Receptionist
+      + toDTO(model: Receptionist): ReceptionistDTO
+    }
+  }
 }
 
-class Company {
-  + getSNSUserStore()
-}
+Receptionist --|> Employee
 
-class SNSUserStore {
-  + createSNSUser(dto)
-  + validateSNSUser(user)
-  + saveSNSUser(user)
-}
+RegisterReceptionistUI ..> RegisterReceptionistController
+RegisterReceptionistUI ..> ReceptionistDTO
 
-class "SNS User" {
-  - sns_number
-  - name
-  - birth_date
-  - sex
-  - postal_address
-  - phone_number
-  - email
-  - citizen_card_number
-  + SNSUser(...)
-}
+RegisterReceptionistController ..> ReceptionistService
+RegisterReceptionistController ..> ReceptionistDTO
 
-class Receptionist {
-}
+ReceptionistService ..> ReceptionistRepository
+ReceptionistService ..> ReceptionistMapper
+ReceptionistService ..> Receptionist
+ReceptionistService ..> ReceptionistDTO
 
-RegisterSNSUserUI ..> RegisterSNSUserController
-RegisterSNSUserController ..> Company
-RegisterSNSUserController ..> SNSUserStore
-Company "1" --> "1" SNSUserStore : has >
-SNSUserStore "1" --> "*" "SNS User" : stores >
-Receptionist ..> RegisterSNSUserUI : uses >
+ReceptionistMapper ..> ReceptionistDTO
+ReceptionistMapper ..> Receptionist
+
+ReceptionistRepository "1" --> "*" Receptionist : stores
 
 @enduml

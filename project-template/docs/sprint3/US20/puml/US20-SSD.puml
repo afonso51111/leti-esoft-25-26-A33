@@ -1,27 +1,24 @@
 @startuml
 autonumber
-actor "Receptionist" as Rec
+actor "Administrator" as Admin
 participant ":System" as System
 
-activate Rec
+activate Admin
 
-Rec -> System : asks to register a new SNS User
+Admin -> System : asks to register a new receptionist
 activate System
-
-System --> Rec : requests data (name, address, sex, phone, email, \nbirth date, SNS number, citizen card number)
+System --> Admin : asks for the receptionist data (Name, Address, Phone, Email, CC Number)
 deactivate System
 
-Rec -> System : types the requested data and selects the sex
+Admin -> System : types the requested data
 activate System
-
-System --> Rec : shows all data and requests confirmation
+System --> Admin : shows the data and requests confirmation
 deactivate System
 
-Rec -> System : confirms the data
+Admin -> System : confirms the data
 activate System
-
-System --> Rec : informs operation success
+System --> Admin : registers the receptionist, generates credentials and informs success
 deactivate System
 
-deactivate Rec
+deactivate Admin
 @enduml

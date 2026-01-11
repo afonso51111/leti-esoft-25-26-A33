@@ -1,39 +1,65 @@
 @startuml
-hide circle
 hide methods
+left to right direction
 skinparam classAttributeIconSize 0
 
-class Nurse {
+class Company {
+  - designation
 }
 
-class "Vaccination Center" {
+class VaccinationCenter {
+  - name
+  - address
+  - email
+  - phoneNumber
+  - faxNumber
+  - website
 }
 
-class "Waiting Room" {
+class SNSUser {
+  - name
+  - address
+  - sex
+  - phoneNumber
+  - email
+  - birthDate
+  - snsUserNumber
+  - citizenCardNumber
 }
 
-class "Recovery Room" {
-}
-
-class "Appointment" {
+class Appointment {
   - date
   - time
-  - administration_date
-  - administration_time
-  - lot_number
+  - state
 }
 
-class "Vaccine" {
+class Vaccine {
+  - name
   - brand
+  - id
 }
 
-Nurse "1" -right-- "*" Appointment : records administration >
-"Vaccination Center" "1" *-- "1" "Waiting Room" : has >
-"Vaccination Center" "1" *-- "1" "Recovery Room" : has >
+class VaccineAdministration {
+  - administeredDate
+  - leaveDate
+  - lotNumber
+  - adverseReactions
+}
 
-"Waiting Room" "1" -down-- "*" Appointment : has (waiting) >
-"Recovery Room" "1" -down-- "*" Appointment : has (recovering) >
+class Nurse {
+  - name
+  - address
+  - phoneNumber
+  - email
+  - citizenCardNumber
+  - employeeId
+}
 
-Appointment "*" -right-- "0..1" Vaccine : administered >
+Company "1" -- "*" VaccinationCenter : manages >
+VaccinationCenter "1" -- "*" VaccineAdministration : performs >
+Nurse "1" -- "*" VaccineAdministration : registers >
+SNSUser "1" -- "1" VaccineAdministration : receives >
+Appointment "1" -- "1" VaccineAdministration : fulfills >
+Vaccine "1" -- "*" VaccineAdministration : administered as >
 
 @enduml

@@ -1,76 +1,88 @@
 @startuml
 skinparam classAttributeIconSize 0
-hide circle
 
-class RegisterVaccinationCenterUI {
+package "UI" {
+  class SpecifyVaccineUI {
+  }
 }
 
-class RegisterVaccinationCenterController {
-  + createVaccinationCenter(dto)
-  + save()
-  + getVaccinationCenterTypes()
-  + getVaccineTypes()
+package "Core" {
+
+  package "Controller" {
+    class SpecifyVaccineController {
+      + getVaccineTypes(): List<VaccineTypeDTO>
+      + createVaccine(dto: VaccineDTO): boolean
+    }
+  }
+
+  package "Service" {
+    class VaccineService {
+      + getVaccineTypes(): List<VaccineTypeDTO>
+      + createVaccine(dto: VaccineDTO): boolean
+    }
+  }
+
+  package "Domain" {
+    package "Model" {
+      class Vaccine {
+        - name: String
+        - brand: String
+        + create(name, brand, type, process)
+      }
+      class VaccineType {}
+      class AdministrationProcess {}
+    }
+
+    package "Repository" {
+      class VaccineRepository {
+        + save(vaccine: Vaccine): boolean
+      }
+      class VaccineTypeRepository {
+        + findAll(): List<VaccineType>
+        + findByCode(code: String): VaccineType
+      }
+    }
+  }
+
+  package "DTO" {
+    class VaccineDTO {
+      - name
+      - brand
+      - typeCode
+      - ageGroupsList
+      - dosesList
+    }
+    class VaccineTypeDTO {}
+  }
+
+  package "Mapper" {
+    class VaccineMapper {
+      + toModel(dto: VaccineDTO, type: VaccineType): Vaccine
+    }
+    class VaccineTypeMapper {
+      + toDTOList(list: List<VaccineType>): List<VaccineTypeDTO>
+    }
+  }
 }
 
-class Company {
-  + getVaccinationCenterStore()
-  + getVaccineTypeStore()
-}
+SpecifyVaccineUI ..> SpecifyVaccineController
+SpecifyVaccineUI ..> VaccineDTO
 
-class VaccinationCenterStore {
-  + createVaccinationCenter(dto)
-  + validateVaccinationCenter(center)
-  + saveVaccinationCenter(center)
-}
+SpecifyVaccineController ..> VaccineService
+SpecifyVaccineController ..> VaccineDTO
 
-abstract class "Vaccination Center" {
-  - name
-  - postal_address
-  - phone_number
-  - email
-  - website_address
-  - opening_hours
-  - closing_hours
-  - capacity_per_hour
-  + VaccinationCenter(...)
-}
+VaccineService ..> VaccineRepository
+VaccineService ..> VaccineTypeRepository
+VaccineService ..> VaccineMapper
+VaccineService ..> VaccineTypeMapper
+VaccineService ..> Vaccine
+VaccineService ..> VaccineType
 
-class "Healthcare Center" {
-  - ars
-  - ages
-  + HealthcareCenter(...)
-}
+VaccineMapper ..> VaccineDTO
+VaccineMapper ..> Vaccine
 
-class "Community Mass Vaccination Center" {
-  + CommunityMassVaccinationCenter(..., vaccineType)
-}
-
-class "Vaccine Type" {
-    - code
-    - description
-    - technology
-}
-
-class "Waiting Room" {
-}
-class "Recovery Room" {
-}
-
-RegisterVaccinationCenterUI ..> RegisterVaccinationCenterController
-RegisterVaccinationCenterController ..> Company
-RegisterVaccinationCenterController ..> VaccinationCenterStore
-
-RegisterVaccinationCenterController ..> "Vaccine Type"
-
-Company "1" --> "1" VaccinationCenterStore : has >
-VaccinationCenterStore "1" --> "*" "Vaccination Center" : stores >
-
-"Healthcare Center" --|> "Vaccination Center"
-"Community Mass Vaccination Center" --|> "Vaccination Center"
-
-"Community Mass Vaccination Center" "1" --> "1" "Vaccine Type" : administers >
-
-"Vaccination Center" *-- "Waiting Room"
-"Vaccination Center" *-- "Recovery Room"
+VaccineRepository "1" --> "*" Vaccine : stores
+Vaccine "1" --> "1" VaccineType : has
+Vaccine "1" --> "*" AdministrationProcess : defines
 
 @enduml

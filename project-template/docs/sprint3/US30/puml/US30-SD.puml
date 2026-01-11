@@ -1,109 +1,67 @@
 @startuml
 autonumber
-actor "SNS User" as User
-participant ":ScheduleVaccineUI" as UI
-participant ":ScheduleVaccine\nController" as CTRL
-participant ":Company" as CMP
-participant "centerStore\n:VaccinationCenterStore" as C_STORE
-participant "typeStore\n:VaccineTypeStore" as T_STORE
-participant "center\n:Vaccination Center" as CENTER
-participant "app\n:Appointment" as APP
 
-activate User
-User -> UI : asks to schedule a vaccine administration
+actor "Administrator" as Admin
+participant ":LoadUsersUI" as UI
+participant ":LoadUsersController" as CTRL
+participant ":LoadUsersService" as SVC
+participant ":CSVReader" as READER
+participant "dto: SNSUserDTO" as DTO
+participant ":SNSUserMapper" as MAPPER
+participant ":SNSUserRepository" as REPO
+participant "user: SNSUser" as USER
+
+activate Admin
+Admin -> UI : asks to load CSV file
 activate UI
 
-UI -> CTRL : getVaccinationCenters()
-activate CTRL
-CTRL -> CMP : store = getVaccinationCenterStore()
-activate CMP
-deactivate CMP
-CTRL -> C_STORE : getList()
-activate C_STORE
-deactivate C_STORE
-CTRL --> UI : list of centers
-deactivate CTRL
-
-UI --> User : shows list and asks to select one
+UI --> Admin : asks for file path
 deactivate UI
 
-User -> UI : selects a vaccination center
+Admin -> UI : provides file path
 activate UI
 
-UI -> CTRL : getVaccineTypes()
-activate CTRL
-CTRL -> CMP : typeStore = getVaccineTypeStore()
-activate CMP
-deactivate CMP
-CTRL -> T_STORE : getList()
-activate T_STORE
-deactivate T_STORE
-CTRL --> UI : list of types
-deactivate CTRL
-
-UI --> User : asks to select vaccine type
-deactivate UI
-User -> UI : selects vaccine type
-activate UI
-
-UI --> User : requests preferred date
-deactivate UI
-User -> UI : types date
-activate UI
-
-UI -> CTRL : getAvailableSlots(center, date)
-activate CTRL
-    CTRL -> CENTER : getAvailableSlots(date)
-    activate CENTER
-
-    CENTER --> CTRL : list of slots
-    deactivate CENTER
-CTRL --> UI : list of slots
-deactivate CTRL
-
-UI --> User : shows available slots
-deactivate UI
-
-User -> UI : selects a time slot
-activate UI
-
-UI -> CTRL : createAppointment(dto)
+UI -> CTRL : loadUsers(filePath)
 activate CTRL
 
-    CTRL -> CENTER : createAppointment(user, vaccineType, date, time)
-    activate CENTER
+CTRL -> SVC : loadUsers(filePath)
+activate SVC
 
-        CENTER -> CENTER : validateSlot(date, time)
+' Serviço usa um leitor de CSV (Utilitário)
+SVC -> READER : read(filePath)
+activate READER
+READER --> SVC : rawDataList
+deactivate READER
 
-        create APP
-        CENTER -> APP : create(user, vaccineType, date, time)
+' Loop para processar cada linha
+loop for each line in rawDataList
 
-    CENTER --> CTRL : app
-    deactivate CENTER
+    ' Criar DTO com dados crus
+    SVC -> DTO** : create(name, snsNum, email, ...)
 
-CTRL -> CENTER : validateAppointment(app)
-activate CENTER
-deactivate CENTER
+    ' Validar e Converter para Modelo
+    SVC -> MAPPER : toModel(dto)
+    activate MAPPER
+    MAPPER -> USER** : create(name, snsNum, email, ...)
+    MAPPER --> SVC : user
+    deactivate MAPPER
 
-CTRL --> UI : appointment info
+    ' Persistir no Repositório
+    SVC -> REPO : save(user)
+    activate REPO
+    REPO --> SVC : boolean (success)
+    deactivate REPO
+
+end loop
+
+SVC --> CTRL : summary (count)
+deactivate SVC
+
+CTRL --> UI : summary
 deactivate CTRL
 
-UI --> User : shows data and requests confirmation
+UI --> Admin : displays success and number of users loaded
 deactivate UI
 
-User -> UI : confirms
-activate UI
-
-UI -> CTRL : save()
-activate CTRL
-    CTRL -> CENTER : addAppointment(app)
-    activate CENTER
-    deactivate CENTER
-CTRL --> UI : success
-deactivate CTRL
-
-UI --> User : informs operation success
-deactivate UI
-deactivate User
-
+deactivate Admin
 @enduml

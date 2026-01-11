@@ -1,33 +1,58 @@
 @startuml
-hide circle
 hide methods
+left to right direction
 skinparam classAttributeIconSize 0
 
-class Nurse {
+class Company {
+  - designation
 }
 
-class "Vaccination Center" {
+class VaccinationCenter {
+  - name
+  - address
+  - email
+  - phoneNumber
+  - faxNumber
+  - website
 }
 
-class "Waiting Room" {
+class WaitingRoom {
+  - capacity
+  - currentOccupancy
 }
 
-class "Appointment" {
+class Appointment {
   - date
   - time
+  - arrivalTime
+  - state
 }
 
-class "SNS User" {
+class SNSUser {
   - name
-  - sns_number
+  - address
   - sex
-  - birth_date
+  - phoneNumber
+  - email
+  - birthDate
+  - snsUserNumber
+  - citizenCardNumber
 }
 
-Nurse "1" -right-- "1" "Vaccination Center" : works at >
-Nurse "1" -down-- "1" "Waiting Room" : consults >
-"Vaccination Center" "1" *-- "1" "Waiting Room" : has >
-"Waiting Room" "1" -right-- "*" Appointment : has (waiting) >
-Appointment "*" -down-- "1" "SNS User" : for >
+class Nurse {
+  - name
+  - address
+  - phoneNumber
+  - email
+  - citizenCardNumber
+  - employeeId
+}
+
+' Relações
+Company "1" -- "*" VaccinationCenter : manages >
+VaccinationCenter "1" -- "1" WaitingRoom : has >
+WaitingRoom "1" -- "*" Appointment : contains >
+Appointment "*" -- "1" SNSUser : created for >
+Nurse "1" ..> WaitingRoom : consults >
 
 @enduml

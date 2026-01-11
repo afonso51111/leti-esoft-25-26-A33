@@ -1,45 +1,24 @@
 @startuml
 autonumber
-actor "SNS User" as User
+actor "Administrator" as Admin
 participant ":System" as System
 
-activate User
+activate Admin
 
-User -> System : asks to schedule a vaccine administration
+Admin -> System : asks to load SNS users from a CSV file
 activate System
-
-System --> User : shows list of vaccination centers and asks to select one
+System --> Admin : asks for the file path/name
 deactivate System
 
-User -> System : selects a vaccination center
+Admin -> System : types the file path
 activate System
-
-System --> User : asks to select the vaccine type (if applicable)
+System --> Admin : validates the file and displays summary (number of users to load)
 deactivate System
 
-User -> System : selects the vaccine type
+Admin -> System : confirms
 activate System
-
-System --> User : requests the preferred date
+System --> Admin : loads the users and informs operation success
 deactivate System
 
-User -> System : types the date
-activate System
-
-System --> User : shows available time slots for that date
-deactivate System
-
-User -> System : selects a time slot
-activate System
-
-System --> User : shows all data and requests confirmation
-deactivate System
-
-User -> System : confirms the data
-activate System
-
-System --> User : informs operation success
-deactivate System
-
-deactivate User
+deactivate Admin
 @enduml

@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template
+CMAKE_SOURCE_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -131,14 +131,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\Core\\CMakeFiles\progress.marks
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 0
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\Core\\CMakeFiles\progress.marks"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/clean
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/clean
 .PHONY : clean
 
 # The main clean target
@@ -147,22 +147,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/preinstall
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/preinstall
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Core/CMakeFiles/Core.dir/rule:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/CMakeFiles/Core.dir/rule
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/CMakeFiles/Core.dir/rule
 .PHONY : Core/CMakeFiles/Core.dir/rule
 
 # Convenience name for target.
@@ -171,7 +171,7 @@ Core: Core/CMakeFiles/Core.dir/rule
 
 # fast build rule for target.
 Core/fast:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/build
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/build
 .PHONY : Core/fast
 
 sources/domain/model/Appointment.obj: sources/domain/model/Appointment.cpp.obj
@@ -179,7 +179,7 @@ sources/domain/model/Appointment.obj: sources/domain/model/Appointment.cpp.obj
 
 # target to build an object file
 sources/domain/model/Appointment.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Appointment.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Appointment.cpp.obj
 .PHONY : sources/domain/model/Appointment.cpp.obj
 
 sources/domain/model/Appointment.i: sources/domain/model/Appointment.cpp.i
@@ -187,7 +187,7 @@ sources/domain/model/Appointment.i: sources/domain/model/Appointment.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/Appointment.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Appointment.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Appointment.cpp.i
 .PHONY : sources/domain/model/Appointment.cpp.i
 
 sources/domain/model/Appointment.s: sources/domain/model/Appointment.cpp.s
@@ -195,7 +195,7 @@ sources/domain/model/Appointment.s: sources/domain/model/Appointment.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/Appointment.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Appointment.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Appointment.cpp.s
 .PHONY : sources/domain/model/Appointment.cpp.s
 
 sources/domain/model/AppointmentStore.obj: sources/domain/model/AppointmentStore.cpp.obj
@@ -203,7 +203,7 @@ sources/domain/model/AppointmentStore.obj: sources/domain/model/AppointmentStore
 
 # target to build an object file
 sources/domain/model/AppointmentStore.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.obj
 .PHONY : sources/domain/model/AppointmentStore.cpp.obj
 
 sources/domain/model/AppointmentStore.i: sources/domain/model/AppointmentStore.cpp.i
@@ -211,7 +211,7 @@ sources/domain/model/AppointmentStore.i: sources/domain/model/AppointmentStore.c
 
 # target to preprocess a source file
 sources/domain/model/AppointmentStore.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.i
 .PHONY : sources/domain/model/AppointmentStore.cpp.i
 
 sources/domain/model/AppointmentStore.s: sources/domain/model/AppointmentStore.cpp.s
@@ -219,7 +219,7 @@ sources/domain/model/AppointmentStore.s: sources/domain/model/AppointmentStore.c
 
 # target to generate assembly for a file
 sources/domain/model/AppointmentStore.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.s
 .PHONY : sources/domain/model/AppointmentStore.cpp.s
 
 sources/domain/model/CommunityMassVaccinationCenter.obj: sources/domain/model/CommunityMassVaccinationCenter.cpp.obj
@@ -227,7 +227,7 @@ sources/domain/model/CommunityMassVaccinationCenter.obj: sources/domain/model/Co
 
 # target to build an object file
 sources/domain/model/CommunityMassVaccinationCenter.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/CommunityMassVaccinationCenter.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/CommunityMassVaccinationCenter.cpp.obj
 .PHONY : sources/domain/model/CommunityMassVaccinationCenter.cpp.obj
 
 sources/domain/model/CommunityMassVaccinationCenter.i: sources/domain/model/CommunityMassVaccinationCenter.cpp.i
@@ -235,7 +235,7 @@ sources/domain/model/CommunityMassVaccinationCenter.i: sources/domain/model/Comm
 
 # target to preprocess a source file
 sources/domain/model/CommunityMassVaccinationCenter.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/CommunityMassVaccinationCenter.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/CommunityMassVaccinationCenter.cpp.i
 .PHONY : sources/domain/model/CommunityMassVaccinationCenter.cpp.i
 
 sources/domain/model/CommunityMassVaccinationCenter.s: sources/domain/model/CommunityMassVaccinationCenter.cpp.s
@@ -243,7 +243,7 @@ sources/domain/model/CommunityMassVaccinationCenter.s: sources/domain/model/Comm
 
 # target to generate assembly for a file
 sources/domain/model/CommunityMassVaccinationCenter.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/CommunityMassVaccinationCenter.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/CommunityMassVaccinationCenter.cpp.s
 .PHONY : sources/domain/model/CommunityMassVaccinationCenter.cpp.s
 
 sources/domain/model/Company.obj: sources/domain/model/Company.cpp.obj
@@ -251,7 +251,7 @@ sources/domain/model/Company.obj: sources/domain/model/Company.cpp.obj
 
 # target to build an object file
 sources/domain/model/Company.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Company.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Company.cpp.obj
 .PHONY : sources/domain/model/Company.cpp.obj
 
 sources/domain/model/Company.i: sources/domain/model/Company.cpp.i
@@ -259,7 +259,7 @@ sources/domain/model/Company.i: sources/domain/model/Company.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/Company.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Company.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Company.cpp.i
 .PHONY : sources/domain/model/Company.cpp.i
 
 sources/domain/model/Company.s: sources/domain/model/Company.cpp.s
@@ -267,7 +267,7 @@ sources/domain/model/Company.s: sources/domain/model/Company.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/Company.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Company.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Company.cpp.s
 .PHONY : sources/domain/model/Company.cpp.s
 
 sources/domain/model/Employee.obj: sources/domain/model/Employee.cpp.obj
@@ -275,7 +275,7 @@ sources/domain/model/Employee.obj: sources/domain/model/Employee.cpp.obj
 
 # target to build an object file
 sources/domain/model/Employee.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Employee.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Employee.cpp.obj
 .PHONY : sources/domain/model/Employee.cpp.obj
 
 sources/domain/model/Employee.i: sources/domain/model/Employee.cpp.i
@@ -283,7 +283,7 @@ sources/domain/model/Employee.i: sources/domain/model/Employee.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/Employee.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Employee.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Employee.cpp.i
 .PHONY : sources/domain/model/Employee.cpp.i
 
 sources/domain/model/Employee.s: sources/domain/model/Employee.cpp.s
@@ -291,7 +291,7 @@ sources/domain/model/Employee.s: sources/domain/model/Employee.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/Employee.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Employee.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Employee.cpp.s
 .PHONY : sources/domain/model/Employee.cpp.s
 
 sources/domain/model/EmployeeStore.obj: sources/domain/model/EmployeeStore.cpp.obj
@@ -299,7 +299,7 @@ sources/domain/model/EmployeeStore.obj: sources/domain/model/EmployeeStore.cpp.o
 
 # target to build an object file
 sources/domain/model/EmployeeStore.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/EmployeeStore.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/EmployeeStore.cpp.obj
 .PHONY : sources/domain/model/EmployeeStore.cpp.obj
 
 sources/domain/model/EmployeeStore.i: sources/domain/model/EmployeeStore.cpp.i
@@ -307,7 +307,7 @@ sources/domain/model/EmployeeStore.i: sources/domain/model/EmployeeStore.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/EmployeeStore.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/EmployeeStore.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/EmployeeStore.cpp.i
 .PHONY : sources/domain/model/EmployeeStore.cpp.i
 
 sources/domain/model/EmployeeStore.s: sources/domain/model/EmployeeStore.cpp.s
@@ -315,7 +315,7 @@ sources/domain/model/EmployeeStore.s: sources/domain/model/EmployeeStore.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/EmployeeStore.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/EmployeeStore.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/EmployeeStore.cpp.s
 .PHONY : sources/domain/model/EmployeeStore.cpp.s
 
 sources/domain/model/HealthcareCenter.obj: sources/domain/model/HealthcareCenter.cpp.obj
@@ -323,7 +323,7 @@ sources/domain/model/HealthcareCenter.obj: sources/domain/model/HealthcareCenter
 
 # target to build an object file
 sources/domain/model/HealthcareCenter.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/HealthcareCenter.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/HealthcareCenter.cpp.obj
 .PHONY : sources/domain/model/HealthcareCenter.cpp.obj
 
 sources/domain/model/HealthcareCenter.i: sources/domain/model/HealthcareCenter.cpp.i
@@ -331,7 +331,7 @@ sources/domain/model/HealthcareCenter.i: sources/domain/model/HealthcareCenter.c
 
 # target to preprocess a source file
 sources/domain/model/HealthcareCenter.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/HealthcareCenter.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/HealthcareCenter.cpp.i
 .PHONY : sources/domain/model/HealthcareCenter.cpp.i
 
 sources/domain/model/HealthcareCenter.s: sources/domain/model/HealthcareCenter.cpp.s
@@ -339,7 +339,7 @@ sources/domain/model/HealthcareCenter.s: sources/domain/model/HealthcareCenter.c
 
 # target to generate assembly for a file
 sources/domain/model/HealthcareCenter.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/HealthcareCenter.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/HealthcareCenter.cpp.s
 .PHONY : sources/domain/model/HealthcareCenter.cpp.s
 
 sources/domain/model/Nurse.obj: sources/domain/model/Nurse.cpp.obj
@@ -347,7 +347,7 @@ sources/domain/model/Nurse.obj: sources/domain/model/Nurse.cpp.obj
 
 # target to build an object file
 sources/domain/model/Nurse.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Nurse.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Nurse.cpp.obj
 .PHONY : sources/domain/model/Nurse.cpp.obj
 
 sources/domain/model/Nurse.i: sources/domain/model/Nurse.cpp.i
@@ -355,7 +355,7 @@ sources/domain/model/Nurse.i: sources/domain/model/Nurse.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/Nurse.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Nurse.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Nurse.cpp.i
 .PHONY : sources/domain/model/Nurse.cpp.i
 
 sources/domain/model/Nurse.s: sources/domain/model/Nurse.cpp.s
@@ -363,7 +363,7 @@ sources/domain/model/Nurse.s: sources/domain/model/Nurse.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/Nurse.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Nurse.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Nurse.cpp.s
 .PHONY : sources/domain/model/Nurse.cpp.s
 
 sources/domain/model/Receptionist.obj: sources/domain/model/Receptionist.cpp.obj
@@ -371,7 +371,7 @@ sources/domain/model/Receptionist.obj: sources/domain/model/Receptionist.cpp.obj
 
 # target to build an object file
 sources/domain/model/Receptionist.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Receptionist.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Receptionist.cpp.obj
 .PHONY : sources/domain/model/Receptionist.cpp.obj
 
 sources/domain/model/Receptionist.i: sources/domain/model/Receptionist.cpp.i
@@ -379,7 +379,7 @@ sources/domain/model/Receptionist.i: sources/domain/model/Receptionist.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/Receptionist.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Receptionist.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Receptionist.cpp.i
 .PHONY : sources/domain/model/Receptionist.cpp.i
 
 sources/domain/model/Receptionist.s: sources/domain/model/Receptionist.cpp.s
@@ -387,7 +387,7 @@ sources/domain/model/Receptionist.s: sources/domain/model/Receptionist.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/Receptionist.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Receptionist.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Receptionist.cpp.s
 .PHONY : sources/domain/model/Receptionist.cpp.s
 
 sources/domain/model/RecoveryRoom.obj: sources/domain/model/RecoveryRoom.cpp.obj
@@ -395,7 +395,7 @@ sources/domain/model/RecoveryRoom.obj: sources/domain/model/RecoveryRoom.cpp.obj
 
 # target to build an object file
 sources/domain/model/RecoveryRoom.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/RecoveryRoom.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/RecoveryRoom.cpp.obj
 .PHONY : sources/domain/model/RecoveryRoom.cpp.obj
 
 sources/domain/model/RecoveryRoom.i: sources/domain/model/RecoveryRoom.cpp.i
@@ -403,7 +403,7 @@ sources/domain/model/RecoveryRoom.i: sources/domain/model/RecoveryRoom.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/RecoveryRoom.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/RecoveryRoom.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/RecoveryRoom.cpp.i
 .PHONY : sources/domain/model/RecoveryRoom.cpp.i
 
 sources/domain/model/RecoveryRoom.s: sources/domain/model/RecoveryRoom.cpp.s
@@ -411,7 +411,7 @@ sources/domain/model/RecoveryRoom.s: sources/domain/model/RecoveryRoom.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/RecoveryRoom.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/RecoveryRoom.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/RecoveryRoom.cpp.s
 .PHONY : sources/domain/model/RecoveryRoom.cpp.s
 
 sources/domain/model/SNSUser.obj: sources/domain/model/SNSUser.cpp.obj
@@ -419,7 +419,7 @@ sources/domain/model/SNSUser.obj: sources/domain/model/SNSUser.cpp.obj
 
 # target to build an object file
 sources/domain/model/SNSUser.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUser.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUser.cpp.obj
 .PHONY : sources/domain/model/SNSUser.cpp.obj
 
 sources/domain/model/SNSUser.i: sources/domain/model/SNSUser.cpp.i
@@ -427,7 +427,7 @@ sources/domain/model/SNSUser.i: sources/domain/model/SNSUser.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/SNSUser.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUser.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUser.cpp.i
 .PHONY : sources/domain/model/SNSUser.cpp.i
 
 sources/domain/model/SNSUser.s: sources/domain/model/SNSUser.cpp.s
@@ -435,7 +435,7 @@ sources/domain/model/SNSUser.s: sources/domain/model/SNSUser.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/SNSUser.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUser.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUser.cpp.s
 .PHONY : sources/domain/model/SNSUser.cpp.s
 
 sources/domain/model/SNSUserStore.obj: sources/domain/model/SNSUserStore.cpp.obj
@@ -443,7 +443,7 @@ sources/domain/model/SNSUserStore.obj: sources/domain/model/SNSUserStore.cpp.obj
 
 # target to build an object file
 sources/domain/model/SNSUserStore.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUserStore.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUserStore.cpp.obj
 .PHONY : sources/domain/model/SNSUserStore.cpp.obj
 
 sources/domain/model/SNSUserStore.i: sources/domain/model/SNSUserStore.cpp.i
@@ -451,7 +451,7 @@ sources/domain/model/SNSUserStore.i: sources/domain/model/SNSUserStore.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/SNSUserStore.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUserStore.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUserStore.cpp.i
 .PHONY : sources/domain/model/SNSUserStore.cpp.i
 
 sources/domain/model/SNSUserStore.s: sources/domain/model/SNSUserStore.cpp.s
@@ -459,7 +459,7 @@ sources/domain/model/SNSUserStore.s: sources/domain/model/SNSUserStore.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/SNSUserStore.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUserStore.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/SNSUserStore.cpp.s
 .PHONY : sources/domain/model/SNSUserStore.cpp.s
 
 sources/domain/model/VaccinationCenter.obj: sources/domain/model/VaccinationCenter.cpp.obj
@@ -467,7 +467,7 @@ sources/domain/model/VaccinationCenter.obj: sources/domain/model/VaccinationCent
 
 # target to build an object file
 sources/domain/model/VaccinationCenter.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenter.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenter.cpp.obj
 .PHONY : sources/domain/model/VaccinationCenter.cpp.obj
 
 sources/domain/model/VaccinationCenter.i: sources/domain/model/VaccinationCenter.cpp.i
@@ -475,7 +475,7 @@ sources/domain/model/VaccinationCenter.i: sources/domain/model/VaccinationCenter
 
 # target to preprocess a source file
 sources/domain/model/VaccinationCenter.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenter.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenter.cpp.i
 .PHONY : sources/domain/model/VaccinationCenter.cpp.i
 
 sources/domain/model/VaccinationCenter.s: sources/domain/model/VaccinationCenter.cpp.s
@@ -483,7 +483,7 @@ sources/domain/model/VaccinationCenter.s: sources/domain/model/VaccinationCenter
 
 # target to generate assembly for a file
 sources/domain/model/VaccinationCenter.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenter.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenter.cpp.s
 .PHONY : sources/domain/model/VaccinationCenter.cpp.s
 
 sources/domain/model/VaccinationCenterStore.obj: sources/domain/model/VaccinationCenterStore.cpp.obj
@@ -491,7 +491,7 @@ sources/domain/model/VaccinationCenterStore.obj: sources/domain/model/Vaccinatio
 
 # target to build an object file
 sources/domain/model/VaccinationCenterStore.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenterStore.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenterStore.cpp.obj
 .PHONY : sources/domain/model/VaccinationCenterStore.cpp.obj
 
 sources/domain/model/VaccinationCenterStore.i: sources/domain/model/VaccinationCenterStore.cpp.i
@@ -499,7 +499,7 @@ sources/domain/model/VaccinationCenterStore.i: sources/domain/model/VaccinationC
 
 # target to preprocess a source file
 sources/domain/model/VaccinationCenterStore.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenterStore.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenterStore.cpp.i
 .PHONY : sources/domain/model/VaccinationCenterStore.cpp.i
 
 sources/domain/model/VaccinationCenterStore.s: sources/domain/model/VaccinationCenterStore.cpp.s
@@ -507,7 +507,7 @@ sources/domain/model/VaccinationCenterStore.s: sources/domain/model/VaccinationC
 
 # target to generate assembly for a file
 sources/domain/model/VaccinationCenterStore.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenterStore.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccinationCenterStore.cpp.s
 .PHONY : sources/domain/model/VaccinationCenterStore.cpp.s
 
 sources/domain/model/Vaccine.obj: sources/domain/model/Vaccine.cpp.obj
@@ -515,7 +515,7 @@ sources/domain/model/Vaccine.obj: sources/domain/model/Vaccine.cpp.obj
 
 # target to build an object file
 sources/domain/model/Vaccine.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Vaccine.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Vaccine.cpp.obj
 .PHONY : sources/domain/model/Vaccine.cpp.obj
 
 sources/domain/model/Vaccine.i: sources/domain/model/Vaccine.cpp.i
@@ -523,7 +523,7 @@ sources/domain/model/Vaccine.i: sources/domain/model/Vaccine.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/Vaccine.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Vaccine.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Vaccine.cpp.i
 .PHONY : sources/domain/model/Vaccine.cpp.i
 
 sources/domain/model/Vaccine.s: sources/domain/model/Vaccine.cpp.s
@@ -531,7 +531,7 @@ sources/domain/model/Vaccine.s: sources/domain/model/Vaccine.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/Vaccine.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Vaccine.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/Vaccine.cpp.s
 .PHONY : sources/domain/model/Vaccine.cpp.s
 
 sources/domain/model/VaccineStore.obj: sources/domain/model/VaccineStore.cpp.obj
@@ -539,7 +539,7 @@ sources/domain/model/VaccineStore.obj: sources/domain/model/VaccineStore.cpp.obj
 
 # target to build an object file
 sources/domain/model/VaccineStore.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineStore.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineStore.cpp.obj
 .PHONY : sources/domain/model/VaccineStore.cpp.obj
 
 sources/domain/model/VaccineStore.i: sources/domain/model/VaccineStore.cpp.i
@@ -547,7 +547,7 @@ sources/domain/model/VaccineStore.i: sources/domain/model/VaccineStore.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/VaccineStore.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineStore.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineStore.cpp.i
 .PHONY : sources/domain/model/VaccineStore.cpp.i
 
 sources/domain/model/VaccineStore.s: sources/domain/model/VaccineStore.cpp.s
@@ -555,7 +555,7 @@ sources/domain/model/VaccineStore.s: sources/domain/model/VaccineStore.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/VaccineStore.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineStore.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineStore.cpp.s
 .PHONY : sources/domain/model/VaccineStore.cpp.s
 
 sources/domain/model/VaccineType.obj: sources/domain/model/VaccineType.cpp.obj
@@ -563,7 +563,7 @@ sources/domain/model/VaccineType.obj: sources/domain/model/VaccineType.cpp.obj
 
 # target to build an object file
 sources/domain/model/VaccineType.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineType.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineType.cpp.obj
 .PHONY : sources/domain/model/VaccineType.cpp.obj
 
 sources/domain/model/VaccineType.i: sources/domain/model/VaccineType.cpp.i
@@ -571,7 +571,7 @@ sources/domain/model/VaccineType.i: sources/domain/model/VaccineType.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/VaccineType.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineType.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineType.cpp.i
 .PHONY : sources/domain/model/VaccineType.cpp.i
 
 sources/domain/model/VaccineType.s: sources/domain/model/VaccineType.cpp.s
@@ -579,7 +579,7 @@ sources/domain/model/VaccineType.s: sources/domain/model/VaccineType.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/VaccineType.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineType.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineType.cpp.s
 .PHONY : sources/domain/model/VaccineType.cpp.s
 
 sources/domain/model/VaccineTypeStore.obj: sources/domain/model/VaccineTypeStore.cpp.obj
@@ -587,7 +587,7 @@ sources/domain/model/VaccineTypeStore.obj: sources/domain/model/VaccineTypeStore
 
 # target to build an object file
 sources/domain/model/VaccineTypeStore.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineTypeStore.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineTypeStore.cpp.obj
 .PHONY : sources/domain/model/VaccineTypeStore.cpp.obj
 
 sources/domain/model/VaccineTypeStore.i: sources/domain/model/VaccineTypeStore.cpp.i
@@ -595,7 +595,7 @@ sources/domain/model/VaccineTypeStore.i: sources/domain/model/VaccineTypeStore.c
 
 # target to preprocess a source file
 sources/domain/model/VaccineTypeStore.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineTypeStore.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineTypeStore.cpp.i
 .PHONY : sources/domain/model/VaccineTypeStore.cpp.i
 
 sources/domain/model/VaccineTypeStore.s: sources/domain/model/VaccineTypeStore.cpp.s
@@ -603,7 +603,7 @@ sources/domain/model/VaccineTypeStore.s: sources/domain/model/VaccineTypeStore.c
 
 # target to generate assembly for a file
 sources/domain/model/VaccineTypeStore.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineTypeStore.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/VaccineTypeStore.cpp.s
 .PHONY : sources/domain/model/VaccineTypeStore.cpp.s
 
 sources/domain/model/WaitingRoom.obj: sources/domain/model/WaitingRoom.cpp.obj
@@ -611,7 +611,7 @@ sources/domain/model/WaitingRoom.obj: sources/domain/model/WaitingRoom.cpp.obj
 
 # target to build an object file
 sources/domain/model/WaitingRoom.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/WaitingRoom.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/WaitingRoom.cpp.obj
 .PHONY : sources/domain/model/WaitingRoom.cpp.obj
 
 sources/domain/model/WaitingRoom.i: sources/domain/model/WaitingRoom.cpp.i
@@ -619,7 +619,7 @@ sources/domain/model/WaitingRoom.i: sources/domain/model/WaitingRoom.cpp.i
 
 # target to preprocess a source file
 sources/domain/model/WaitingRoom.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/WaitingRoom.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/WaitingRoom.cpp.i
 .PHONY : sources/domain/model/WaitingRoom.cpp.i
 
 sources/domain/model/WaitingRoom.s: sources/domain/model/WaitingRoom.cpp.s
@@ -627,7 +627,7 @@ sources/domain/model/WaitingRoom.s: sources/domain/model/WaitingRoom.cpp.s
 
 # target to generate assembly for a file
 sources/domain/model/WaitingRoom.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/WaitingRoom.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/model/WaitingRoom.cpp.s
 .PHONY : sources/domain/model/WaitingRoom.cpp.s
 
 sources/domain/shared/Result.obj: sources/domain/shared/Result.cpp.obj
@@ -635,7 +635,7 @@ sources/domain/shared/Result.obj: sources/domain/shared/Result.cpp.obj
 
 # target to build an object file
 sources/domain/shared/Result.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/Result.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/Result.cpp.obj
 .PHONY : sources/domain/shared/Result.cpp.obj
 
 sources/domain/shared/Result.i: sources/domain/shared/Result.cpp.i
@@ -643,7 +643,7 @@ sources/domain/shared/Result.i: sources/domain/shared/Result.cpp.i
 
 # target to preprocess a source file
 sources/domain/shared/Result.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/Result.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/Result.cpp.i
 .PHONY : sources/domain/shared/Result.cpp.i
 
 sources/domain/shared/Result.s: sources/domain/shared/Result.cpp.s
@@ -651,7 +651,7 @@ sources/domain/shared/Result.s: sources/domain/shared/Result.cpp.s
 
 # target to generate assembly for a file
 sources/domain/shared/Result.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/Result.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/Result.cpp.s
 .PHONY : sources/domain/shared/Result.cpp.s
 
 sources/domain/shared/StringUtils.obj: sources/domain/shared/StringUtils.cpp.obj
@@ -659,7 +659,7 @@ sources/domain/shared/StringUtils.obj: sources/domain/shared/StringUtils.cpp.obj
 
 # target to build an object file
 sources/domain/shared/StringUtils.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/StringUtils.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/StringUtils.cpp.obj
 .PHONY : sources/domain/shared/StringUtils.cpp.obj
 
 sources/domain/shared/StringUtils.i: sources/domain/shared/StringUtils.cpp.i
@@ -667,7 +667,7 @@ sources/domain/shared/StringUtils.i: sources/domain/shared/StringUtils.cpp.i
 
 # target to preprocess a source file
 sources/domain/shared/StringUtils.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/StringUtils.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/StringUtils.cpp.i
 .PHONY : sources/domain/shared/StringUtils.cpp.i
 
 sources/domain/shared/StringUtils.s: sources/domain/shared/StringUtils.cpp.s
@@ -675,7 +675,7 @@ sources/domain/shared/StringUtils.s: sources/domain/shared/StringUtils.cpp.s
 
 # target to generate assembly for a file
 sources/domain/shared/StringUtils.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/StringUtils.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/StringUtils.cpp.s
 .PHONY : sources/domain/shared/StringUtils.cpp.s
 
 sources/views/ConsoleView.obj: sources/views/ConsoleView.cpp.obj
@@ -683,7 +683,7 @@ sources/views/ConsoleView.obj: sources/views/ConsoleView.cpp.obj
 
 # target to build an object file
 sources/views/ConsoleView.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj
 .PHONY : sources/views/ConsoleView.cpp.obj
 
 sources/views/ConsoleView.i: sources/views/ConsoleView.cpp.i
@@ -691,7 +691,7 @@ sources/views/ConsoleView.i: sources/views/ConsoleView.cpp.i
 
 # target to preprocess a source file
 sources/views/ConsoleView.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.i
 .PHONY : sources/views/ConsoleView.cpp.i
 
 sources/views/ConsoleView.s: sources/views/ConsoleView.cpp.s
@@ -699,7 +699,7 @@ sources/views/ConsoleView.s: sources/views/ConsoleView.cpp.s
 
 # target to generate assembly for a file
 sources/views/ConsoleView.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.s
 .PHONY : sources/views/ConsoleView.cpp.s
 
 # Help Target
@@ -792,6 +792,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

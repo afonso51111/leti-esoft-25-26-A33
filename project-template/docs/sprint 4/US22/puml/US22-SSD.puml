@@ -7,26 +7,17 @@ activate Rec
 
 Rec -> System : asks to register the arrival of an SNS user
 activate System
-
-System --> Rec : asks to select the vaccination center (where the receptionist is)
-deactivate System
-
-Rec -> System : selects the vaccination center
-activate System
-
-System --> Rec : requests the SNS User Number
+System --> Rec : asks for the SNS User Number
 deactivate System
 
 Rec -> System : types the SNS User Number
 activate System
-
-System --> Rec : shows appointment details and requests confirmation
+System --> Rec : shows appointment details (Date, Time, Vaccine) and requests confirmation
 deactivate System
 
 Rec -> System : confirms the arrival
 activate System
-
-System --> Rec : informs operation success (User assigned to Waiting Room)
+System --> Rec : registers the arrival, updates appointment state and informs success
 deactivate System
 
 deactivate Rec

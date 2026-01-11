@@ -1,33 +1,55 @@
 @startuml
 autonumber
-actor "DGS Administrator" as Admin
-participant ":ListVaccinesUI" as UI
-participant ":ListVaccinesController" as CTRL
-participant ":Company" as CMP
-participant "store\n:VaccineStore" as STORE
-participant "v\n:Vaccine" as VAX
+
+actor "Administrator" as Admin
+participant ":SpecifyVaccineTypeUI" as UI
+participant ":SpecifyVaccineTypeController" as CTRL
+participant ":VaccineTypeService" as SVC
+participant "dto: VaccineTypeDTO" as DTO
+participant ":VaccineTypeMapper" as MAPPER
+participant "vt: VaccineType" as VT
+participant ":VaccineTypeRepository" as REPO
 
 activate Admin
-Admin -> UI : asks to list all vaccines
+Admin -> UI : asks to specify new vaccine type
 activate UI
 
-UI -> CTRL : getVaccineList()
+UI --> Admin : asks for data (code, description, technology)
+deactivate UI
+
+Admin -> UI : types data
+activate UI
+
+' UI cria o DTO
+UI -> DTO** : create(code, description, technology)
+
+UI -> CTRL : createVaccineType(dto)
 activate CTRL
 
-CTRL -> CMP : store = getVaccineStore()
-activate CMP
-deactivate CMP
+CTRL -> SVC : createVaccineType(dto)
+activate SVC
 
-CTRL -> STORE : allVaccines = getAll()
-activate STORE
-deactivate STORE
+' 1. Converter DTO para Domínio
+SVC -> MAPPER : toModel(dto)
+activate MAPPER
+MAPPER -> VT** : create(code, description, technology)
+MAPPER --> SVC : vt
+deactivate MAPPER
 
-CTRL -> CTRL : sortAndGroup(allVaccines)
+' 2. Guardar no Repositório
+SVC -> REPO : save(vt)
+activate REPO
+REPO --> SVC : boolean (success)
+deactivate REPO
 
-CTRL --> UI : sortedList
+SVC --> CTRL : success
+deactivate SVC
+
+CTRL --> UI : success
 deactivate CTRL
 
-UI --> Admin : shows the list of vaccines (grouped by type, sorted by brand)
+UI --> Admin : displays success message
 deactivate UI
+
 deactivate Admin
 @enduml

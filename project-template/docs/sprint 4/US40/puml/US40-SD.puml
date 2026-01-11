@@ -1,50 +1,59 @@
 @startuml
 autonumber
+
 actor "Nurse" as Nurse
 participant ":ConsultWaitingRoomUI" as UI
-participant ":ConsultWaitingRoom\nController" as CTRL
-participant ":Company" as CMP
-participant "cStore\n:VaccinationCenterStore" as CSTORE
-participant "center\n:Vaccination Center" as CENTER
-participant "room\n:Waiting Room" as ROOM
+participant ":ConsultWaitingRoomController" as CTRL
+participant ":WaitingRoomService" as SVC
+participant ":VaccinationCenterRepository" as VCRepo
+participant "center: VaccinationCenter" as CENTER
+participant "waitingRoom: WaitingRoom" as ROOM
+participant ":AppointmentMapper" as MAPPER
+participant "listDTO: List<AppointmentDTO>" as LIST_DTO
 
 activate Nurse
-Nurse -> UI : asks to consult waiting room
+Nurse -> UI : asks to consult the waiting room
 activate UI
 
-'--- Selecionar Centro ---
-UI -> CTRL : getVaccinationCenters()
-activate CTRL
-CTRL -> CMP : store = getVaccinationCenterStore()
-activate CMP
-deactivate CMP
-CTRL -> CSTORE : getList()
-activate CSTORE
-deactivate CSTORE
-CTRL --> UI : list of centers
-deactivate CTRL
-
-UI --> Nurse : asks to select center
-deactivate UI
-Nurse -> UI : selects center
-activate UI
-
-'--- Obter Lista de Espera ---
 UI -> CTRL : getWaitingList()
 activate CTRL
-    CTRL -> CENTER : room = getWaitingRoom()
-    activate CENTER
-    deactivate CENTER
 
-    CTRL -> ROOM : waitingList = getWaitingList()
-    activate ROOM
+CTRL -> SVC : getWaitingList()
+activate SVC
 
-    deactivate ROOM
+' 1. Service obtém o Centro de Vacinação atual (assumindo contexto do utilizador logado)
+SVC -> VCRepo : getCurrentCenter()
+activate VCRepo
+VCRepo --> SVC : center
+deactivate VCRepo
 
-CTRL --> UI : waitingListDTO
+' 2. Service pede a sala de espera ao centro
+SVC -> CENTER : getWaitingRoom()
+activate CENTER
+CENTER --> SVC : waitingRoom
+deactivate CENTER
+
+' 3. Service pede a lista de agendamentos (que estão na sala de espera)
+SVC -> ROOM : getAppointments()
+activate ROOM
+ROOM --> SVC : appointmentList
+deactivate ROOM
+
+' 4. Service converte a lista de objetos de domínio para DTOs
+SVC -> MAPPER : toDTOList(appointmentList)
+activate MAPPER
+MAPPER -> LIST_DTO** : create()
+MAPPER --> SVC : listDTO
+deactivate MAPPER
+
+SVC --> CTRL : listDTO
+deactivate SVC
+
+CTRL --> UI : listDTO
 deactivate CTRL
 
-UI --> Nurse : shows list of users in waiting room
+UI --> Nurse : shows the list of users waiting
 deactivate UI
+
 deactivate Nurse
 @enduml

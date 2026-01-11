@@ -1,58 +1,89 @@
 @startuml
 skinparam classAttributeIconSize 0
-hide circle
 
-class RecordAdministrationUI {
+package "UI" {
+  class RecordAdministrationUI {
+  }
 }
 
-class RecordAdministrationController {
-  + getVaccines(type)
-  + recordAdministration(dto)
+package "Core" {
+
+  package "Controller" {
+    class VaccineAdministrationController {
+      + createVaccineAdministration(dto: VaccineAdministrationDTO): boolean
+      + getAppointment(snsUserNumber: String): AppointmentDTO
+    }
+  }
+
+  package "Service" {
+    class VaccineAdministrationService {
+      + createVaccineAdministration(dto: VaccineAdministrationDTO): boolean
+      + getAppointment(snsUserNumber: String): AppointmentDTO
+    }
+  }
+
+  package "Domain" {
+    package "Model" {
+      class VaccineAdministration {
+        - administeredDate: DateTime
+        - leaveDate: DateTime
+        - lotNumber: String
+        + create(user, vaccine, appointment, lot)
+      }
+      class SNSUser {}
+      class Vaccine {}
+      class Appointment {}
+    }
+
+    package "Repository" {
+      class VaccineAdministrationRepository {
+        + save(admin: VaccineAdministration): boolean
+      }
+      class SNSUserRepository {
+        + findByNumber(number: String): SNSUser
+      }
+      class VaccineRepository {
+        + findByLot(lot: String): Vaccine
+      }
+      class AppointmentRepository {
+        + findById(id: String): Appointment
+      }
+    }
+  }
+
+  package "DTO" {
+    class VaccineAdministrationDTO {
+      - snsUserNumber: String
+      - lotNumber: String
+      - appointmentId: String
+    }
+    class AppointmentDTO {}
+  }
+
+  package "Mapper" {
+    class VaccineAdministrationMapper {
+      + toDTO(admin: VaccineAdministration): VaccineAdministrationDTO
+      + toModel(dto: VaccineAdministrationDTO): VaccineAdministration
+    }
+  }
 }
 
-class Company {
-  + getVaccineStore()
-}
+RecordAdministrationUI ..> VaccineAdministrationController
+RecordAdministrationUI ..> VaccineAdministrationDTO
 
-class VaccineStore {
-  + getVaccinesByType(type)
-}
+VaccineAdministrationController ..> VaccineAdministrationService
+VaccineAdministrationController ..> VaccineAdministrationDTO
 
-class "Vaccination Center" {
-  + moveUserToRecovery(app)
-}
+VaccineAdministrationService ..> VaccineAdministrationRepository
+VaccineAdministrationService ..> SNSUserRepository
+VaccineAdministrationService ..> VaccineRepository
+VaccineAdministrationService ..> AppointmentRepository
+VaccineAdministrationService ..> VaccineAdministration
+VaccineAdministrationService ..> VaccineAdministrationMapper
 
-class "Waiting Room" {
-  + remove(app)
-}
+VaccineAdministrationMapper ..> VaccineAdministrationDTO
+VaccineAdministrationMapper ..> VaccineAdministration
 
-class "Recovery Room" {
-  + add(app)
-}
-
-class Appointment {
-  - lot_number
-  - administration_time
-  + addAdministrationInfo(vaccine, lot, time)
-}
-
-class Vaccine {
-  - brand
-}
-
-RecordAdministrationUI ..> RecordAdministrationController
-RecordAdministrationController ..> Company
-RecordAdministrationController ..> VaccineStore
-RecordAdministrationController ..> "Vaccination Center"
-RecordAdministrationController ..> Appointment
-
-Company "1" --> "1" VaccineStore : has >
-VaccineStore "1" --> "*" Vaccine : stores >
-
-"Vaccination Center" "1" --> "1" "Waiting Room" : has >
-"Vaccination Center" "1" --> "1" "Recovery Room" : has >
-
-"Waiting Room" --> "0..*" Appointment : holds >
-"Recovery Room" --> "0..*" Appointment : holds >
+VaccineAdministrationRepository "1" --> "*" VaccineAdministration : saves
 
 @enduml

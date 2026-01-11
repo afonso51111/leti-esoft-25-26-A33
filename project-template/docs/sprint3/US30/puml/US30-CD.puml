@@ -1,69 +1,77 @@
 @startuml
 skinparam classAttributeIconSize 0
-hide circle
 
-class ScheduleVaccineUI {
+package "UI" {
+  class LoadUsersUI {
+  }
 }
 
-class ScheduleVaccineController {
-  + getVaccinationCenters()
-  + getVaccineTypes()
-  + getAvailableSlots(center, date)
-  + createAppointment(dto)
-  + save()
+package "Core" {
+
+  package "Controller" {
+    class LoadUsersController {
+      + loadUsers(filePath: String): int
+    }
+  }
+
+  package "Service" {
+    class LoadUsersService {
+      + loadUsers(filePath: String): int
+    }
+  }
+
+  package "Utils" {
+    class CSVReader {
+      + read(filePath: String): List<String[]>
+    }
+  }
+
+  package "Domain" {
+    package "Model" {
+      class SNSUser {
+        - name: String
+        - snsUserNumber: String
+        - email: String
+        + create(...)
+      }
+    }
+
+    package "Repository" {
+      class SNSUserRepository {
+        + save(user: SNSUser): boolean
+        + findByNumber(num: String): SNSUser
+      }
+    }
+  }
+
+  package "DTO" {
+    class SNSUserDTO {
+      - name
+      - snsUserNumber
+      - email
+    }
+  }
+
+  package "Mapper" {
+    class SNSUserMapper {
+      + toModel(dto: SNSUserDTO): SNSUser
+    }
+  }
 }
 
-class Company {
-  + getVaccinationCenterStore()
-  + getVaccineTypeStore()
-}
+LoadUsersUI ..> LoadUsersController
 
-class VaccinationCenterStore {
-  + getList()
-}
+LoadUsersController ..> LoadUsersService
 
-class VaccineTypeStore {
-  + getList()
-}
+LoadUsersService ..> CSVReader
+LoadUsersService ..> SNSUserRepository
+LoadUsersService ..> SNSUserMapper
+LoadUsersService ..> SNSUserDTO
+LoadUsersService ..> SNSUser
 
-class "Vaccination Center" {
-  - name
-  - capacity_per_hour
-  + getAvailableSlots(date)
-  + createAppointment(user, type, date, time)
-  + addAppointment(app)
-}
+SNSUserMapper ..> SNSUserDTO
+SNSUserMapper ..> SNSUser
 
-class Appointment {
-  - date
-  - time
-  + Appointment(user, type, date, time)
-}
-
-class "SNS User" {
-  - sns_number
-  - name
-}
-
-class "Vaccine Type" {
-  - code
-  - description
-}
-
-ScheduleVaccineUI ..> ScheduleVaccineController
-ScheduleVaccineController ..> Company
-ScheduleVaccineController ..> VaccinationCenterStore
-ScheduleVaccineController ..> VaccineTypeStore
-ScheduleVaccineController ..> "Vaccination Center"
-
-Company "1" --> "1" VaccinationCenterStore : has >
-Company "1" --> "1" VaccineTypeStore : has >
-
-VaccinationCenterStore "1" --> "*" "Vaccination Center" : stores >
-VaccineTypeStore "1" --> "*" "Vaccine Type" : stores >
-
-"Vaccination Center" "1" --> "*" Appointment : manages >
-Appointment "*" --> "1" "SNS User" : has >
-Appointment "*" --> "1" "Vaccine Type" : for >
+SNSUserRepository "1" --> "*" SNSUser : stores
 
 @enduml

@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template
+CMAKE_SOURCE_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -131,14 +131,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\\CMakeFiles\progress.marks
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 0
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CoreTests\\CMakeFiles\progress.marks"
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\MSI PC\Documents\Projeto\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/clean
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/clean
 .PHONY : clean
 
 # The main clean target
@@ -147,22 +147,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/preinstall
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/preinstall
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 CoreTests/CMakeFiles/CoreTests.dir/rule:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/CMakeFiles/CoreTests.dir/rule
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CoreTests/CMakeFiles/CoreTests.dir/rule
 .PHONY : CoreTests/CMakeFiles/CoreTests.dir/rule
 
 # Convenience name for target.
@@ -171,7 +171,7 @@ CoreTests: CoreTests/CMakeFiles/CoreTests.dir/rule
 
 # fast build rule for target.
 CoreTests/fast:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/build
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/build
 .PHONY : CoreTests/fast
 
 domain/model/VaccineTest.obj: domain/model/VaccineTest.cpp.obj
@@ -179,7 +179,7 @@ domain/model/VaccineTest.obj: domain/model/VaccineTest.cpp.obj
 
 # target to build an object file
 domain/model/VaccineTest.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.obj
 .PHONY : domain/model/VaccineTest.cpp.obj
 
 domain/model/VaccineTest.i: domain/model/VaccineTest.cpp.i
@@ -187,7 +187,7 @@ domain/model/VaccineTest.i: domain/model/VaccineTest.cpp.i
 
 # target to preprocess a source file
 domain/model/VaccineTest.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.i
 .PHONY : domain/model/VaccineTest.cpp.i
 
 domain/model/VaccineTest.s: domain/model/VaccineTest.cpp.s
@@ -195,7 +195,7 @@ domain/model/VaccineTest.s: domain/model/VaccineTest.cpp.s
 
 # target to generate assembly for a file
 domain/model/VaccineTest.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/model/VaccineTest.cpp.s
 .PHONY : domain/model/VaccineTest.cpp.s
 
 domain/shared/StringUtilsTests.obj: domain/shared/StringUtilsTests.cpp.obj
@@ -203,7 +203,7 @@ domain/shared/StringUtilsTests.obj: domain/shared/StringUtilsTests.cpp.obj
 
 # target to build an object file
 domain/shared/StringUtilsTests.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.obj
 .PHONY : domain/shared/StringUtilsTests.cpp.obj
 
 domain/shared/StringUtilsTests.i: domain/shared/StringUtilsTests.cpp.i
@@ -211,7 +211,7 @@ domain/shared/StringUtilsTests.i: domain/shared/StringUtilsTests.cpp.i
 
 # target to preprocess a source file
 domain/shared/StringUtilsTests.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.i
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.i
 .PHONY : domain/shared/StringUtilsTests.cpp.i
 
 domain/shared/StringUtilsTests.s: domain/shared/StringUtilsTests.cpp.s
@@ -219,7 +219,7 @@ domain/shared/StringUtilsTests.s: domain/shared/StringUtilsTests.cpp.s
 
 # target to generate assembly for a file
 domain/shared/StringUtilsTests.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.s
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/shared/StringUtilsTests.cpp.s
 .PHONY : domain/shared/StringUtilsTests.cpp.s
 
 # Help Target
@@ -252,6 +252,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\MSIPC~1\DOCUME~1\Projeto\LETI-E~1\PROJEC~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

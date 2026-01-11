@@ -1,39 +1,73 @@
 @startuml
 skinparam classAttributeIconSize 0
-hide circle
 
-class ListVaccinesUI {
+package "UI" {
+  class SpecifyVaccineTypeUI {
+  }
 }
 
-class ListVaccinesController {
-  + getVaccineList()
+package "Core" {
+
+  package "Controller" {
+    class SpecifyVaccineTypeController {
+      + createVaccineType(dto: VaccineTypeDTO): boolean
+    }
+  }
+
+  package "Service" {
+    class VaccineTypeService {
+      + createVaccineType(dto: VaccineTypeDTO): boolean
+    }
+  }
+
+  package "Domain" {
+    package "Model" {
+      class VaccineType {
+        - code: String
+        - description: String
+        - technology: String
+        + create(code, desc, tech)
+      }
+    }
+
+    package "Repository" {
+      class VaccineTypeRepository {
+        + save(vt: VaccineType): boolean
+        + findByCode(code: String): VaccineType
+      }
+    }
+  }
+
+  package "DTO" {
+    class VaccineTypeDTO {
+      - code
+      - description
+      - technology
+    }
+  }
+
+  package "Mapper" {
+    class VaccineTypeMapper {
+      + toModel(dto: VaccineTypeDTO): VaccineType
+      + toDTO(vt: VaccineType): VaccineTypeDTO
+    }
+  }
 }
 
-class Company {
-  + getVaccineStore()
-}
+SpecifyVaccineTypeUI ..> SpecifyVaccineTypeController
+SpecifyVaccineTypeUI ..> VaccineTypeDTO
 
-class VaccineStore {
-  + getAll()
-}
+SpecifyVaccineTypeController ..> VaccineTypeService
+SpecifyVaccineTypeController ..> VaccineTypeDTO
 
-class Vaccine {
-  - commercial_name
-  - brand
-  + getBrand()
-  + getType()
-}
+VaccineTypeService ..> VaccineTypeRepository
+VaccineTypeService ..> VaccineTypeMapper
+VaccineTypeService ..> VaccineType
+VaccineTypeService ..> VaccineTypeDTO
 
-class "Vaccine Type" {
-  - code
-  - short_description
-}
+VaccineTypeMapper ..> VaccineTypeDTO
+VaccineTypeMapper ..> VaccineType
 
-ListVaccinesUI ..> ListVaccinesController
-ListVaccinesController ..> Company
-ListVaccinesController ..> VaccineStore
-Company "1" --> "1" VaccineStore : has >
-VaccineStore "1" --> "*" Vaccine : stores >
-Vaccine "*" --> "1" "Vaccine Type" : has >
+VaccineTypeRepository "1" --> "*" VaccineType : stores
 
 @enduml

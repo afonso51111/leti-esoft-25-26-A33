@@ -1,36 +1,36 @@
 @startuml
-hide circle
 hide methods
+left to right direction
 skinparam classAttributeIconSize 0
 
-class "SNS User" {
-  - sns_number
+class Administrator {
   - name
-  - birth_date
-  - sex
-  - phone_number
   - email
+  - phoneNumber
+  - employeeId
 }
 
-class "Vaccination Center" {
+class CSVFile {
+  - fileName
+  - filePath
+  - content
+  - numberOfRecords
+}
+
+class SNSUser {
   - name
-  - opening_hours
-  - closing_hours
-  - capacity_per_hour
+  - address
+  - sex
+  - phoneNumber
+  - email
+  - birthDate
+  - snsUserNumber
+  - citizenCardNumber
 }
 
-class "Appointment" {
-  - date
-  - time
-}
-
-class "Vaccine Type" {
-  - code
-  - short_description
-}
-
-"SNS User" "1" -right-- "*" Appointment : schedules >
-Appointment "*" -down-- "1" "Vaccination Center" : occurs at >
-Appointment "*" -down-- "1" "Vaccine Type" : for >
+' Relações
+Administrator "1" -- "1" CSVFile : loads >
+CSVFile "1" -- "*" SNSUser : contains data of >
+Administrator "1" -- "*" SNSUser : registers >
 
 @enduml
