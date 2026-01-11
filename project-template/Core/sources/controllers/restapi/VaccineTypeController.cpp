@@ -53,3 +53,44 @@ HttpResult VaccineTypeController::createType(std::string code, std::string descr
 
     return result;
 }
+
+HttpResult VaccineTypeController::updateType(std::string code, std::string description) {
+    HttpResult result;
+    Company* company = Company::getInstance();
+    VaccineTypeStore* store = company->getVaccineTypeStore();
+
+    // 1. Procurar o objeto real
+    VaccineType* vt = store->findTypeByCode(code);
+
+    if (vt != nullptr) {
+        // 2. Alterar os dados (Real Update)
+        // Nota: Tens de ter um 'setDescription' no teu model VaccineType.
+        // Se não tiveres, tens de o adicionar no VaccineType.h!
+        vt->setDescription(description);
+
+        result.setHttpStatus(200);
+        result.setResult("{ \"message\": \"Vaccine Type updated successfully.\" }");
+    } else {
+        result.setHttpStatus(404);
+        result.setResult("{ \"error\": \"Vaccine Type not found.\" }");
+    }
+    return result;
+}
+
+HttpResult VaccineTypeController::deleteType(std::string code) {
+    HttpResult result;
+    Company* company = Company::getInstance();
+    VaccineTypeStore* store = company->getVaccineTypeStore();
+
+    // 1. Tentar remover (Real Delete)
+    bool success = store->removeType(code);
+
+    if (success) {
+        result.setHttpStatus(200);
+        result.setResult("{ \"message\": \"Vaccine Type deleted successfully.\" }");
+    } else {
+        result.setHttpStatus(404);
+        result.setResult("{ \"error\": \"Vaccine Type not found to delete.\" }");
+    }
+    return result;
+}

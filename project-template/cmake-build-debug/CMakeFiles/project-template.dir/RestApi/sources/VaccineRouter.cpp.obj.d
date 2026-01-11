@@ -524,5 +524,4 @@ CMakeFiles/project-template.dir/RestApi/sources/VaccineRouter.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_thread.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/this_thread_sleep.h \
  C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/Core/headers/controllers/restapi/VaccineController.h \
- C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/Core/headers/controllers/restapi/HttpResult.h \
- C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/Core/headers/domain/model/Company.h
+ C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/Core/headers/controllers/restapi/HttpResult.h

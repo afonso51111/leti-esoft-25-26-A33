@@ -174,30 +174,6 @@ CoreTests/fast:
 	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/build
 .PHONY : CoreTests/fast
 
-domain/model/UtentTest.obj: domain/model/UtentTest.cpp.obj
-.PHONY : domain/model/UtentTest.obj
-
-# target to build an object file
-domain/model/UtentTest.cpp.obj:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.obj
-.PHONY : domain/model/UtentTest.cpp.obj
-
-domain/model/UtentTest.i: domain/model/UtentTest.cpp.i
-.PHONY : domain/model/UtentTest.i
-
-# target to preprocess a source file
-domain/model/UtentTest.cpp.i:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.i
-.PHONY : domain/model/UtentTest.cpp.i
-
-domain/model/UtentTest.s: domain/model/UtentTest.cpp.s
-.PHONY : domain/model/UtentTest.s
-
-# target to generate assembly for a file
-domain/model/UtentTest.cpp.s:
-	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/domain/model/UtentTest.cpp.s
-.PHONY : domain/model/UtentTest.cpp.s
-
 domain/model/VaccineTest.obj: domain/model/VaccineTest.cpp.obj
 .PHONY : domain/model/VaccineTest.obj
 
@@ -259,9 +235,6 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... CoreTests
-	@echo ... domain/model/UtentTest.obj
-	@echo ... domain/model/UtentTest.i
-	@echo ... domain/model/UtentTest.s
 	@echo ... domain/model/VaccineTest.obj
 	@echo ... domain/model/VaccineTest.i
 	@echo ... domain/model/VaccineTest.s

@@ -6,18 +6,18 @@
 class VaccineType {
 private:
     std::string code;
-    std::string disease;
-    std::string short_description;
+    std::string description;
+    std::string technology;
 
 public:
-    VaccineType(std::string code, std::string disease, std::string shortDesc);
+    VaccineType(std::string code, std::string description, std::string technology);
 
     std::string getCode() const;
-    std::string getDisease() const;
     std::string getShortDescription() const;
+    std::string getTechnology() const;
 
-    // Método extra para verificar compatibilidade (útil para o Sprint 3)
-    bool checkTechnology(std::string tech) const;
+    // CORRIGIDO: Este método é obrigatório para o UPDATE funcionar
+    void setDescription(std::string description);
 };
 
 #endif // VACCINETYPE_H

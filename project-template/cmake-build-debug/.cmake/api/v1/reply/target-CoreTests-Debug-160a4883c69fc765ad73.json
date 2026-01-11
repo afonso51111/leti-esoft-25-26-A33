@@ -36,13 +36,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 12,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 13,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
@@ -112,8 +112,7 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1,
-				2
+				1
 			]
 		}
 	],
@@ -186,8 +185,7 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1,
-				2
+				1
 			]
 		}
 	],
@@ -203,12 +201,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "CoreTests/domain/model/VaccineTest.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "CoreTests/domain/model/UtentTest.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

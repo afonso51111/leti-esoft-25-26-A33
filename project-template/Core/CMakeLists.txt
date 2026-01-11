@@ -57,6 +57,8 @@ add_library(Core
         sources/domain/model/WaitingRoom.cpp
         sources/domain/model/RecoveryRoom.cpp
         sources/domain/model/AppointmentStore.cpp
+        headers/views/ConsoleView.h
+        sources/views/ConsoleView.cpp
 
 
 )

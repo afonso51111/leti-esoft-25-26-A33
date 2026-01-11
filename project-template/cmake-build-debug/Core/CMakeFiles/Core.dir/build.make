@@ -383,6 +383,21 @@ Core/CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.s"
 	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\Core && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\Core\sources\domain\model\AppointmentStore.cpp -o CMakeFiles\Core.dir\sources\domain\model\AppointmentStore.cpp.s
 
+Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj: Core/CMakeFiles/Core.dir/flags.make
+Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj: Core/CMakeFiles/Core.dir/includes_CXX.rsp
+Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj: C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/Core/sources/views/ConsoleView.cpp
+Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj: Core/CMakeFiles/Core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj"
+	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\Core && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj -MF CMakeFiles\Core.dir\sources\views\ConsoleView.cpp.obj.d -o CMakeFiles\Core.dir\sources\views\ConsoleView.cpp.obj -c C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\Core\sources\views\ConsoleView.cpp
+
+Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.i"
+	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\Core && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\Core\sources\views\ConsoleView.cpp > CMakeFiles\Core.dir\sources\views\ConsoleView.cpp.i
+
+Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.s"
+	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\Core && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\Core\sources\views\ConsoleView.cpp -o CMakeFiles\Core.dir\sources\views\ConsoleView.cpp.s
+
 # Object files for target Core
 Core_OBJECTS = \
 "CMakeFiles/Core.dir/sources/domain/shared/Result.cpp.obj" \
@@ -405,7 +420,8 @@ Core_OBJECTS = \
 "CMakeFiles/Core.dir/sources/domain/model/Appointment.cpp.obj" \
 "CMakeFiles/Core.dir/sources/domain/model/WaitingRoom.cpp.obj" \
 "CMakeFiles/Core.dir/sources/domain/model/RecoveryRoom.cpp.obj" \
-"CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.obj"
+"CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.obj" \
+"CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj"
 
 # External object files for target Core
 Core_EXTERNAL_OBJECTS =
@@ -431,9 +447,10 @@ Core/libCore.a: Core/CMakeFiles/Core.dir/sources/domain/model/Appointment.cpp.ob
 Core/libCore.a: Core/CMakeFiles/Core.dir/sources/domain/model/WaitingRoom.cpp.obj
 Core/libCore.a: Core/CMakeFiles/Core.dir/sources/domain/model/RecoveryRoom.cpp.obj
 Core/libCore.a: Core/CMakeFiles/Core.dir/sources/domain/model/AppointmentStore.cpp.obj
+Core/libCore.a: Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj
 Core/libCore.a: Core/CMakeFiles/Core.dir/build.make
 Core/libCore.a: Core/CMakeFiles/Core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX static library libCore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX static library libCore.a"
 	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\Core && $(CMAKE_COMMAND) -P CMakeFiles\Core.dir\cmake_clean_target.cmake
 	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\Core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Core.dir\link.txt --verbose=$(VERBOSE)
 

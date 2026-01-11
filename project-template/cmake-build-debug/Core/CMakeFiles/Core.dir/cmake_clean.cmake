@@ -41,6 +41,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Core.dir/sources/domain/shared/Result.cpp.obj.d"
   "CMakeFiles/Core.dir/sources/domain/shared/StringUtils.cpp.obj"
   "CMakeFiles/Core.dir/sources/domain/shared/StringUtils.cpp.obj.d"
+  "CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj"
+  "CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj.d"
   "libCore.a"
   "libCore.pdb"
 )

@@ -22,6 +22,8 @@ public:
     ~VaccineTypeStore();
 
     VaccineType* findTypeByCode(std::string code) const;
+
+    bool removeType(std::string code);
 };
 
 #endif

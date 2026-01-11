@@ -44,3 +44,14 @@ VaccineType* VaccineTypeStore::findTypeByCode(std::string code) const {
     }
     return nullptr;
 }
+
+bool VaccineTypeStore::removeType(std::string code) {
+    for (auto it = listVaccineTypes.begin(); it != listVaccineTypes.end(); ++it) {
+        if ((*it)->getCode() == code) {
+            // Opcional: delete *it; // Descomenta se quiseres libertar memória (recomendado em C++)
+            listVaccineTypes.erase(it);
+            return true; // Apagado com sucesso
+        }
+    }
+    return false; // Não encontrado
+}

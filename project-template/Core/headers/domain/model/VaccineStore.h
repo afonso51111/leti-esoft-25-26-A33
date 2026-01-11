@@ -11,15 +11,15 @@ private:
 public:
     VaccineStore();
 
-    Vaccine* createVaccine(std::string name, std::string brand, VaccineType* type);
+    // Atualizado para receber 'code'
+    Vaccine* createVaccine(std::string code, std::string name, std::string brand, VaccineType* type);
 
-    bool validateVaccine(Vaccine* v) const;
+    void saveVaccine(Vaccine* vaccine);
+    std::vector<Vaccine*> getVaccines();
+    Vaccine* findVaccineByCode(std::string code);
 
-    void saveVaccine(Vaccine* v);
-
-    std::vector<Vaccine*> getVaccines() const;
-
-    ~VaccineStore();
+    // Novo método para apagar
+    bool removeVaccine(std::string code);
 };
 
-#endif
+#endif // VACCINESTORE_H

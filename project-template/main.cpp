@@ -1,50 +1,58 @@
+#include "RestApi/headers/Server.h"
+#include "Core/headers/views/ConsoleView.h"
 #include <iostream>
-#include "Server.h"
-#include "../Core/headers/domain/model/AppointmentStore.h"
-#include "../Core/headers/domain/model/Company.h"
-#include "../Core/headers/domain/model/VaccineTypeStore.h"
-#include "../Core/headers/domain/model/VaccineStore.h"
-#include "../Core/headers/domain/model/VaccineType.h"
-#include "../Core/headers/domain/model/Vaccine.h"
-#include "../Core/headers/domain/model/VaccinationCenterStore.h"
-#include "../Core/headers/domain/model/SNSUserStore.h"
-#include "../Core/headers/domain/model/SNSUser.h"
+#include <string>
+#include "Core/headers/domain/model/Company.h"
+#include "Core/headers/domain/model/VaccineStore.h"
+#include "Core/headers/domain/model/VaccineTypeStore.h"
 
 void bootstrap() {
-    std::cout << "Bootstrapping data..." << std::endl;
     Company* company = Company::getInstance();
-
     VaccineTypeStore* typeStore = company->getVaccineTypeStore();
-    VaccineType* type1 = typeStore->createVaccineType("COV19", "Covid-19 Vaccine", "mRNA Technology");
-    typeStore->saveVaccineType(type1);
-
     VaccineStore* vaccineStore = company->getVaccineStore();
-    Vaccine* v1 = vaccineStore->createVaccine("Comirnaty", "Pfizer", type1);
-    vaccineStore->saveVaccine(v1);
 
-    VaccinationCenterStore* centerStore = company->getVaccinationCenterStore();
-    VaccinationCenter* c1 = centerStore->createHealthcareCenter("Centro Hospitalar Lisboa", "ARS Lisboa", "Todos");
-    centerStore->saveVaccinationCenter(c1);
+    if (typeStore->getVaccineTypes().empty()) {
+        VaccineType* type1 = typeStore->createVaccineType("COV19", "Covid-19 Vaccine", "mRNA");
+        typeStore->saveVaccineType(type1);
 
-    SNSUserStore* userStore = company->getSNSUserStore();
-    SNSUser* u1 = userStore->createSNSUser("Maria Silva", "Rua das Flores", "Feminino", "912345678", "maria@mail.com", "1990-05-20", "123456789", "98765432");
-    userStore->saveSNSUser(u1);
-
-    AppointmentStore* appStore = company->getAppointmentStore();
-    appStore->createAppointment(u1, "Centro Hospitalar Lisboa", "COV19", "2025-01-20 10:00");
-
-    std::cout << "Data loaded successfully!" << std::endl;
-
+        Vaccine* v1 = vaccineStore->createVaccine("VAC001", "Comirnaty", "Pfizer", type1);
+        vaccineStore->saveVaccine(v1);
+    }
 }
 
 int main() {
     bootstrap();
 
-    Server server;
+    std::string input;
+    int choice;
+
+    std::cout << "Selecione o modo de execucao:\n";
+    std::cout << "1. Iniciar Servidor REST API (para usar curl)\n";
+    std::cout << "2. Iniciar Menu de Consola (UI C++)\n";
+    std::cout << "Opcao: ";
+
+    std::getline(std::cin, input);
+
     try {
+        choice = std::stoi(input);
+    } catch (...) {
+        std::cout << "Opcao invalida!\n";
+        return 1;
+    }
+
+    if (choice == 1) {
+        Server server;
         server.run();
-    } catch (const std::exception& e) {
-        std::cerr << "Error starting server: " << e.what() << std::endl;
+    } else if (choice == 2) {
+        // ADICIONA ESTA LINHA DE DEBUG
+        std::cout << "\n[DEBUG] A iniciar ConsoleView...\n";
+        ConsoleView view;
+        std::cout << "[DEBUG] ConsoleView criado, a chamar run()...\n";
+        view.run();
+        std::cout << "[DEBUG] run() terminou.\n";
+    } else {
+        std::cout << "Opcao invalida!\n";
+        return 1;
     }
 
     return 0;

@@ -678,6 +678,30 @@ sources/domain/shared/StringUtils.cpp.s:
 	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/domain/shared/StringUtils.cpp.s
 .PHONY : sources/domain/shared/StringUtils.cpp.s
 
+sources/views/ConsoleView.obj: sources/views/ConsoleView.cpp.obj
+.PHONY : sources/views/ConsoleView.obj
+
+# target to build an object file
+sources/views/ConsoleView.cpp.obj:
+	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.obj
+.PHONY : sources/views/ConsoleView.cpp.obj
+
+sources/views/ConsoleView.i: sources/views/ConsoleView.cpp.i
+.PHONY : sources/views/ConsoleView.i
+
+# target to preprocess a source file
+sources/views/ConsoleView.cpp.i:
+	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.i
+.PHONY : sources/views/ConsoleView.cpp.i
+
+sources/views/ConsoleView.s: sources/views/ConsoleView.cpp.s
+.PHONY : sources/views/ConsoleView.s
+
+# target to generate assembly for a file
+sources/views/ConsoleView.cpp.s:
+	cd /d C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug && $(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/sources/views/ConsoleView.cpp.s
+.PHONY : sources/views/ConsoleView.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -754,6 +778,9 @@ help:
 	@echo ... sources/domain/shared/StringUtils.obj
 	@echo ... sources/domain/shared/StringUtils.i
 	@echo ... sources/domain/shared/StringUtils.s
+	@echo ... sources/views/ConsoleView.obj
+	@echo ... sources/views/ConsoleView.i
+	@echo ... sources/views/ConsoleView.s
 .PHONY : help
 
 

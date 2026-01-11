@@ -191,7 +191,7 @@ CMakeFiles/project-template.dir/all: Core/CMakeFiles/Core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/project-template.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/project-template.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/project-template.dir/rule
@@ -212,12 +212,12 @@ CMakeFiles/project-template.dir/clean:
 Core/CMakeFiles/Core.dir/all:
 	$(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/depend
 	$(MAKE) $(MAKESILENT) -f Core\CMakeFiles\Core.dir\build.make Core/CMakeFiles/Core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24 "Built target Core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 "Built target Core"
 .PHONY : Core/CMakeFiles/Core.dir/all
 
 # Build rule for subdir invocation for target.
 Core/CMakeFiles/Core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Core/CMakeFiles/Core.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 0
 .PHONY : Core/CMakeFiles/Core.dir/rule
@@ -240,7 +240,7 @@ CoreTests/CMakeFiles/CoreTests.dir/all: CoreTests/lib/googletest/CMakeFiles/gtes
 CoreTests/CMakeFiles/CoreTests.dir/all: CoreTests/lib/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CoreTests\CMakeFiles\CoreTests.dir\build.make CoreTests/CMakeFiles/CoreTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=25,26,27,28 "Built target CoreTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles --progress-num=26,27,28 "Built target CoreTests"
 .PHONY : CoreTests/CMakeFiles/CoreTests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -376,7 +376,7 @@ ConsoleApp/CMakeFiles/ConsoleApp.dir/all: Core/CMakeFiles/Core.dir/all
 
 # Build rule for subdir invocation for target.
 ConsoleApp/CMakeFiles/ConsoleApp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ConsoleApp/CMakeFiles/ConsoleApp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ruima\Documents\ESOFT\leti-esoft-25-26-A33\project-template\cmake-build-debug\CMakeFiles 0
 .PHONY : ConsoleApp/CMakeFiles/ConsoleApp.dir/rule

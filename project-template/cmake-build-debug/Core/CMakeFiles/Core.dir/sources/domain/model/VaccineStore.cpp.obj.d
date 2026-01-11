@@ -104,4 +104,5 @@ Core/CMakeFiles/Core.dir/sources/domain/model/VaccineStore.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc \
- C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/Core/headers/domain/model/VaccineType.h
+ C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/Core/headers/domain/model/VaccineType.h \
+ C:/Users/ruima/Documents/ESOFT/leti-esoft-25-26-A33/project-template/Core/headers/domain/model/Vaccine.h

@@ -12,6 +12,10 @@ public:
     HttpResult getAll();
 
     HttpResult createType(std::string code, std::string description, std::string tech);
+
+    HttpResult updateType(std::string code, std::string description);
+
+    HttpResult deleteType(std::string code);
 };
 
 #endif

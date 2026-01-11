@@ -3,7 +3,6 @@
 
 #include <string>
 #include "HttpResult.h"
-#include "../../domain/model/Company.h"
 
 class VaccineController {
 public:
@@ -11,7 +10,11 @@ public:
 
     HttpResult getAll();
 
-    HttpResult createVaccine(std::string name, std::string brand, std::string typeCode);
+    // CORRIGIDO: Adicionado o parâmetro 'code'
+    HttpResult createVaccine(std::string code, std::string name, std::string brand, std::string typeCode);
+
+    HttpResult updateVaccine(std::string code, std::string name, std::string brand, std::string typeCode);
+    HttpResult deleteVaccine(std::string code);
 };
 
-#endif
+#endif // VACCINECONTROLLER_H

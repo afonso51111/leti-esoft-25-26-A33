@@ -245,14 +245,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "Core::@94795ff35dabbbd3a8ca",
-					"jsonFile" : "target-Core-Debug-adf256222eae3d3a9b28.json",
+					"jsonFile" : "target-Core-Debug-9ac99366c0945375f278.json",
 					"name" : "Core",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "CoreTests::@f5995f64041c05ec46bd",
-					"jsonFile" : "target-CoreTests-Debug-0314983670866bd5ce90.json",
+					"jsonFile" : "target-CoreTests-Debug-160a4883c69fc765ad73.json",
 					"name" : "CoreTests",
 					"projectIndex" : 2
 				},
